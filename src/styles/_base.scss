@@ -1,0 +1,19 @@
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body > header {
+    border: 1px solid red;
+}
+
+
+body > main {
+    border: 1px solid orange;
+}
+
+
+body > footer {
+    border: 1px solid black;
+}

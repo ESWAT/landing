@@ -1,0 +1,62 @@
+
+include mixins/asset-mixins
+include mixins/asset-mixins-angular
+
+
+!!!
+html(lang='en', ng-app="42.landing")
+
+  head
+    title 42
+
+    block meta
+      include includes/mobile-meta-tags
+      meta(charset="utf-8")
+
+    block css
+      mixin css("default")
+
+    block top-scripts
+      mixin js-lib("jquery")
+      mixin js-lib("angular")
+      mixin js-lib("angular.ui")
+      mixin js-lib("angular.route")
+      mixin js-lib("angular.animate")
+      mixin js-lib("angular.sanitize")
+
+      mixin app-core("app")
+      mixin app-core("router")
+
+
+  body(ng-controller="MainController")
+
+    header
+
+      mixin route(routeId)
+        li(ng-class="{active:routes['#{routeId}'].active}")
+          a(route="routes['#{routeId}']")
+            | {{ route.label }}
+
+      nav.ng-cloak: ul
+        mixin route('home')
+        mixin route('product')
+        mixin route('news')
+        mixin route('team')
+        mixin route('blog')
+        mixin route('contact')
+
+
+    main.animation-fade(ng-view)
+
+
+    footer
+        ul
+          li Terms of Use
+          li Privacy Policy
+          li Disclaimer
+
+
+  block bottom-scripts
+    mixin js-lib("lodash")
+
+    mixin app-controller("main")

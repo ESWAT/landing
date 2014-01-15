@@ -1,0 +1,33 @@
+
+@import "compass/css3/font-face";
+
+
+@include font-face(
+    "Open Sans",
+    inline-font-files('open-sans/OpenSans-Light.ttf', truetype),
+    $weight: 300
+);
+
+@include font-face(
+    "Open Sans",
+    inline-font-files('open-sans/OpenSans.ttf', truetype),
+    $weight: 400
+);
+
+@include font-face(
+    "Open Sans",
+    inline-font-files('open-sans/OpenSans-Semibold.ttf', truetype),
+    $weight: 600
+);
+
+@include font-face(
+    "Open Sans",
+    inline-font-files('open-sans/OpenSans-Bold.ttf', truetype),
+    $weight: 700
+);
+
+@include font-face(
+    "Open Sans",
+    inline-font-files('open-sans/OpenSans-Italic.ttf', truetype),
+    $style: italic
+);
