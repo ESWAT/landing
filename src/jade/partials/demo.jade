@@ -1,0 +1,16 @@
+
+article.view.view-demo
+
+    header
+        h1 Demo View
+        nav: ul
+            li: a(ui-sref="root.demo.signup") 1. signup
+            li: a(ui-sref="root.demo.upload") 2. upload
+            li: a(ui-sref="root.demo.finish") 3. finish
+        a(ui-sref="root.home")
+            | cancel
+
+    main(ui-view='')
+
+    footer
+        .progress(ui-view="progress")

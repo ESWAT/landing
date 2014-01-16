@@ -1,18 +1,23 @@
 
-
 $black: #181c1e;
-$light-black: #272c2f;
-$dark-grey: #33393d;
-$mid-grey: #404549;
-$grey: #aaa;
-$light-grey: #ccc;
-$off-white: #eee;
-$white: #fdfdfd;
-$red: #be5973;
-$yellow: #f0d264;
-$green: #82c8a0;
-$cyan: #7fccde;
-$blue: #6698cb;
-$purple: #cb99c5;
 
-// etc. etc.
+
+html {
+    font-family: 'Open Sans';
+    font-weight: 400;
+    color: $black;
+}
+
+h1 {
+    font-size: 20px;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+a {
+    &:hover {
+        text-decoration: underline;
+    }
+}

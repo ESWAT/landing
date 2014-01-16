@@ -1,9 +1,8 @@
 
 @app = app = angular.module '42.landing', [
     'ui'
-    'ngRoute'
+    'ui.router'
     'ngAnimate'
-    'ngSanitize'
 ]
 
 

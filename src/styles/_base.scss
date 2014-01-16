@@ -4,16 +4,66 @@ html, body {
     overflow: hidden;
 }
 
-body > header {
-    border: 1px solid red;
+
+$header-height: 150px;
+$footer-height: 75px;
+$slide-transition-speed: 0.7s;
+
+
+body > *, body > main > * {
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+body > * {
+    @include transition(top $slide-transition-speed);
 }
 
 
 body > main {
-    border: 1px solid orange;
+    top: 0;
+    height: 100%;
 }
 
 
-body > footer {
-    border: 1px solid black;
+body.demo-flow > main {
+    top: calc(100% - #{$header-height});
+}
+
+
+body > .offscreen {
+    background: purple;
+    top: 0;
+    z-index: 0;
+    bottom: $header-height;
+}
+
+
+body > main {
+
+    & > header {
+        top: 0;
+        height: $header-height;
+        background: cyan;
+    }
+
+    & > .content {
+        top: $header-height;
+        bottom: $footer-height;
+        background: green;
+    }
+
+    & > footer {
+        height: $footer-height;
+        bottom: 0;
+        background: lime;
+    }
+}
+
+
+.view {
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }

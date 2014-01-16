@@ -1,74 +1,37 @@
 
+app.config ($stateProvider, $urlRouterProvider) ->
+    $urlRouterProvider.otherwise('/')
+    $urlRouterProvider.when '/demo', '/demo/signup'
 
-app.constant 'ROUTES',
-    home:
-        label: 'Home'
-        # icon:  'bar-graph'
-        url:   '/home'
-        templateUrl: 'partials/home.html'
-        controller:  'HomeController'
-    product:
-        label: 'Product'
-        # icon:  'globe'
-        url:   '/product'
-        templateUrl: 'partials/product.html'
-        controller:  'ProductController'
-    news:
-        label: 'News'
-        # icon:  'users'
-        url:   '/news'
-        templateUrl: 'partials/news.html'
-        controller:  'NewsController'
-    team:
-        label: 'Team'
-        # icon:  'users'
-        url:   '/team'
-        templateUrl: 'partials/team.html'
-        controller:  'TeamController'
-    blog:
-        label: 'Blog'
-        # icon:  'cart'
-        url:   '/blog'
-        templateUrl: 'partials/blog.html'
-        controller:  'BlogController'
-    contact:
-        label: 'Contact'
-        # icon:  'archive'
-        url:   '/contact'
-        templateUrl: 'partials/contact.html'
-        controller:  'ContactController'
+    $stateProvider
 
+    .state 'root',
+        abstract: true
+        views:
+            'header@':templateUrl:'partials/header.html'
+            'footer@':templateUrl:'partials/footer.html'
 
+    .state 'root.home',
+        url: '^/'
+        views:
+            '@':templateUrl:'partials/home.html'
 
-app.config ($routeProvider, ROUTES) ->
+    .state 'root.team',
+        url: '^/team'
+        views:
+            '@':templateUrl:'partials/team.html'
 
-    resolve = {}
+    .state 'root.demo',
+        abstract: true
+        url: '^/'
+        views:
+            'offscreen@':        templateUrl:'partials/demo.html'
+            'progress@root.demo':templateUrl:'partials/demo/progress.html'
 
-    for id, route of ROUTES
-        options = _.pick route, 'templateUrl', 'controller'
-        options.resolve = resolve
-        $routeProvider.when route.url, options
+    .state 'root.demo.signup',
+        url: '^/demo/signup'
+        templateUrl: 'partials/demo/signup.html'
 
-    $routeProvider.otherwise redirectTo:'/home'
-
-
-
-app.directive 'route', ($rootScope, $location) ->
-    restrict: 'A'
-    scope:
-        route: '='
-    replace: true
-    template: \
-    """
-    <a ng-href="/\#{{ route.url }}">
-        <i ng-show="icon" class="icon-{{ route.icon }} icon-route-{{ route.id }}"></i>
-        {{ route.label }}
-    </a>
-    """
-
-    link: (scope, element, attributes) ->
-        scope.route.id = scope.route.label.toLowerCase()
-        scope.$on '$routeChangeSuccess', ->
-            isActive = scope.route.url is $location.path()
-            scope.route.active = isActive
-            scope.$parent.activeRoute = scope.route if isActive
+    .state 'root.demo.upload',
+        url: '^/demo/upload'
+        templateUrl:'partials/demo/upload.html'

@@ -9,6 +9,9 @@ html(lang='en', ng-app="42.landing")
   head
     title 42
 
+    //- angular.ui.router requirement
+    //- base(href="/")
+
     block meta
       include includes/mobile-meta-tags
       meta(charset="utf-8")
@@ -19,44 +22,25 @@ html(lang='en', ng-app="42.landing")
     block top-scripts
       mixin js-lib("jquery")
       mixin js-lib("angular")
-      mixin js-lib("angular.ui")
-      mixin js-lib("angular.route")
       mixin js-lib("angular.animate")
+      mixin js-lib("angular.ui")
+      mixin js-lib("angular.ui.router")
       mixin js-lib("angular.sanitize")
 
       mixin app-core("app")
       mixin app-core("router")
 
 
-  body(ng-controller="MainController")
+  body(ng-controller="MainController", ng-class="{'demo-flow':isDemoFlow}")
 
-    header
+    section.offscreen(ui-view='offscreen')
 
-      mixin route(routeId)
-        li(ng-class="{active:routes['#{routeId}'].active}")
-          a(route="routes['#{routeId}']")
-            | {{ route.label }}
-
-      nav.ng-cloak: ul
-        mixin route('home')
-        mixin route('product')
-        mixin route('news')
-        mixin route('team')
-        mixin route('blog')
-        mixin route('contact')
-
-
-    main.animation-fade(ng-view)
-
-
-    footer
-        ul
-          li Terms of Use
-          li Privacy Policy
-          li Disclaimer
+    main
+      header(ui-view="header")
+      main.content.animation-fade(ui-view='')
+      footer(ui-view="footer")
 
 
   block bottom-scripts
     mixin js-lib("lodash")
-
     mixin app-controller("main")

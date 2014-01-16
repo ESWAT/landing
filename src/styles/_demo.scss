@@ -1,0 +1,33 @@
+
+.view-demo {
+    $header-height: 100px;
+    $footer-height: 50px;
+
+    header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: $header-height;
+    }
+
+    main {
+        position: absolute;
+        top: $header-height;
+        bottom: $footer-height;
+        right: 0;
+        left: 0;
+    }
+
+    footer {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: $footer-height;
+    }
+
+    .view-progress {
+        border: 1px solid yellow;
+    }
+}
