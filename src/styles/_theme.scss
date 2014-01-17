@@ -2,11 +2,14 @@ $black: #232323;
 $light-grey: #95a0a5;
 $yellow: #ffc928;
 $white: #fff;
+$blue: #ddeeff;
+
+$font-stack: 'Open Sans', sans-serif;
+
 
 html {
     color: $light-grey;
-    font-family: 'Open Sans', sans-serif;
-    -webkit-font-smoothing: antialiased;
+    font-family: $font-stack;
     font-weight: 400;
 }
 
@@ -16,14 +19,6 @@ h1 {
 
 h2 {
     font-size: 18px;
-}
-
-.signup-form span {
-    color: $light-grey;
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
 }
 
 a {
@@ -39,4 +34,45 @@ a {
     line-height: 66px;
     text-align: center;
     text-transform: uppercase;
+}
+
+
+label {
+    @include transition(background 0.2s);
+    color: $light-grey;
+    background: rgba($white, 0.9);
+
+    span {
+        @include transition(color 0.2s);
+        color: $light-grey;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    input {
+        background: transparent;
+        border: none;
+
+        font-family: $font-stack;
+        -webkit-font-smoothing: antialiased;
+        color: $black;
+        font-size: 14px;
+        font-weight: 400;
+
+        @include placeholder {
+            font-family: $font-stack;
+            -webkit-font-smoothing: antialiased;
+            color: rgba($light-grey, 0.7);
+            font-weight: 400;
+        }
+    }
+
+    &.focus{
+        background: $blue;
+        span {
+            color: $black;
+        }
+    }
 }

@@ -15,16 +15,14 @@
         margin-top: -($form-height/2);
         margin-left: -($form-width/2);
 
+        // @include box-shadow(0px 0px 100px rgba(black, 0.1));
     }
 
     label {
         width: 220px;
         height: 66px;
-        background: #fff;
-        border-bottom: 1px solid #eee;
         display: inline-block;
-
-        transition: 0.2s;
+        border-bottom: 1px solid #eee;
 
         span {
             margin: 12px 0 0 14px;
@@ -33,30 +31,6 @@
 
         input {
             margin: 8px 0 0 14px;
-            background: transparent;
-            border: none;
-            outline: none;
-
-            font-family: 'Open Sans', sans-serif;
-            -webkit-font-smoothing: antialiased;
-            color: $black;
-            font-size: 14px;
-            font-weight: 400;
-
-            @mixin placeholder {
-                font-family: 'Open Sans', sans-serif;
-                -webkit-font-smoothing: antialiased;
-                color: #ccc;
-                font-weight: 400;    
-            }
-        }
-
-        &.focus{
-            background: #ddeeff;
-
-            span {
-                color: $black;
-            }
         }
     }
 
@@ -69,7 +43,7 @@
     }
 
     label.full-width {
-        width: 440px;
+        width: 100%;
     }
 
     .btn {

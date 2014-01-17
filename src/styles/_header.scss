@@ -1,0 +1,26 @@
+
+.view-header {
+    background: white;
+
+    .logo {
+        height: $header-height;
+        width:  $header-height;
+        position: absolute;
+
+        img {
+            position: absolute;
+            max-height: 30px;
+            top: 10px;
+            left: 10px;
+        }
+    }
+
+    nav {
+        position: absolute;
+        left: $header-height;
+        top: 15px;
+        li {
+            display: inline-block;
+        }
+    }
+}

@@ -7,5 +7,4 @@ app.controller 'MainController', ($rootScope, $scope, $animate) ->
         $scope.isDemoFlow = state.name.indexOf('root.demo') is 0
 
 
-
 app.controller 'DemoController', ->

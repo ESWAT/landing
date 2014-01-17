@@ -1,3 +1,4 @@
+
 app.directive('signupForm', function() {
     return {
         restrict: 'C',
@@ -11,7 +12,7 @@ app.directive('signupForm', function() {
                     var $label = $input.parent();
                     var method = $input.is(":focus")? 'addClass' : 'removeClass';
                     $label[method](focusedClass);
-                }                
+                }
             })('focus');
 
             $inputs.on('focus', setLabelFocus);
@@ -21,81 +22,60 @@ app.directive('signupForm', function() {
 });
 
 
-app.directive('viewDemoSignup', function($window) {
+app.directive('viewDemoSignup', function(Utils) {
     return {
         restrict: 'C',
         link: function(scope, element) {
-            var $element = $('body');
 
-            function erf(x) {
-                // constants
-                var a1 =  0.254829592;
-                var a2 = -0.284496736;
-                var a3 =  1.421413741;
-                var a4 = -1.453152027;
-                var a5 =  1.061405429;
-                var p  =  0.3275911;
+            var $body = $('body')
+              , $element = $(element)
+              , $parallaxElements = {
+                    mountains: $element.find('.image-mountains'),
+                    lines:     $element.find('.image-lines'),
+                    form:      $element.find('.signup-form')
+                };
 
-                // Save the sign of x
-                var sign = x < 0 ? -1 : 1;
-                x = Math.abs(x);
-
-                // A&S formula 7.1.26
-                var t = 1.0/(1.0 + p*x);
-                var y = 1.0 - (((((a5*t + a4)*t) + a3)*t + a2)*t + a1)*t*Math.exp(-x*x);
-
-                return sign*y;
-            }
-
-            var dampen = function(position) {
-                var fn = function(a) {
-                    return erf(a);
-                } 
+            var dampen = function(position, sauce) {
                 return {
-                    x: fn(position.x),
-                    y: fn(position.y)
+                    x: -Utils.erf(position.x) / 30 * sauce,
+                    y: -Utils.erf(position.y) / 30 * sauce
                 };
             };
 
-            var parallaxElement = function($el, dampeningFactor) {
+            var stringify = function(position) {
+                return {
+                    x: (position.x * 100) + "%",
+                    y: (position.y * 100) + "%"
+                };
+            };
+
+            var parallax = function(sauce, $element) {
                 return function (position) {
-                    position = {
-                        x: position.x - 0.5,
-                        y: position.y - 0.5
-                    }
-                    position = dampen(position);
-                    position = {
-                        x: -(position.x / 30 * 100 * dampeningFactor) + "%",
-                        y: -(position.y / 30 * 100 * dampeningFactor) + "%"
-                    }
-                    var transform = "translate(" + position.x + "," + position.y + ")";
-                    $el.css({
-                        "-webkit-transform": transform
+                    position = dampen(position, sauce);
+                    position = stringify(position);
+                    $element.css({
+                        "transform":"translate("+ position.x +","+ position.y +")"
                     });
                 }
             };
 
-            var normalizeMousePosition = function(event) {
+            var normalize = function(event) {
                 var offset = $element.offset()
                   , width  = $element.width()
                   , height = $element.height();
                 return {
-                    x: (event.clientX - offset.left) / width,
-                    y: (event.clientY - offset.top) / height
+                    x: ((event.clientX - offset.left) / width) - 0.5,
+                    y: ((event.clientY - offset.top) / height) - 0.5
                 };
             };
 
-            var $els = {
-                mountains: $element.find('.image-mountains'),
-                lines:     $element.find('.image-lines'),
-                form:      $element.find('.signup-form')
-            };
-
-            $element.on('mousemove', function(event) {
-                var position = normalizeMousePosition(event);
-                parallaxElement($els.mountains, 3)(position);
-                parallaxElement($els.lines, 1.5)(position);
-                parallaxElement($els.form, 1)(position); 
+            $body.on('mousemove', function(event) {
+                var position = normalize(event);
+                [   parallax(2.8, $parallaxElements.mountains)
+                ,   parallax(1.5, $parallaxElements.lines)
+                ,   parallax(1, $parallaxElements.form)
+                ]
+                .forEach(function(fn) { fn(position) });
             });
         }
     }

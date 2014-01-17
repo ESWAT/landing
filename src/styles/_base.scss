@@ -5,7 +5,7 @@ html, body {
 }
 
 
-$header-height: 150px;
+$header-height: 50px;
 $footer-height: 75px;
 $slide-transition-speed: 0.7s;
 
@@ -41,23 +41,21 @@ body > .offscreen {
 
 
 body > main {
+    background: #eee;
 
     & > header {
         top: 0;
         height: $header-height;
-        background: cyan;
     }
 
     & > .content {
         top: $header-height;
         bottom: $footer-height;
-        background: green;
     }
 
     & > footer {
         height: $footer-height;
         bottom: 0;
-        background: lime;
     }
 }
 
