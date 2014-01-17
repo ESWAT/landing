@@ -1,4 +1,33 @@
 
 article.view.view-demo-signup
 
-    h1 View Demo Signup
+    .background-images
+        img.image-mountains(src="/assets/images/mountains.svg")
+        img.image-lines(src="/assets/images/lines.svg")
+
+    .signup-form
+        label.border-right
+            span First Name
+            input(placeholder='Johnny')
+
+        label
+            span Last Name
+            input(placeholder='Appleseed')
+
+        label.full-width
+            span Company
+            input(placeholder='Appleseed Inc.')
+
+        label.full-width
+            span Phone Number
+            input(placeholder='1 (123) 456-7890', type="telephone")
+
+        label.border-right
+            span E-mail
+            input(placeholder='you@mail.com')
+
+        label
+            span Password
+            input(placeholder='secretcode', type="password")
+
+        .btn Create Account

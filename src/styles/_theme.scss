@@ -1,11 +1,13 @@
-
-$black: #181c1e;
-
+$black: #232323;
+$light-grey: #95a0a5;
+$yellow: #ffc928;
+$white: #fff;
 
 html {
-    font-family: 'Open Sans';
+    color: $light-grey;
+    font-family: 'Open Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
     font-weight: 400;
-    color: $black;
 }
 
 h1 {
@@ -16,8 +18,25 @@ h2 {
     font-size: 18px;
 }
 
+.signup-form span {
+    color: $light-grey;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
 a {
     &:hover {
         text-decoration: underline;
     }
+}
+
+.btn {
+    color: $white;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 66px;
+    text-align: center;
+    text-transform: uppercase;
 }

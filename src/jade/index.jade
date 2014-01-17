@@ -31,6 +31,7 @@ html(lang='en', ng-app="42.landing")
       mixin app-core("router")
 
 
+
   body(ng-controller="MainController", ng-class="{'demo-flow':isDemoFlow}")
 
     section.offscreen(ui-view='offscreen')
@@ -42,5 +43,8 @@ html(lang='en', ng-app="42.landing")
 
 
   block bottom-scripts
+
+    mixin app-directive("signup")
+
     mixin js-lib("lodash")
     mixin app-controller("main")

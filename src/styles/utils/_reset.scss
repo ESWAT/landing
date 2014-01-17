@@ -13,6 +13,9 @@
 
     // Making the box model not suck
     @include box-sizing(border-box);
+
+    // No select for you
+    @include user-select(none);
 }
 
 a {
