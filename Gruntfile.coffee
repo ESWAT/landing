@@ -169,6 +169,12 @@ module.exports = (grunt) ->
                 files: ['<%= dirs.src %>/styles/**/*']
                 tasks: ['compass']
 
+            images:
+                files: ['<%= dirs.src %>/images/**/*']
+                tasks: [
+                    'copy:images'
+                ]
+
 
     grunt.task.registerTask 'banner', 'prints the banner', ->
         grunt.log.write grunt.file.read('./banner.txt')
