@@ -1,6 +1,8 @@
 $black: #232323;
+$medium-grey: #73838e;
 $light-grey: #95a0a5;
 $yellow: #ffc928;
+$light-yellow: lighten($yellow, 6%);
 $white: #fff;
 $blue: #ddeeff;
 
@@ -14,33 +16,40 @@ html {
 }
 
 h1 {
-    font-size: 20px;
+    font-size: 38px;
+    font-weight: 200;
 }
 
 h2 {
     font-size: 18px;
 }
 
-a {
-    &:hover {
-        text-decoration: underline;
-    }
-}
+a.btn {
+    width: 220px;
+    height: 66px;
+    background: $yellow;
 
-.btn {
+    cursor: pointer;
+    transition: 0.2s;
+
     color: $white;
     font-size: 14px;
     font-weight: 700;
     line-height: 66px;
     text-align: center;
     text-transform: uppercase;
+    display: block;
+}
+
+a.btn:hover {
+    background: $light-yellow;
 }
 
 
 label {
     @include transition(background 0.2s);
     color: $light-grey;
-    background: rgba($white, 0.9);
+    background: $white;
 
     span {
         @include transition(color 0.2s);

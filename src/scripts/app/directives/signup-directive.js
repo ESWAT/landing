@@ -1,4 +1,3 @@
-
 app.directive('signupForm', function() {
     return {
         restrict: 'C',
@@ -21,7 +20,6 @@ app.directive('signupForm', function() {
     }
 });
 
-
 app.directive('viewDemoSignup', function(Utils) {
     return {
         restrict: 'C',
@@ -38,7 +36,7 @@ app.directive('viewDemoSignup', function(Utils) {
             var dampen = function(position, sauce) {
                 return {
                     x: -Utils.erf(position.x) / 30 * sauce,
-                    y: -Utils.erf(position.y) / 30 * sauce
+                    y: -Utils.erf(position.y) / 60 * sauce
                 };
             };
 
@@ -71,11 +69,12 @@ app.directive('viewDemoSignup', function(Utils) {
 
             $body.on('mousemove', function(event) {
                 var position = normalize(event);
-                [   parallax(2.8, $parallaxElements.mountains)
+                [   parallax(2.25, $parallaxElements.mountains)
                 ,   parallax(1.5, $parallaxElements.lines)
                 ,   parallax(1, $parallaxElements.form)
                 ]
                 .forEach(function(fn) { fn(position) });
+
             });
         }
     }

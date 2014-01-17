@@ -1,33 +1,35 @@
 
 article.view.view-demo-signup
 
-    .background-images
-        img.image-mountains(src="/assets/images/mountains.svg")
-        img.image-lines(src="/assets/images/lines.svg")
+    section.signup-form-container
 
-    .signup-form
-        label.border-right
-            span First Name
-            input(placeholder='Johnny')
+        .background-images
+            img.image-mountains(src="/assets/images/mountains.svg")
+            img.image-lines(src="/assets/images/lines.svg")
 
-        label
-            span Last Name
-            input(placeholder='Appleseed')
+        form.signup-form
+            label.border-right
+                span First Name
+                input(placeholder='Johnny')
 
-        label.full-width
-            span Company
-            input(placeholder='Appleseed Inc.')
+            label
+                span Last Name
+                input(placeholder='Appleseed')
 
-        label.full-width
-            span Phone Number
-            input(placeholder='1 (123) 456-7890', type="telephone")
+            label.full-width
+                span Company
+                input(placeholder='Appleseed Inc.')
 
-        label.border-right
-            span E-mail
-            input(placeholder='you@mail.com')
+            label.full-width
+                span Phone Number
+                input(placeholder='1 (123) 456-7890', type="telephone")
 
-        label
-            span Password
-            input(placeholder='secretcode', type="password")
+            label.border-right
+                span E-mail
+                input(placeholder='you@mail.com')
 
-        .btn Create Account
+            label
+                span Password
+                input(placeholder='secretcode', type="password")
+
+            a.btn(ui-sref="root.demo.upload") Create Account

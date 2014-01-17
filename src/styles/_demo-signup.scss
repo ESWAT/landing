@@ -3,19 +3,24 @@
     $form-width: 440px;
     $form-height: 66px * 5;
 
-    border: 1px solid #b4d455;
+    .signup-form-container {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: $form-height;
+    }
 
     .signup-form {
-        width: 440px;
-        font-size: 0;
-
         position: absolute;
         top: 50%;
+        bottom: 0;
         left: 50%;
+        width: 440px;
         margin-top: -($form-height/2);
         margin-left: -($form-width/2);
 
-        // @include box-shadow(0px 0px 100px rgba(black, 0.1));
+        font-size: 0;
     }
 
     label {
@@ -34,24 +39,13 @@
         }
     }
 
-    label:nth-child(1n+5) {
-        border-bottom: none;
-    }
+    label:nth-child(1n+5) { border-bottom: none; }
 
-    label.border-right {
-        border-right: 1px solid #eee;
-    }
+    label.border-right { border-right: 1px solid #eee;}
 
-    label.full-width {
-        width: 100%;
-    }
+    label.full-width { width: 100%; }
 
-    .btn {
-        width: 100%;
-        height: 66px;
-        background: $yellow;
-        cursor: pointer;
-    }
+    a.btn { width: $form-width; }
 
     .background-images {
         position: absolute;
@@ -61,6 +55,7 @@
         bottom: 0;
         max-width: 900px;
         margin: 0 auto;
+        bottom: 0;
 
         img {
             position: absolute;
