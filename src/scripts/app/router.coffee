@@ -35,3 +35,7 @@ app.config ($stateProvider, $urlRouterProvider) ->
     .state 'root.demo.upload',
         url: '^/demo/upload'
         templateUrl:'partials/demo/upload.html'
+
+    .state 'root.demo.upload-choice',
+        url: '^/demo/upload/choice'
+        templateUrl:'partials/demo/upload-choice.html'

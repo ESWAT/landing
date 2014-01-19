@@ -1,3 +1,4 @@
+
 .view-demo-signup {
 
     $form-width: 440px;
@@ -21,31 +22,31 @@
         margin-left: -($form-width/2);
 
         font-size: 0;
-    }
 
-    label {
-        width: 220px;
-        height: 66px;
-        display: inline-block;
-        border-bottom: 1px solid #eee;
+        label {
+            width: 220px;
+            height: 66px;
+            display: inline-block;
+            border-bottom: 1px solid #eee;
 
-        span {
-            margin: 12px 0 0 14px;
-            display: block;
+            span {
+                margin: 12px 0 0 14px;
+                display: block;
+            }
+
+            input {
+                margin: 8px 0 0 14px;
+            }
         }
 
-        input {
-            margin: 8px 0 0 14px;
-        }
+        label:nth-child(1n+5) { border-bottom: none; }
+
+        label.border-right { border-right: 1px solid #eee;}
+
+        label.full-width { width: 100%; }
+
+        a.btn { width: $form-width; }
     }
-
-    label:nth-child(1n+5) { border-bottom: none; }
-
-    label.border-right { border-right: 1px solid #eee;}
-
-    label.full-width { width: 100%; }
-
-    a.btn { width: $form-width; }
 
     .background-images {
         position: absolute;

@@ -1,8 +1,11 @@
+
 $black: #232323;
 $medium-grey: #73838e;
 $light-grey: #95a0a5;
+$default-grey: #ccc;
 $yellow: #ffc928;
 $light-yellow: lighten($yellow, 6%);
+$dark-yellow: darken($yellow, 8%);
 $white: #fff;
 $blue: #ddeeff;
 
@@ -10,7 +13,8 @@ $font-stack: 'Open Sans', sans-serif;
 
 
 html {
-    color: $light-grey;
+    color: $medium-grey;
+    font-size: 14px;
     font-family: $font-stack;
     font-weight: 400;
 }
@@ -20,8 +24,12 @@ h1 {
     font-weight: 200;
 }
 
-h2 {
-    font-size: 18px;
+p { line-height: 24px; }
+
+p.hero {
+    margin: 50px 0 100px 0;
+    font-size: 16px;
+    line-height: 28px;
 }
 
 a.btn {
@@ -39,10 +47,8 @@ a.btn {
     text-align: center;
     text-transform: uppercase;
     display: block;
-}
 
-a.btn:hover {
-    background: $light-yellow;
+    &:hover { background: $light-yellow; }
 }
 
 
@@ -73,15 +79,14 @@ label {
         @include placeholder {
             font-family: $font-stack;
             -webkit-font-smoothing: antialiased;
-            color: rgba($light-grey, 0.7);
+            color: $default-grey;
             font-weight: 400;
         }
     }
 
     &.focus{
         background: $blue;
-        span {
-            color: $black;
-        }
+
+        span { color: $black; }
     }
 }
