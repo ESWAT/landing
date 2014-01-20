@@ -24,6 +24,14 @@ h1 {
     font-weight: 200;
 }
 
+h2 {
+    color: $light-grey;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
 p { line-height: 24px; }
 
 p.hero {
@@ -38,7 +46,7 @@ a.btn {
     background: $yellow;
 
     cursor: pointer;
-    transition: 0.2s;
+    transition: 0.3s;
 
     color: $white;
     font-size: 14px;
@@ -53,12 +61,12 @@ a.btn {
 
 
 label {
-    @include transition(background 0.2s);
+    @include transition(background 0.3s);
     color: $light-grey;
     background: $white;
 
     span {
-        @include transition(color 0.2s);
+        @include transition(color 0.3s);
         color: $light-grey;
         font-size: 10px;
         font-weight: 700;
