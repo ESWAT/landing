@@ -1,5 +1,6 @@
 
 $black: #232323;
+$navy: #1c232d;
 $medium-grey: #73838e;
 $light-grey: #95a0a5;
 $default-grey: #ccc;
@@ -19,34 +20,27 @@ html {
     font-weight: 400;
 }
 
-h1 {
-    font-size: 38px;
-    font-weight: 200;
+a, a:visited {
+    color: inherit;
+    text-decoration: none;
 }
 
-h2 {
-    color: $light-grey;
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-p { line-height: 24px; }
-
-p.hero {
-    margin: 50px 0 100px 0;
-    font-size: 16px;
-    line-height: 28px;
+.stand-alone {
+    padding: 0 0 2px;
+    border-bottom: 2px solid $light-grey;
+    cursor: pointer;
 }
 
 a.btn {
     width: 220px;
     height: 66px;
     background: $yellow;
+    margin: 0 auto;
+    padding: 0;
+    border: 0;
 
     cursor: pointer;
-    transition: 0.3s;
+    @include transition(background 0.3s);
 
     color: $white;
     font-size: 14px;
@@ -59,6 +53,26 @@ a.btn {
     &:hover { background: $light-yellow; }
 }
 
+h1 {
+    font-size: 38px;
+    font-weight: 200;
+}
+
+h2 {
+    color: $light-grey;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+p { line-height: 24px; }
+
+p.hero {
+    margin: 50px 0 100px 0;
+    font-size: 16px;
+    line-height: 28px;
+}
 
 label {
     @include transition(background 0.3s);

@@ -1,5 +1,7 @@
 .animation-fade {
 
+    // background: green !important;
+    
     &.ng-enter, &.ng-leave {
         @include transition(all .33s cubic-bezier(0.694, 0.0482, 0.335, 1));
     }
