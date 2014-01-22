@@ -1,0 +1,16 @@
+.view-progress-success {
+    $section-width: 600px;
+    $section-height: 340px;
+
+    section {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: $section-width;
+        height: $section-height;
+        margin-top: -($section-height/2);
+        margin-left: -($section-width/2);
+
+        text-align: center;
+    }
+}

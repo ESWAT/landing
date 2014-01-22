@@ -43,3 +43,7 @@ app.config ($stateProvider, $urlRouterProvider) ->
     .state 'root.demo.upload-files',
         url: '^/demo/upload/files'
         templateUrl:'partials/demo/upload-files.html'
+
+    .state 'root.demo.upload-sucess',
+        url: '^/demo/upload/sucess'
+        templateUrl:'partials/demo/upload-success.html'
