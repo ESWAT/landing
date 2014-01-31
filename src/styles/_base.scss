@@ -5,7 +5,7 @@ html, body {
 }
 
 
-$header-height: 50px;
+$header-height: 120px;
 $footer-height: 75px;
 $slide-transition-speed: 0.7s;
 
@@ -41,17 +41,18 @@ body > .offscreen {
 
 
 body > main {
-    background: #eee;
 
     & > header {
+        z-index: 1;
         top: 0;
         height: $header-height;
     }
 
-    & > .content {
-        top: $header-height;
-        bottom: $footer-height;
-    }
+    // Safe keeps for Nick
+    // & > .content {
+    //     top: $header-height;
+    //     bottom: $footer-height;
+    // }
 
     & > footer {
         height: $footer-height;

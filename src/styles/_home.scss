@@ -1,0 +1,31 @@
+.view-home {
+
+    section {
+        position: relative;
+        width: 100%;
+
+        article {
+            color: $white;
+        }
+    }
+
+    section.hero {
+        position: absolute;
+        top: 0;
+        height: 600px;
+        background: #8fc9e0;
+
+        .wrapper {
+            .key-points {
+                position: absolute;
+                top: 222px;
+            }
+
+            img {
+                position: absolute;
+                top: 198px;
+                right: -210px;
+            }
+        }
+    }
+}
