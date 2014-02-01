@@ -41,3 +41,26 @@
         }
     }
 }
+
+
+
+.animation-offscreen {
+    &.ng-enter, &.ng-leave {
+        @include transition(all 0.7s);
+    }
+
+    // &.ng-enter {
+    //     @include transform(translate3d(0,-100%,0));
+    //     &.ng-enter-active {
+    //         @include transform(translate3d(0,0,0));
+    //     }
+    // }
+
+    // &.ng-leave {
+    //     @include transform(translate3d(0,0,0));
+    //     &.ng-leave-active {
+    //         @include transform(translate3d(0,-100%,0));
+    //     }
+    // }
+}
+

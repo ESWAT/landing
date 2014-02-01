@@ -1,7 +1,19 @@
 
-.view-header {
+body.demo-flow .view-header {
+    background: $white;
+    a {
+        color: $medium-grey !important;
+    }
+}
 
+
+.view-header {
     $nav-width: 1000px;
+    background: #8fc9e0;
+    
+    a {
+        color: $white;
+    }
 
     nav {
         position: absolute;
@@ -14,6 +26,7 @@
             width:  $header-height;
         }
 
+
         ul {
             position: absolute;
             top: 0;
@@ -25,8 +38,6 @@
             li {
                 margin: 0 20px;
                 display: inline-block;
-
-                color: $white;
                 font-size: 11px;
                 font-weight: 600;
                 letter-spacing: $letter-spacing;
@@ -55,7 +66,7 @@
             &.account {
                 right: 0;
 
-                a.reg-btn { margin: 0 0 0 -19px; }
+                a.reg-btn { margin: 0 -20px 0 -19px; }
             }
         }
     }

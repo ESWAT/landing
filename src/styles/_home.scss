@@ -4,27 +4,43 @@
         position: relative;
         width: 100%;
 
-        article {
-            color: $white;
-        }
-    }
+        &.hero {
+            height: 600px;
+            background: #8fc9e0;
 
-    section.hero {
-        position: absolute;
-        top: 0;
-        height: 600px;
-        background: #8fc9e0;
+            .wrapper {
+                .hero-points {
+                    position: absolute;
+                    top: 222px;
 
-        .wrapper {
-            .key-points {
-                position: absolute;
-                top: 222px;
+                    color: $white;
+
+                    a { color: $white; }
+                }
+
+                img {
+                    position: absolute;
+                    top: 198px;
+                    right: -210px;
+                }
             }
+        }
 
-            img {
-                position: absolute;
-                top: 198px;
-                right: -210px;
+        &.key {
+            .wrapper {
+                font-size: 0;
+
+                .key-points {
+                    width: 300px;
+                    margin: 100px 25px;
+                    display: inline-block;
+                    vertical-align: top;
+
+                    font-size: 14px;
+
+                    &:first-child { margin: 100px 25px 0 0; }
+                    &:last-child { margin: 100px 0 0 25px; }
+                }
             }
         }
     }

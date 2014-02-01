@@ -2,45 +2,48 @@
 html, body {
     height: 100%;
     overflow: hidden;
+    width: 100%;
 }
 
-
 $header-height: 120px;
-$footer-height: 75px;
+$footer-height: 0;
 $slide-transition-speed: 0.7s;
 
 
-body > *, body > main > * {
-    position: absolute;
-    left: 0;
-    right: 0;
-}
-
 body > * {
-    @include transition(top $slide-transition-speed);
+    position: absolute;
+    left: 0; right: 0;
 }
 
 
-body > main {
-    top: 0;
-    height: 100%;
-}
-
-
-body.demo-flow > main {
+body.demo-flow > .onscreen {
     top: calc(100% - #{$header-height});
+    & > main.animation-fade {
+        // @include transition-delay($slide-transition-speed);
+    }
 }
 
 
 body > .offscreen {
-    background: #f5f2f0;
-    top: 0;
     z-index: 0;
+    top: 0;
     bottom: $header-height;
+    background: $off-white;
 }
 
 
-body > main {
+body > .onscreen {
+    @include transition(top $slide-transition-speed);
+    top: 0;
+    min-height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    & > header, & > main {
+        position: absolute;
+        right: 0;
+        left: 0;
+    }
 
     & > header {
         z-index: 1;
@@ -48,18 +51,15 @@ body > main {
         height: $header-height;
     }
 
-    // Safe keeps for Nick
-    // & > .content {
-    //     top: $header-height;
-    //     bottom: $footer-height;
-    // }
+    & > main {
+        top: 0; bottom: 0;
+    }
 
     & > footer {
         height: $footer-height;
-        bottom: 0;
+        display: none;
     }
 }
-
 
 .view {
     position: absolute;

@@ -31,14 +31,13 @@ html(lang='en', ng-app="42.landing")
       mixin app-core("router")
 
 
-
   body(ng-controller="MainController", ng-class="{'demo-flow':isDemoFlow}")
 
-    section.offscreen(ui-view='offscreen')
+    section.offscreen.animation-offscreen(ui-view='offscreen')
 
-    main
+    section.onscreen
       header(ui-view="header")
-      main.content.animation-fade(ui-view='')
+      main.content(ui-view='')
       footer(ui-view="footer")
 
 
