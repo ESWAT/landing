@@ -24,10 +24,8 @@ html {
 
 
 .wrapper {
-    position: absolute;
-    left: 50%;
     width: $wrapper-width;
-    margin-left: -($wrapper-width/2);
+    margin: 0 auto;
 }
 
 a, a:visited {
@@ -84,8 +82,8 @@ $letter-spacing: 1px;
 }
 
 h1 {
-    font-size: 38px;
-    font-weight: 400;
+    font-size: 34px;
+    font-weight: 300;
 }
 
 h2 {

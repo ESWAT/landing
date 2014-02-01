@@ -21,7 +21,8 @@
                 img {
                     position: absolute;
                     top: 198px;
-                    right: -210px;
+                    left: 50%;
+
                 }
             }
         }
@@ -31,17 +32,21 @@
                 font-size: 0;
 
                 .key-points {
-                    width: 300px;
-                    margin: 100px 25px;
+                    width: 304px;
+                    margin: 100px 22px;
                     display: inline-block;
                     vertical-align: top;
 
                     font-size: 14px;
 
-                    &:first-child { margin: 100px 25px 0 0; }
-                    &:last-child { margin: 100px 0 0 25px; }
+                    &:first-child { margin-left: 0; }
+                    &:last-child { margin-right: 0; }
                 }
             }
+        }
+
+        &.feature {
+            height: 500px;
         }
     }
 }
