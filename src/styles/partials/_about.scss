@@ -1,0 +1,30 @@
+.view-team {
+    .hero {
+        height: 420px;
+        background: steelblue;
+
+        .hero-points {
+            position: relative;
+            text-align: center;
+            top: 180px;
+            color: $white;
+
+            p {
+                width: auto;
+            }
+        }
+    }
+
+    .two-col-first, .two-col-second {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .two-col-first {
+        width: 40%;
+        margin: 0 10% 0 0;
+    }
+
+    .two-col-second {
+    }
+}
