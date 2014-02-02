@@ -16,10 +16,10 @@ app.config ($stateProvider, $urlRouterProvider) ->
         views:
             '@':templateUrl:'partials/home.html'
 
-    .state 'root.team',
-        url: '^/team'
+    .state 'root.about',
+        url: '^/about'
         views:
-            '@':templateUrl:'partials/team.html'
+            '@':templateUrl:'partials/about.html'
 
     .state 'root.demo',
         abstract: true

@@ -1,9 +1,11 @@
 
 @import "partials/header";
+@import "partials/home";
 @import "partials/about";
-@import "partials/demo";
-@import "partials/demo-signup";
-@import "partials/demo-upload";
-@import "partials/demo-upload-choice";
-@import "partials/demo-upload-files";
-@import "partials/demo-upload-success";
+@import "partials/demo/demo";
+@import "partials/demo/demo-progress";
+@import "partials/demo/demo-signup";
+@import "partials/demo/demo-upload";
+@import "partials/demo/demo-upload-choice";
+@import "partials/demo/demo-upload-files";
+@import "partials/demo/demo-upload-success";

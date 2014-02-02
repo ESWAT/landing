@@ -1,38 +1,34 @@
 
+$nav-width: 1000px;
+$letter-spacing: 1px;
+
+
 body.demo-flow .view-header {
     background: $white;
-    a {
-        color: $medium-grey !important;
-    }
+    a { color: $medium-grey !important; }
 }
 
 
 .view-header {
-    $nav-width: 1000px;
-    
-    a {
-        color: $white;
-    }
-
     nav {
         position: absolute;
         left: 50%;
-        margin-left: -($nav-width/2);
         width: $nav-width;
+        margin-left: -($nav-width/2);
+
+        color: $white;
 
         .logo {
-            height: $header-height;
             width:  $header-height;
+            height: $header-height;
         }
-
 
         ul {
             position: absolute;
             top: 0;
             display: inline-block;
-            font-size: 0;
 
-            $letter-spacing: 1px;
+            font-size: 0;
 
             li {
                 margin: 0 20px;
@@ -43,6 +39,8 @@ body.demo-flow .view-header {
                 line-height: 120px;
                 text-indent: $letter-spacing;
                 text-transform: uppercase;
+
+                a { color: inherit; }
             }
 
             &.main {
@@ -50,10 +48,9 @@ body.demo-flow .view-header {
                 margin-left: -(450px/2);
 
                 li a {
+                    @include transition(0.3s);
                     border-bottom: 2px solid transparent;
                     padding: 0 0 6px;
-
-                    @include transition(0.3s);
 
                     &:hover, .selected {
                         padding: 0 0 3px;
@@ -65,7 +62,7 @@ body.demo-flow .view-header {
             &.account {
                 right: 0;
 
-                a.reg-btn { margin: 0 -20px 0 -19px; }
+                li:last-child { margin: 0 0 0 1px }
             }
         }
     }

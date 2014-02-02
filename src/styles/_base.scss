@@ -1,24 +1,27 @@
 
-html, body {
-    height: 100%;
-    overflow: hidden;
-    width: 100%;
-}
-
 $header-height: 120px;
 $footer-height: 0;
 $slide-transition-speed: 0.7s;
 
 
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+
 body > * {
     position: absolute;
-    left: 0; right: 0;
+    left: 0;
+    right: 0;
 }
 
 
 body.demo-flow > .onscreen {
     top: calc(100% - #{$header-height});
     & > main.animation-fade {
+        // Fix this later Nick
         // @include transition-delay($slide-transition-speed);
     }
 }
@@ -60,6 +63,7 @@ body > .onscreen {
         display: none;
     }
 }
+
 
 .view {
     position: absolute;

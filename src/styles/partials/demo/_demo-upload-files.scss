@@ -1,8 +1,11 @@
+
+$section-width: 600px;
+$section-height: 340px;
+$modal-width: 500px;
+$modal-height: 540px;
+
+
 .view-demo-upload-files {
-
-    $section-width: 600px;
-    $section-height: 340px;
-
     section {
         position: absolute;
         top: 50%;
@@ -13,8 +16,6 @@
         margin-left: -($section-width/2);
 
         text-align: center;
-
-        .note { margin: 25px 0 0; }
     }
 
     .modal {
@@ -28,9 +29,6 @@
             background: rgba(255, 255, 255, 0.5);
             cursor: pointer;
         }
-
-        $modal-width: 500px;
-        $modal-height: 540px;
 
         .modal-content {
             position: absolute;
@@ -50,17 +48,14 @@
                 border-bottom: 1px solid #eee;
                 display: inline-block;
 
-                h2 { margin: 12px 0 0; }
-
-                p {
-                    margin: 8px 0 0;
-                    color: $default-grey;
-                }
-
                 &:last-child {
                     border-bottom: none;
                     margin: 0 0 60px;
                 }
+
+                h3 { margin: 12px 0 0; }
+
+                p { margin: 6px 0 0; }
             }
         }
     }

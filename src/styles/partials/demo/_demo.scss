@@ -1,0 +1,33 @@
+
+$footer-height: 40%;
+$progress-width: 1000px;
+$progress-height: 80px;
+
+
+.view-demo {
+
+    // Typography
+
+    h1 { color: $dark-grey; }
+
+    p.note { margin: 30px 0 0 0; }
+
+
+    // Layout
+
+    main {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: $footer-height;
+        left: 0;
+    }
+
+    footer {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: $footer-height;
+    }
+}

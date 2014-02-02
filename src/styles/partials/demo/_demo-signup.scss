@@ -1,9 +1,8 @@
+$form-width: 440px;
+$form-height: 66px * 5;
+
 
 .view-demo-signup {
-
-    $form-width: 440px;
-    $form-height: 66px * 5;
-
     .signup-form-container {
         position: absolute;
         right: 0;
@@ -34,9 +33,7 @@
                 display: block;
             }
 
-            input {
-                margin: 8px 0 0 14px;
-            }
+            input { margin: 8px 0 0 14px; }
         }
 
         label:nth-child(1n+5) { border-bottom: none; }
@@ -45,7 +42,7 @@
 
         label.full-width { width: 100%; }
 
-        a.btn { width: $form-width; }
+        a.solid-btn { width: $form-width; }
     }
 
     .background-images {

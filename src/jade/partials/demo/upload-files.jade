@@ -1,28 +1,28 @@
+
 article.view.view-demo-upload-files
 
     section
         h1 Upload Your Files.
         p.hero Don’t worry about the format! Our support team will make sure your data integrates seamlessly with 42’s dashboard.
-        a.btn(ui-sref="root.demo.upload-sucess") Upload Files
+        a.solid-btn(ui-sref="root.demo.upload-sucess") Upload Files
         p.note
             | Check out the integration details
-            |  <a ng-click="modal.show()" class="stand-alone">here</a>.
-
+            |  <a ng-click="modal.show()" class="single-line">here</a>.
 
     modal(model="modal")
         h1 Integration Details
 
         ul
             li
-                h2 Customer Data
+                h3 Customer Data
                 p Customer_ID, Any Other Fields
             
             li
-                h2 Transation Data
+                h3 Transation Data
                 p Transaction_ID, Customer_ID, Timestamp
 
             li
-                h2 Transaction Item Data
+                h3 Transaction Item Data
                 p Transaction_ID, Cost, Any Other Item Fields
 
-        a.btn(ng-click="modal.hide()") Cool, Got it
+        a.solid-btn(ng-click="modal.hide()") Cool, Got it
