@@ -57,6 +57,7 @@ a, a:visited {
         border-radius: 3px;
         box-sizing: border-box;
 
+        color: inherit;
         font-size: 11px;
         font-weight: 600;
         letter-spacing: $letter-spacing;
@@ -77,7 +78,7 @@ a, a:visited {
 h1 {
     margin: 0 0 30px 0;
 
-    color: inherit;
+    color: $dark-grey;
     font-size: 34px;
     font-weight: 300;
     letter-spacing: 1px;
@@ -120,8 +121,18 @@ p {
 // Layout
 
 .wrapper {
+    position: absolute;
+    left: 50%;
     width: $wrapper-width;
-    margin: 0 auto;
+    margin-left: -($wrapper-width/2);
+}
+
+
+.hero-content {
+    p {
+        width: 335px;
+        margin: 0 0 80px 0;
+    }
 }
 
 

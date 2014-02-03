@@ -8,20 +8,12 @@
             height: 600px;
             background: #8fc9e0;
 
-            color: $white;
-
             .wrapper {
                 .hero-content {
                     position: absolute;
                     top: 222px;
 
-                    color: $white;
-
-                    p {
-                        color: inherit;
-                        width: 335px;
-                        margin: 0 0 80px 0;
-                    }
+                    h1, p, a { color: $white; }
                 }
 
                 img {
@@ -33,12 +25,14 @@
         }
 
         &.key {
+            height: 280px;
+
             .wrapper {
                 font-size: 0;
 
                 .key-content {
                     width: 304px;
-                    margin: 80px 22px;
+                    margin: 70px 22px;
                     display: inline-block;
                     vertical-align: top;
 
@@ -52,7 +46,26 @@
 
         &.feature {
             height: 500px;
+            background: #f7f7f7;
 
+            .wrapper {
+                .hero-content {
+                    position: absolute;
+                    top: 140px;
+
+                    color: $medium-grey;
+
+                    a { border: 1px solid $medium-grey; }
+                }
+            }
+        }
+
+        &.right {
+            background: $white;
+
+            .wrapper {
+                .hero-content { right: 0; }
+            }
         }
     }
 }
