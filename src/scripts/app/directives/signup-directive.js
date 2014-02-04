@@ -78,3 +78,16 @@ app.directive('viewDemoSignup', function(Utils) {
         }
     }
 });
+
+
+app.directive('revealer', function($window) {
+    return {
+        restrict: 'C',
+        link: function (scope, element) {
+            var $element = $(element);
+
+            // do the jqueryies
+
+        }
+    }
+});

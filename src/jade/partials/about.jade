@@ -6,7 +6,7 @@ article.view.view-about
                 h1 Awesome Team Is Awesome
                 p We were born this way. Deal with it.
 
-    section.two-col-contain.the-team
+    section.the-team
         .wrapper
             .section-heading
                 ul
@@ -14,10 +14,10 @@ article.view.view-about
                     li
                         h3 The Team
                     li.line
-            article.two-col-first.about-the-team
+            article.two-col.about-the-team
                 h1 Something about our awesome team and the cool work we do here
                 p Our team here is sooo cool. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nisi sem, ultricies eu facilisis id, commodo nec mauris. Etiam facilisis scelerisque libero, non rutrum justo suscipit ut. Fusce porttitor ligula lorem, et malesuada elit porta eget. Vestibulum suscipit vel eros a placerat. Fusce nisi sapien, viverra nec congue sit amet, hendrerit at massa. Sed adipiscing mauris libero, eleifend dapibus diam aliquet eu. Vestibulum vitae enim nec lectus iaculis lacinia ut sed lacus. Praesent quis odio fermentum, imperdiet urna eu, fermentum felis.
-            article.two-col-second.team-heads
+            article.two-col.team-heads
                 ul
                     li.team-head
                         img(src="http://placekitten.com/100/100")
@@ -46,15 +46,39 @@ article.view.view-about
 
                     li.team-head
                         img(src="http://placekitten.com/100/100")
-                        h4 Eddie Wang
-                        h3 Product Manager
-
-                    li.team-head
-                        img(src="http://placekitten.com/100/100")
-                        h4 Nicole Vulej
-                        h3 Communications
-
-                    li.team-head
-                        img(src="http://placekitten.com/100/100")
                         h4 Vithushan Jeyakumaran
                         h3 Badass Intern
+
+    section.social
+        .wrapper
+            ul
+                li
+                    a(ui-sref="https://twitter.com/42debut")
+                        p.icon-social-facebook
+                li
+                    a(ui-sref="https://twitter.com/42debut")
+                        p.icon-social-twitter
+                li
+                    a(ui-sref="https://twitter.com/42debut")
+                        p.icon-social-tumblr
+                li
+                    a(ui-sref="https://twitter.com/42debut")
+                        p.icon-social-github
+                li
+                    a(ui-sref="https://twitter.com/42debut")
+                        p.icon-mail
+
+    footer
+        .wrapper
+            article
+                h1 Know Your Data
+
+                a.outine-btn(ui-sref="root.demo.signup") Sign Up
+
+            nav
+                ul
+                    li: &copy; 2014 Lytik, Inc
+                    li: &#9679;
+                    li: a(ui-sref="root.home") Privacy Policy
+                    li: &#9679;
+                    li: a(ui-sref="root.home") Legal Notice

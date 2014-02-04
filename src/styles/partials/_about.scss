@@ -18,32 +18,20 @@
     }
 
 
-    .two-col-first, .two-col-second {
+    .two-col, .two-col {
+        position: relative;
         display: inline-block;
         vertical-align: top;
         width: 45%;
         font-size: 14px;
-    }
-
-    .two-col-first {
-        margin: 0 10% 0 0;
-    }
-
-    .two-col-second {
-        ul {
-            li {
-                text-align: center;
-
-                img {border-radius: 100%; }
-            }
-        }
+        margin: 0 2.5%;
     }
 
 
     .section-heading {
         position: relative;
         text-align: center;
-        margin: 0 0 70px 0;
+        margin: 140px 0 70px 0;
 
         li {
             display: inline-block;
@@ -64,10 +52,20 @@
 
 
     .the-team {
+        margin: 0 0 70px 0;
+
+        .about-the-team {
+            text-align: center;
+
+            h1, p {
+                max-width: 325px;
+                display: inline-block;
+                text-align: left;
+            }
+        }
 
         .wrapper {
             font-size: 0;
-            padding: 140px 0;
         }
 
         .team-heads {
@@ -80,7 +78,51 @@
                 vertical-align: top;
 
                 img {
-                    @include border-radius(100px);
+                    @include border-radius(100%);
+                    margin: 0 0 10px 0;
+                }
+
+                ul li {
+                    text-align: center;
+
+                    .entypo-social.twitter:before{ content:'\F309'; }
+
+
+                    img {
+                        @include border-radius (100%);
+                    }
+                }
+            }
+        }
+    }
+
+    .social {
+        background: $off-white;
+        padding: 100px 0;
+
+        .wrapper {
+            text-align: center;
+
+            ul {
+
+                li {
+                    width: 60px;
+                    height: 60px;
+                    display: inline-block;
+                    border: 2px solid $navy;
+                    @include border-radius(100%);
+                    margin: 0 20px;
+                    @include transition(all 0.2s ease-in-out);
+
+                    &:hover {
+                        cursor: pointer;
+                        background: rgba(0, 0, 0, 0.05);
+                    }
+                }
+                p {
+                    font-size: 30px;
+                    color: $navy;
+                    margin: -1px 0 0 2px;
                 }
             }
         }
