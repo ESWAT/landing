@@ -4,13 +4,13 @@
         height: 420px;
         background: steelblue;
 
-        .hero-points {
-            position: relative;
-            text-align: center;
-            top: 180px;
+        .wrapper {
+            .hero-points {
+                position: relative;
+                text-align: center;
+                top: 180px;
 
-            h1, p {
-                color: $white;
+                h1, p { color: $white; }
             }
         }
     }
@@ -19,46 +19,49 @@
         .wrapper {
             font-size: 0;
             padding: 70px 0;
-        }
-        
-        .section-heading {
-            position: relative;
-            text-align: center;
-            margin: 0 0 70px 0;
 
-            li {
+            .section-heading {
+                position: relative;
+                text-align: center;
+                margin: 0 0 70px 0;
+
+                li {
+                    display: inline-block;
+
+                    &.line {
+                        content: '';
+                        width: 140px;
+                        padding: 3px 0 0 0;
+                        border-top: 1px solid $navy;
+                    }
+
+                    h3 {
+                        margin: 0 15px;
+                        color: $navy;
+                    }
+                }
+            }
+
+            .two-col-first, .two-col-second {
                 display: inline-block;
+                vertical-align: top;
+                width: 45%;
+                font-size: 14px;
             }
 
-            h3 {
-                font-size: 11px;
-                margin: 0 15px;
-                color: $dark-grey;
+            .two-col-first {
+                margin: 0 10% 0 0;
             }
 
-            li.line {
-                content: '';
-                width: 140px;
-                padding: 3px 0 0 0;
-                border-top: 1px solid $dark-grey;
-            }
+            .two-col-second {
+                ul {
+                    li {
+                        text-align: center;
 
+                        img {border-radius: 100%; }
+                    }
+                }
+            }
         }
     }
-
-    .two-col-first, .two-col-second {
-        display: inline-block;
-        vertical-align: top;
-        width: 45%;
-        font-size: 14px;
-    }
-
-    .two-col-first {
-        margin: 0 10% 0 0;
-    }
-
-    .two-col-second {
-    }
-
-
 }
