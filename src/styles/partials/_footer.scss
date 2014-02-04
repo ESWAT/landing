@@ -8,8 +8,8 @@ footer {
 
     .wrapper {
         article {
-            position: relative;
-            top: 100px;
+            margin: 100px 0 110px;
+            display: inline-block;
 
             color: $white;
 
@@ -17,10 +17,6 @@ footer {
         }
 
         nav {
-            position: absolute;
-            bottom: 40px;
-            width: 100%;
-
             ul {
                 font-size: 0;
 

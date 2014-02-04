@@ -98,40 +98,33 @@
         }
 
         &.testimonials {
-            height: 460px;
             border-bottom: 1px solid #eee;
 
             .wrapper {
                 text-align: center;
 
                 ul.bragging-rights {
+                    margin: 100px 0;
+
                     li {
-                        position: relative;
-                        top: 95px;
-                        display: inline-block;
+                        display: none;
                         vertical-align: middle;
 
-                        p {
-                            @include transition(opacity 0.3s);
-                            @include opacity(0);
+                        &.active { display: inline-block; }
 
+                        p {
                             color: $navy;
                             font-size: 24px;
                             font-weight: 400;
                             line-height: 32px;
                             text-transform: none;
                             word-spacing: 1px;
-
-                            &.active { @include opacity(1); }
                         }
                     }
                 }
 
                 ul.people {
-                    position: absolute;
-                    bottom: 30px;
-                    width: 100%;
-
+                    margin: 0 0 50px;
                     font-size: 0;
 
                     li {
@@ -149,8 +142,6 @@
         }
 
         &.gym-badges {
-            height: 200px;
-
             .wrapper {
                 ul {
                     font-size: 0;
