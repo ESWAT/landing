@@ -8,24 +8,57 @@
             position: relative;
             text-align: center;
             top: 180px;
-            color: $white;
 
-            p {
-                width: auto;
+            h1, p {
+                color: $white;
             }
+        }
+    }
+
+    .the-team {
+        .wrapper {
+            font-size: 0;
+            padding: 70px 0;
+        }
+        
+        .section-heading {
+            position: relative;
+            text-align: center;
+            margin: 0 0 70px 0;
+
+            li {
+                display: inline-block;
+            }
+
+            h3 {
+                font-size: 11px;
+                margin: 0 15px;
+                color: $dark-grey;
+            }
+
+            li.line {
+                content: '';
+                width: 140px;
+                padding: 3px 0 0 0;
+                border-top: 1px solid $dark-grey;
+            }
+
         }
     }
 
     .two-col-first, .two-col-second {
         display: inline-block;
         vertical-align: top;
+        width: 45%;
+        font-size: 14px;
     }
 
     .two-col-first {
-        width: 40%;
         margin: 0 10% 0 0;
     }
 
     .two-col-second {
     }
+
+
 }
