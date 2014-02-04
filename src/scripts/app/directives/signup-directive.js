@@ -74,7 +74,6 @@ app.directive('viewDemoSignup', function(Utils) {
                 ,   parallax(1, $parallaxElements.form)
                 ]
                 .forEach(function(fn) { fn(position) });
-
             });
         }
     }

@@ -51,7 +51,7 @@
             .wrapper {
                 .hero-content {
                     position: absolute;
-                    top: 140px;
+                    top: 135px;
 
                     color: $medium-grey;
 
@@ -66,6 +66,84 @@
             .wrapper {
                 .hero-content { right: 0; }
             }
+        }
+
+        &.how {
+            height: 500px;
+            background: #f7f7f7;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+
+            .wrapper {
+                .hero-content {
+                    position: absolute;
+                    top: 95px;
+                }
+
+                img {
+                    position: absolute;
+                    left: 50%;
+                    top: 95px;
+                }
+            }
+        }
+
+        &.gym-badges {
+            height: 200px;
+
+            .wrapper {
+                ul {
+                    font-size: 0;
+                    text-align: center;
+
+                    li {
+                        display:inline-block;
+                        margin: 0 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        position: relative;
+        height: 340px;
+        background: $navy;
+
+        text-align: center;
+
+        .wrapper {
+            article {
+                position: relative;
+                top: 100px;
+
+                color: $white;
+
+                h1, a { color: $white;}
+            }
+
+            nav {
+                position: absolute;
+                bottom: 40px;
+                width: 100%;
+
+                ul {
+                    font-size: 0;
+
+                    li {
+                        display: inline-block;
+                        margin: 0 12px;
+
+                        color: $white;
+                        font-size: 10px;
+                        font-weight: 600;
+                        letter-spacing: $letter-spacing;
+                        text-indent: $letter-spacing;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+
         }
     }
 }
