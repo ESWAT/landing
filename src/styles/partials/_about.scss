@@ -4,47 +4,19 @@
         height: 420px;
         background: steelblue;
 
-        .hero-points {
-            position: relative;
-            text-align: center;
-            top: 180px;
-
-            h1, p {
-                color: $white;
-            }
-        }
-    }
-
-    .the-team {
         .wrapper {
-            font-size: 0;
-            padding: 140px 0;
-        }
-        
-        .section-heading {
-            position: relative;
-            text-align: center;
-            margin: 0 0 70px 0;
+            .hero-points {
+                position: relative;
+                text-align: center;
+                top: 180px;
 
-            li {
-                display: inline-block;
+                h1, p {
+                    color: $white;
+                }
             }
-
-            h3 {
-                font-size: 11px;
-                margin: 0 15px;
-                color: $dark-grey;
-            }
-
-            li.line {
-                content: '';
-                width: 140px;
-                padding: 3px 0 0 0;
-                border-top: 1px solid $dark-grey;
-            }
-
         }
     }
+
 
     .two-col-first, .two-col-second {
         display: inline-block;
@@ -58,27 +30,62 @@
     }
 
     .two-col-second {
+        ul {
+            li {
+                text-align: center;
+
+                img {border-radius: 100%; }
+            }
+        }
     }
 
-    .team-heads {
-        .team-head {
-            width: 45%;
-            display: inline-block;
-            margin: 0 0 70px 0;
-            text-align: center;
-            vertical-align: top;
 
-            h2 {
-                font-size: 18px;
-                margin: 5px 0;
-                line-height: 22px;
+    .section-heading {
+        position: relative;
+        text-align: center;
+        margin: 0 0 70px 0;
+
+        li {
+            display: inline-block;
+
+            &.line {
+                content: '';
+                width: 140px;
+                padding: 3px 0 0 0;
+                border-top: 1px solid $navy;
             }
 
-            img {
-                @include border-radius(100px);
+            h3 {
+                margin: 0 15px;
+                color: $navy;
+            }
+        }
+    }
+
+
+    .the-team {
+
+        .wrapper {
+            font-size: 0;
+            padding: 140px 0;
+        }
+
+        .team-heads {
+
+            .team-head {
+                width: 45%;
+                display: inline-block;
+                margin: 0 0 70px 0;
+                text-align: center;
+                vertical-align: top;
+
+                img {
+                    @include border-radius(100px);
+                }
             }
         }
     }
 
 
 }
+
