@@ -129,11 +129,8 @@ p {
 // Layout
 
 .wrapper {
-    position: absolute;
-    left: 50%;
     width: $wrapper-width;
-    height: 100%;
-    margin-left: -($wrapper-width/2);
+    margin: 0 auto;
 }
 
 

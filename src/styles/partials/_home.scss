@@ -25,8 +25,6 @@
         }
 
         &.key {
-            height: 280px;
-
             .wrapper {
                 font-size: 0;
 
@@ -45,13 +43,12 @@
         }
 
         &.feature {
-            height: 500px;
             background: #f7f7f7;
 
             .wrapper {
                 .hero-content {
-                    position: absolute;
-                    top: 135px;
+                    margin: 135px 0 175px;
+                    display: inline-block;
 
                     color: $medium-grey;
 
@@ -69,15 +66,14 @@
         }
 
         &.how {
-            height: 500px;
             background: #f7f7f7;
             border-top: 1px solid #eee;
             border-bottom: 1px solid #eee;
 
             .wrapper {
                 .hero-content {
-                    position: absolute;
-                    top: 95px;
+                    margin: 95px 0 130px;
+                    display: inline-block;
 
                     counter-reset: step;
 
@@ -108,7 +104,7 @@
             .wrapper {
                 text-align: center;
 
-                ul.brags {
+                ul.bragging-rights {
                     li {
                         position: relative;
                         top: 95px;
@@ -116,12 +112,17 @@
                         vertical-align: middle;
 
                         p {
+                            @include transition(opacity 0.3s);
+                            @include opacity(0);
+
                             color: $navy;
                             font-size: 24px;
                             font-weight: 400;
                             line-height: 32px;
                             text-transform: none;
                             word-spacing: 1px;
+
+                            &.active { @include opacity(1); }
                         }
                     }
                 }
@@ -140,7 +141,7 @@
 
                         img {
                             border-radius: 100%;
-                            margin: 0 0 20px 0;
+                            margin: 0 0 10px 0;
                         }
                     }
                 }
@@ -161,59 +162,6 @@
                     }
                 }
             }
-        }
-    }
-
-    footer {
-        position: relative;
-        height: 340px;
-        background: $navy;
-
-        text-align: center;
-
-        .wrapper {
-            article {
-                position: relative;
-                top: 100px;
-
-                color: $white;
-
-                h1, a { color: $white;}
-            }
-
-            nav {
-                position: absolute;
-                bottom: 40px;
-                width: 100%;
-
-                ul {
-                    font-size: 0;
-
-                    li {
-                        display: inline-block;
-                        margin: 0 10px;
-
-                        color: $white;
-                        font-size: 10px;
-                        font-weight: 600;
-                        letter-spacing: $letter-spacing;
-                        text-indent: $letter-spacing;
-                        text-transform: uppercase;
-
-                        a {
-                            @include transition(0.3s);
-                            border-bottom: 2px solid transparent;
-                            padding: 0 0 6px;
-
-                            &:hover, .selected {
-                                padding: 0 0 3px;
-                                border-bottom: 2px solid $white;
-                            }
-                        }
-                    }
-                }
-            }
-
         }
     }
 }
