@@ -18,7 +18,7 @@
     .the-team {
         .wrapper {
             font-size: 0;
-            padding: 70px 0;
+            padding: 140px 0;
         }
         
         .section-heading {
@@ -58,6 +58,26 @@
     }
 
     .two-col-second {
+    }
+
+    .team-heads {
+        .team-head {
+            width: 45%;
+            display: inline-block;
+            margin: 0 0 70px 0;
+            text-align: center;
+            vertical-align: top;
+
+            h2 {
+                font-size: 18px;
+                margin: 5px 0;
+                line-height: 22px;
+            }
+
+            img {
+                @include border-radius(100px);
+            }
+        }
     }
 
 
