@@ -16,6 +16,11 @@ app.config ($stateProvider, $urlRouterProvider) ->
         views:
             '@':templateUrl:'partials/home.html'
 
+    .state 'root.features',
+        url: '^/features'
+        views:
+            '@':templateUrl:'partials/features.html'
+
     .state 'root.about',
         url: '^/about'
         views:
