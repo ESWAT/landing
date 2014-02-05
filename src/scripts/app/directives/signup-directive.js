@@ -80,14 +80,19 @@ app.directive('viewDemoSignup', function(Utils) {
 });
 
 
-app.directive('revealer', function($window) {
+app.directive('contactTrigger', function($window) {
     return {
         restrict: 'C',
         link: function (scope, element) {
             var $element = $(element);
 
-            // do the jqueryies
+            $('#contact-link').on('click', function (){
+                $('.contact-us').fadeToggle(200);
+            });
 
+            $('nav ul li a, .logo').not(document.getElementById('contact-link')).on('click', function (){
+                $('.contact-us').fadeOut(200);
+            });
         }
     }
 });
