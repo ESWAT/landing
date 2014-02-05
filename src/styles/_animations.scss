@@ -48,25 +48,27 @@
 
 
 .animation-ease {
-    
+
     &.ng-hide-add, &.ng-hide-remove {
         @include transition(0.3s);
         display: block !important;
     }
 
-    &.ng-hide-add {
-        opacity: 1;
-
-        &.ng-hide-add-active {
-            opacity: 0;
-        }
-    }
-
+    // Show
     &.ng-hide-remove {
         opacity: 0;
 
         &.ng-hide-remove-active {
             opacity: 1;
+        }
+    }
+
+    // Hide
+    &.ng-hide-add {
+        opacity: 1;
+
+        &.ng-hide-add-active {
+            opacity: 0;
         }
     }
 }

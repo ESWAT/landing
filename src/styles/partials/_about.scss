@@ -87,15 +87,15 @@
 
                 ul {
                     display: inline-block;
-                    margin: 100px 0;
+                    margin: 70px 0;
 
                     li {
                         @include transition(0.3s);
                         width: 60px;
                         height: 60px;
                         display: inline-block;
-                        border: 2px solid $navy;
-                        @include border-radius(100%);
+                        border: 2px solid $light-grey;
+                        border-radius: 100%;
                         margin: 0 20px;
 
                         &:hover {
@@ -104,11 +104,10 @@
                         }
 
                         a {
-                            p {
-                                margin: -1px 0 0 1px;
-
-                                font-size: 30px;
-                                color: $navy;
+                            p:before {
+                                color: $light-grey;
+                                font-size: 50px;
+                                line-height: 58px;
                             }
                         }
                     }
