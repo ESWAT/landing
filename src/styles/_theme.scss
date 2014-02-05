@@ -26,7 +26,7 @@ html {
 // Typography
 
 a, a:visited {
-    @include transition(background 0.3s);
+    @include transition(0.3s);
     color: inherit;
     text-decoration: none;
 
@@ -110,7 +110,7 @@ h3 {
 // Change this when you have time
 
 h4 {
-    color: $navy;
+    color: $dark-grey;
     font-size: 18px;
     font-weight: 300;
     line-height: 32px;
@@ -143,12 +143,12 @@ p {
 
 
 label {
-    @include transition(background 0.3s);
+    @include transition(0.3s);
     color: $light-grey;
     background: $white;
 
     span {
-        @include transition(color 0.3s);
+        @include transition(0.3s);
         color: $light-grey;
         font-size: 10px;
         font-weight: 700;
@@ -198,5 +198,15 @@ label {
         counter-increment: step;
         content: counters(step, '');
     }
+}
+
+.two-col {
+    position: relative;
+    width: 45%;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 2.5%;
+
+    font-size: 14px;
 }
 

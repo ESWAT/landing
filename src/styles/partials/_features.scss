@@ -1,0 +1,53 @@
+
+.view-features {
+    section {
+        &.hero {
+            height: 420px;
+            background: $navy;
+
+            .wrapper {
+                .hero-points {
+                    position: relative;
+                    text-align: center;
+                    top: 180px;
+
+                    h1, p {
+                        color: $white;
+                    }
+                }
+            }
+        }
+
+        &.features {
+            .wrapper {
+                section {
+                    & > * {
+                        float: right;
+                    }
+
+                    li {
+                        display: inline-block;
+
+                        &.line {
+                            content: '';
+                            width: 540px;
+                            padding: 3px 0 0 0;
+                            border-top: 1px solid $navy;
+                        }
+
+                        h3 {
+                            margin: 0 15px 0 0;
+                            color: $navy;
+                        }
+                    }
+
+                    article {
+                        width: 400px;
+
+                        p { margin: 0 0 50px; }
+                    }
+                }
+            }
+        }
+    }
+}

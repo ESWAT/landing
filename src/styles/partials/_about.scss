@@ -1,133 +1,119 @@
 
 .view-about {
-    .hero {
-        height: 420px;
-        background: steelblue;
+    section {
+        &.hero {
+            height: 420px;
+            background: $navy;
 
-        .wrapper {
-            .hero-points {
-                position: relative;
-                text-align: center;
-                top: 180px;
+            .wrapper {
+                .hero-points {
+                    position: relative;
+                    top: 180px;
 
-                h1, p {
-                    color: $white;
-                }
-            }
-        }
-    }
-
-
-    .two-col, .two-col {
-        position: relative;
-        display: inline-block;
-        vertical-align: top;
-        width: 45%;
-        font-size: 14px;
-        margin: 0 2.5%;
-    }
-
-
-    .section-heading {
-        position: relative;
-        text-align: center;
-        margin: 140px 0 70px 0;
-
-        li {
-            display: inline-block;
-
-            &.line {
-                content: '';
-                width: 140px;
-                padding: 3px 0 0 0;
-                border-top: 1px solid $navy;
-            }
-
-            h3 {
-                margin: 0 15px;
-                color: $navy;
-            }
-        }
-    }
-
-
-    .the-team {
-        margin: 0 0 70px 0;
-
-        .about-the-team {
-            text-align: center;
-
-            h1, p {
-                max-width: 325px;
-                display: inline-block;
-                text-align: left;
-            }
-        }
-
-        .wrapper {
-            font-size: 0;
-        }
-
-        .team-heads {
-
-            .team-head {
-                width: 45%;
-                display: inline-block;
-                margin: 0 0 70px 0;
-                text-align: center;
-                vertical-align: top;
-
-                img {
-                    @include border-radius(100%);
-                    margin: 0 0 10px 0;
-                }
-
-                ul li {
                     text-align: center;
 
-                    .entypo-social.twitter:before{ content:'\F309'; }
+                    h1, p { color: $white; }
+                }
+            }
+        }
 
+        &.the-team {
+            margin: 0 0 70px 0;
+
+            .wrapper {
+                font-size: 0;
+
+                .section-heading {
+                    position: relative;
+                    margin: 140px 0 70px 0;
+
+                    text-align: center;
+
+                    li {
+                        display: inline-block;
+
+                        &.line {
+                            content: '';
+                            width: 140px;
+                            padding: 3px 0 0 0;
+                            border-top: 1px solid $navy;
+                        }
+
+                        h3 {
+                            margin: 0 15px;
+                            color: $navy;
+                        }
+                    }
+                }
+
+                .about-the-team {
+                    text-align: center;
+
+                    h1, p {
+                        max-width: 325px;
+                        display: inline-block;
+
+                        text-align: left;
+                    }
+                }
+
+                .team-head {
+                    width: 45%;
+                    margin: 0 0 70px 0;
+                    display: inline-block;
+                    vertical-align: top;
+
+                    text-align: center;
 
                     img {
-                        @include border-radius (100%);
+                        @include border-radius(100%);
+                        margin: 0 0 10px 0;
+                    }
+
+                    li {
+                        text-align: center;
+
+                        img { @include border-radius (100%); }
                     }
                 }
             }
         }
-    }
 
-    .social {
-        background: $off-white;
-        padding: 100px 0;
+        &.social {
+            background: $off-white;
 
-        .wrapper {
-            text-align: center;
+            .wrapper {
+                text-align: center;
 
-            ul {
-
-                li {
-                    width: 60px;
-                    height: 60px;
+                ul {
                     display: inline-block;
-                    border: 2px solid $navy;
-                    @include border-radius(100%);
-                    margin: 0 20px;
-                    @include transition(all 0.2s ease-in-out);
+                    margin: 100px 0;
 
-                    &:hover {
-                        cursor: pointer;
-                        background: rgba(0, 0, 0, 0.05);
+                    li {
+                        @include transition(0.3s);
+                        width: 60px;
+                        height: 60px;
+                        display: inline-block;
+                        border: 2px solid $navy;
+                        @include border-radius(100%);
+                        margin: 0 20px;
+
+                        &:hover {
+                            background: rgba(0, 0, 0, 0.05);
+                            cursor: pointer;
+                        }
+
+                        a {
+                            p {
+                                margin: -1px 0 0 1px;
+
+                                font-size: 30px;
+                                color: $navy;
+                            }
+                        }
                     }
-                }
-                p {
-                    font-size: 30px;
-                    color: $navy;
-                    margin: -1px 0 0 2px;
                 }
             }
         }
     }
-
-
 }
-
