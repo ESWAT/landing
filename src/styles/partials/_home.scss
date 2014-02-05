@@ -46,6 +46,8 @@
             background: #f7f7f7;
 
             .wrapper {
+                position: relative;
+
                 .hero-content {
                     margin: 135px 0 175px;
                     display: inline-block;
@@ -54,14 +56,32 @@
 
                     a { border: 1px solid $medium-grey; }
                 }
+
+                .filters, .paper {
+                    position: absolute;
+                    bottom: -7px;
+                    right: -55px;
+                    display: inline-block;
+                    width: 65%;
+                    max-width: 600px;
+                }
+
             }
+        }
+
+        &.exporting {
+            background: $navy;
         }
 
         &.right {
             background: $white;
 
             .wrapper {
-                .hero-content { right: 0; }
+                text-align: right;
+
+                .hero-content {
+                    text-align: left;
+                }
             }
         }
 
