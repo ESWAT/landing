@@ -12,10 +12,9 @@ body.demo-flow .view-header {
 .view-header {
     .contact-us {
         position: fixed;
-        background: rgba(36, 42, 51, 0.95);
         width: 100%;
         height: 100%;
-        display: none;
+        background: rgba(36, 42, 51, 0.96);
 
         .wrapper {
             display: inline-block;
@@ -24,21 +23,25 @@ body.demo-flow .view-header {
              .contact-us-content {
                 position: fixed;
                 top: 50%;
-                margin: -100px 0 0 0;
-                display: block;
-                text-align: center;
                 width: 100%;
+                display: block;
+                margin: -100px 0 0 0;
+
+                text-align: center;
 
 
                 h3 {
                     margin: 0 0 30px;
-                    font-size: 120%;
+
+                    color: $white;
+                    font-size: 13px;
                 }
 
                 a {
-                    font-size: 100px;
+                    @include transition(0.3s);
                     color: $white;
-                    @include transition(all 0.3s ease-in-out);
+                    font-size: 60px;
+                    font-weight: 700;
                 }
 
                 a:hover {

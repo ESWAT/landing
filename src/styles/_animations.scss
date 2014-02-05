@@ -1,48 +1,86 @@
 
 .animation-fade {
 
-    // background: green !important;
-
-    &.ng-enter, &.ng-leave { @include transition(all .33s cubic-bezier(0.694, 0.0482, 0.335, 1)); }
+    &.ng-enter, &.ng-leave {
+        @include transition(.33s cubic-bezier(0.694, 0.0482, 0.335, 1));
+    }
 
     &.ng-enter {
         opacity: 0;
 
-        &.ng-enter-active { opacity: 1; }
+        &.ng-enter-active {
+            opacity: 1;
+        }
     }
 
     &.ng-leave {
         opacity: 1;
 
-        &.ng-leave-active { opacity: 0; }
+        &.ng-leave-active {
+            opacity: 0;
+        }
     }
 }
 
 
 .animation-slide {
-    &.ng-enter, &.ng-leave { @include transition(all 2s); }
+
+    &.ng-enter, &.ng-leave {
+        @include transition(2s);
+    }
 
     &.ng-enter {
         @include transform(translate3d(0,-100%,0));
 
-        &.ng-enter-active { @include transform(translate3d(0,0,0)); }
+        &.ng-enter-active {
+            @include transform(translate3d(0,0,0));
+        }
     }
 
     &.ng-leave {
         @include transform(translate3d(0,0,0));
 
-        &.ng-leave-active { @include transform(translate3d(0,100%,0)); }
+        &.ng-leave-active {
+            @include transform(translate3d(0,100%,0));
+        }
+    }
+}
+
+
+.animation-ease {
+    
+    &.ng-hide-add, &.ng-hide-remove {
+        @include transition(0.3s);
+        display: block !important;
+    }
+
+    &.ng-hide-add {
+        opacity: 1;
+
+        &.ng-hide-add-active {
+            opacity: 0;
+        }
+    }
+
+    &.ng-hide-remove {
+        opacity: 0;
+
+        &.ng-hide-remove-active {
+            opacity: 1;
+        }
     }
 }
 
 
 .animation-offscreen {
+
     &.ng-enter, &.ng-leave {
-        @include transition(all 0.7s);
+        @include transition(0.7s);
     }
 
     // &.ng-enter {
     //     @include transform(translate3d(0,-100%,0));
+
     //     &.ng-enter-active {
     //         @include transform(translate3d(0,0,0));
     //     }
@@ -50,6 +88,7 @@
 
     // &.ng-leave {
     //     @include transform(translate3d(0,0,0));
+
     //     &.ng-leave-active {
     //         @include transform(translate3d(0,-100%,0));
     //     }

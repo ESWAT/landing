@@ -80,19 +80,43 @@ app.directive('viewDemoSignup', function(Utils) {
 });
 
 
-app.directive('contactTrigger', function($window) {
+app.directive('viewHeader', function($window) {
     return {
         restrict: 'C',
         link: function (scope, element) {
             var $element = $(element);
 
-            $('#contact-link').on('click', function (){
-                $('.contact-us').fadeToggle(200);
-            });
-
-            $('nav ul li a, .logo').not(document.getElementById('contact-link')).on('click', function (){
-                $('.contact-us').fadeOut(200);
-            });
+            scope.contactUs = {}
+            scope.contactUs.isVisible = false;
+            scope.contactUs.show = function () {
+                scope.contactUs.isVisible = true;
+            }
+            scope.contactUs.hide = function() {
+                scope.contactUs.isVisible = false;
+            }
+            scope.contactUs.toggle = function() {
+                scope.contactUs.isVisible = !scope.contactUs.isVisible;
+            }
         }
     }
 });
+
+
+// Safe keeps for Sarah
+
+// app.directive('contactTrigger', function($window) {
+//     return {
+//         restrict: 'C',
+//         link: function (scope, element) {
+//             var $element = $(element);
+
+//             $('#contact-link').on('click', function (){
+//                 $('.contact-us').fadeToggle(300);
+//             });
+
+//             $('nav ul li a, .logo').not(document.getElementById('contact-link')).on('click', function (){
+//                 $('.contact-us').fadeOut(300);
+//             });
+//         }
+//     }
+// });

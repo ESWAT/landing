@@ -1,23 +1,25 @@
 
 article.view.view-header
 
+    section.contact-us.animation-ease(ng-show="contactUs.isVisible")
 
-    section.contact-us
-      .wrapper
-        .contact-us-content
-          h3 Contact Us
-          a(ui-sref="mailto:team@42debut.com") team@42debut.com
+        .wrapper
+
+            .contact-us-content
+                h3 E-mail Us
+                a(ui-sref="mailto:team@42debut.com") team@42debut.com
+
 
     nav
-      .logo: a(ui-sref="root.home")
-        img(src="/assets/images/logo.svg")
+        .logo: a(ui-sref="root.home")
+            img(src="/assets/images/logo.svg")
 
-      ul.main
-        li: a(ui-sref="root.features") Features
-        li: a(ui-sref="root.blog") Blog
-        li: a(ui-sref="root.about") About
-        li: a.contact-trigger#contact-link(ui-sref="root.home") Contact
+        ul.main
+            li: a(ui-sref="root.features", ng-click="contactUs.hide()") Features
+            li: a(ui-sref="root.blog",     ng-click="contactUs.hide()") Blog
+            li: a(ui-sref="root.about",    ng-click="contactUs.hide()") About
+            li: a.contact-link(ng-click="contactUs.toggle()") Contact
 
-      ul.account
-        li: a(ui-sref="root.home") Log In
-        li: a.outine-btn(ui-sref="root.demo.signup") Sign Up
+        ul.account
+            li: a(ui-sref="root.home") Log In
+            li: a.outine-btn(ui-sref="root.demo.signup") Sign Up
