@@ -56,7 +56,7 @@ a, a:visited {
         padding: 10px 22px;
         border: 1px solid $white;
         border-radius: 3px;
-        box-sizing: border-box;
+        @include box-sizing(border-box);
 
         color: inherit;
         font-size: 11px;
