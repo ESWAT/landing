@@ -12,15 +12,15 @@ $light-yellow: lighten($yellow, 6%);
 $dark-yellow: darken($yellow, 8%);
 
 $wrapper-width: 960px;
-$font-stack: 'Open Sans', sans-serif;
+$font-stack: "museo-sans", sans-serif;
 $letter-spacing: 1px;
 
 $box-shadow: 0 3px 0 rgba(36, 42, 51, 0.1);
 
+
 html {
     font-size: 14px;
     font-family: $font-stack;
-    font-weight: 400;
 }
 
 
