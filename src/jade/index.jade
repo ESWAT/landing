@@ -1,6 +1,7 @@
 
 include mixins/mixins-assets
 include mixins/mixins-assets-angular
+include mixins/mixins-typekit
 
 
 !!!
@@ -29,6 +30,9 @@ html(lang='en', ng-app="42.landing")
 
       mixin app-core("app")
       mixin app-core("router")
+
+      mixin typekit-sync('qzk2xqv')
+
 
 
   body(ng-controller="MainController", ng-class="{'demo-flow':isDemoFlow}")
