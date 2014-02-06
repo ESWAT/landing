@@ -122,7 +122,7 @@ module.exports = (grunt) ->
                 imagesDir: '<%= dirs.src %>/images'
                 fontsDir:  '<%= dirs.src %>/fonts'
                 relativeAssets: true
-                debugInfo: true
+                debugInfo: false
                 outputStyle: 'nested'
 
 
