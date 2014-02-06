@@ -1,12 +1,158 @@
-$ipad-land: 1024px;
-$ipad-port: 768px;
+$tablet-land: 1024px;
+$tablet-port: 768px;
 $mobile-land: 480px;
 $mobile-port: 320px;
 
-// Smartphones
+// Tablet
 @media only screen
-and (max-width : $mobile-land) {
+and (max-width : $tablet-port ) {
 
+    .wrapper {
+        width: $tablet-port;
+        padding: 60px;
+    }
+
+    // Home
+
+    .view-home {
+
+        section.hero {
+            overflow: hidden;
+
+            .wrapper {
+                img {
+                    position: relative;
+                    top: 60px;
+                    left: 55%;
+                }
+            }
+        }
+
+        section.key .wrapper {
+            .key-content {
+                margin: 15px 30px 30px 0;
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+        section.hero {
+            height: 430px;
+
+            .wrapper {
+                .hero-content {
+                    top: 140px;
+
+                    p {
+                        margin: 0 0 50px;
+                        width: 300px;
+                    }
+                }
+            }
+        }
+
+        section.feature .wrapper {
+            padding: 30px 60px 0 60px;
+            overflow: hidden;
+
+            .hero-content {
+                margin: 30px 0 50px;
+
+                p {
+                    width: 100%;
+                    margin: 0 0 50px;
+                    max-width: 300px;
+                }
+            }
+
+            .filters, .paper {
+                left: 400px;
+                max-height: 280px;
+            }
+        }
+
+        section.how.feature .wrapper {
+            padding: 30px 60px;
+
+            .hero-content {
+                margin: 30px 0 80px 0;
+
+                section {
+                    display: inline-block;
+                    margin: 0 20px 0 0;
+                }
+            }
+
+            img {
+                margin: 0 0 40px 0;
+                position: relative;
+                display: block;
+                width: 100%;
+                top: 0;
+                right: 0;
+            }
+        }
+
+        section.testimonials .wrapper {
+            ul.bragging-rights {
+                width: 100%;
+                margin: 30px auto;
+            }
+
+            ul.people {
+                li {
+                    text-align: left;
+
+                    img {
+                        width: 50px;
+                        display: inline-block;
+                        margin: 0 20px 0 0;
+                        vertical-align: top;
+                    }
+
+                    div {
+                        display: inline-block;
+                        vertical-align: top;
+                        width: 170px;
+                    }
+                }
+            }
+        }
+
+        section.gym-badges { display: none; }
+
+        footer {
+            height: auto;
+
+            .wrapper {
+                padding: 0 30px 10px;
+
+                article { margin: 70px 0 80px 0; }
+
+                li { margin: 0 0 15px 0; }
+
+                li:first-child { width: 100%; }
+
+                li:nth-child(even) { display: none; }
+            }
+        }
+    }
+
+    .view-header {
+        nav {
+            left: 0;
+            margin: 0;
+            padding: 0 60px;
+            width: $tablet-port;
+        }
+    }
+
+}
+
+// Mobile
+@media only screen
+and (min-width : $mobile-port)
+and (max-width : $mobile-land) {
     .wrapper {
         width: $mobile-port;
         padding: 30px;
@@ -73,24 +219,13 @@ and (max-width : $mobile-land) {
     }
 
     // Home
-
     .view-home {
-        section.key .wrapper {
-            .key-content {
-                margin: 15px 0 30px;
-                width: 100%;
-            }
-        }
 
         section.hero {
-            height: 430px;
 
             .wrapper {
                 .hero-content {
-                    top: 140px;
-
                     p {
-                        margin: 0 0 50px;
                         width: 250px;
                     }
                 }
@@ -101,18 +236,14 @@ and (max-width : $mobile-land) {
             }
         }
 
-        section.feature .wrapper {
-            padding: 30px 30px 0 30px;
-            overflow: hidden;
-
-            .hero-content {
-                margin: 30px 0 50px;
-
-                p {
-                    width: 100%;
-                    margin: 0 0 50px;
-                }
+        section.key .wrapper {
+            .key-content {
+                margin: 15px 0 30px;
             }
+        }
+
+        section.feature .wrapper {
+            padding: 0 30px;
 
             .filters, .paper {
                 position: relative;
@@ -127,58 +258,5 @@ and (max-width : $mobile-land) {
 
         section.how .wrapper .hero-content section .step { margin: 5px 20px 40px 0; }
 
-        section.how.feature .wrapper .hero-content { margin: 30px 0 80px 0; }
-
-        section.testimonials .wrapper {
-            ul.bragging-rights {
-                width: 100%;
-                margin: 30px 0;
-            }
-
-            ul.people {
-                li {
-                    text-align: left;
-
-                    img {
-                        width: 50px;
-                        display: inline-block;
-                        margin: 0 20px 0 0;
-                        vertical-align: top;
-                    }
-
-                    div {
-                        display: inline-block;
-                        vertical-align: top;
-                        width: 170px;
-                    }
-                }
-            }
-        }
-
-        section.gym-badges { display: none; }
-
-        footer {
-            height: auto;
-
-            .wrapper {
-                padding: 0 30px 10px;
-
-                article { margin: 70px 0 80px 0; }
-
-                li { margin: 0 0 15px 0; }
-
-                li:first-child { width: 100%; }
-
-                li:nth-child(even) { display: none; }
-            }
-        }
     }
-
-
-}
-
-// iPads
-@media only screen
-and (min-device-width : $ipad-port)
-and (max-device-width : $ipad-land) {
 }
