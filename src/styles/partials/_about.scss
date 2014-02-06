@@ -91,12 +91,12 @@
 
                     li {
                         @include transition(0.3s);
-                        width: 60px;
-                        height: 60px;
+                        width: 50px;
+                        height: 50px;
                         display: inline-block;
                         border: 2px solid $light-grey;
                         border-radius: 100%;
-                        margin: 0 20px;
+                        margin: 0 15px;
 
                         &:hover {
                             background: rgba(0, 0, 0, 0.05);
@@ -106,8 +106,8 @@
                         a {
                             p:before {
                                 color: $light-grey;
-                                font-size: 50px;
-                                line-height: 58px;
+                                font-size: 48px;
+                                line-height: 48px;
                             }
                         }
                     }
