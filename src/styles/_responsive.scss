@@ -1,2 +1,184 @@
+$ipad-land: 1024px;
+$ipad-port: 768px;
+$mobile-land: 480px;
+$mobile-port: 320px;
 
-// Play in here. Good luck.
+// Smartphones
+@media only screen
+and (max-width : $mobile-land) {
+
+    .wrapper {
+        width: $mobile-port;
+        padding: 30px;
+    }
+
+    // Header
+    .view-header {
+        nav {
+            left: 30px;
+            margin: 0;
+            width: $mobile-port;
+
+            .logo {
+                position: absolute;
+
+                a {
+                    height: 100%;
+                }
+            }
+
+            .nav-trigger {
+                display: block;
+                font-size: 24px;
+                color: $white;
+                text-align: right;
+                position: absolute;
+                top: 30px;
+                right: 60px;
+            }
+
+            ul {
+                width: 130px;
+                padding: 15px 0;
+                @include transition(0.3s);
+
+                li {
+                    line-height: 0;
+                    display: block;
+                    line-height: 30px;
+                }
+
+                &.main {
+                    position: absolute;
+                    background: $white;
+                    @include box-shadow($box-shadow);
+                    top: 100px;
+                    right: 30px;
+                    margin: 0;
+                    color: $medium-grey;
+                    display: none;
+
+                    &.active {
+                        top: 80px;
+                        display: block;
+                    }
+                }
+
+            }
+
+            .account {
+                display: none;
+            }
+        }
+    }
+
+    // Home
+
+    .view-home {
+        section.key .wrapper {
+            .key-content {
+                margin: 15px 0 30px;
+                width: 100%;
+            }
+        }
+
+        section.hero {
+            height: 430px;
+
+            .wrapper {
+                .hero-content {
+                    top: 140px;
+
+                    p {
+                        margin: 0 0 50px;
+                        width: 250px;
+                    }
+                }
+
+                img {
+                    display: none;
+                }
+            }
+        }
+
+        section.feature .wrapper {
+            padding: 30px 30px 0 30px;
+            overflow: hidden;
+
+            .hero-content {
+                margin: 30px 0 50px;
+
+                p {
+                    width: 100%;
+                    margin: 0 0 50px;
+                }
+            }
+
+            .filters, .paper {
+                position: relative;
+                width: 200%;
+                right: 4px;
+            }
+
+            .how-it-works {
+                display: none;
+            }
+        }
+
+        section.how .wrapper .hero-content section .step { margin: 5px 20px 40px 0; }
+
+        section.how.feature .wrapper .hero-content { margin: 30px 0 80px 0; }
+
+        section.testimonials .wrapper {
+            ul.bragging-rights {
+                width: 100%;
+                margin: 30px 0;
+            }
+
+            ul.people {
+                li {
+                    text-align: left;
+
+                    img {
+                        width: 50px;
+                        display: inline-block;
+                        margin: 0 20px 0 0;
+                        vertical-align: top;
+                    }
+
+                    div {
+                        display: inline-block;
+                        vertical-align: top;
+                        width: 170px;
+                    }
+                }
+            }
+        }
+
+        section.gym-badges { display: none; }
+
+        footer {
+            height: auto;
+
+            .wrapper {
+                padding: 0 30px 10px;
+
+                article { margin: 70px 0 80px 0; }
+
+                li { margin: 0 0 15px 0; }
+
+                li:first-child { width: 100%; }
+
+                li:nth-child(even) { display: none; }
+            }
+        }
+    }
+
+
+}
+
+// iPads
+@media only screen
+and (min-device-width : $ipad-port)
+and (max-device-width : $ipad-land) {
+}

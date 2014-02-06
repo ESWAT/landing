@@ -46,7 +46,7 @@ body.demo-flow .view-header {
                     }
                 }
 
-                
+
             }
         }
     }
@@ -64,9 +64,10 @@ body.demo-flow .view-header {
         }
 
         .logo {
-            width:  $header-height;
-            height: $header-height;
+            line-height: 130px;
         }
+
+        .nav-trigger { display: none; }
 
         ul {
             position: absolute;

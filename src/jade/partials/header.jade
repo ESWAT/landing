@@ -14,7 +14,9 @@ article.view.view-header
         .logo: a(ui-sref="root.home", ng-click="contactUs.hide()")
             img(src="/assets/images/logo.svg")
 
-        ul.main
+        p.nav-trigger.icon-list
+
+        ul.main.active
             li: a(ui-sref="root.features", ng-click="contactUs.hide()") Features
             li: a(ui-sref="root.blog",     ng-click="contactUs.hide()") Blog
             li: a(ui-sref="root.about",    ng-click="contactUs.hide()") About

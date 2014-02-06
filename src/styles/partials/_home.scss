@@ -100,7 +100,10 @@
                     section {
                         .step { margin: 5px 20px 0 0; }
 
-                        p.leader { margin: 0 0 30px 0; }
+                        p.leader {
+                            margin: 0 0 30px 0;
+                            max-width: 295px;
+                        }
                     }
 
                     a {
@@ -120,7 +123,10 @@
                 text-align: center;
 
                 ul.bragging-rights {
-                    margin: 100px 0 90px 0;
+                    margin: 100px auto 80px auto;
+                    width: 50%;
+                    max-width: 460px;
+
 
                     li {
                         display: none;
@@ -151,6 +157,11 @@
 
                         &.active { opacity: 1; }
 
+                        &:hover {
+                            cursor: pointer;
+                            opacity: 1;
+                        }
+
                         img {
                             border-radius: 100%;
                             margin: 0 0 10px 0;
@@ -169,6 +180,10 @@
                     li {
                         margin: 0 20px;
                         display: inline-block;
+
+                        img {
+                            margin: 70px 0;
+                        }
                     }
                 }
             }
