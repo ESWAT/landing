@@ -2,15 +2,17 @@
 .view-home {
 
     section {
+        position: relative;
+
         &.hero {
             height: 600px;
-            background: #8fc9e0;
+            background: $navy;
 
             .wrapper {
+                position: relative;
                 .hero-content {
                     position: absolute;
                     top: 222px;
-
                     h1, p, a { color: $white; }
                 }
 
@@ -23,6 +25,8 @@
         }
 
         &.key {
+            background: $white;
+
             .wrapper {
                 font-size: 0;
 
@@ -31,11 +35,8 @@
                     margin: 70px 15px;
                     display: inline-block;
                     vertical-align: top;
-
                     font-size: 14px;
-
                     &:first-child { margin-left: 0; }
-
                     &:last-child { margin-right: 0; }
                 }
             }
@@ -117,16 +118,18 @@
         }
 
         &.testimonials {
+            background: $white;
             border-bottom: 1px solid #eee;
+            padding: 100px 0px;
 
             .wrapper {
                 text-align: center;
 
                 ul.bragging-rights {
-                    margin: 100px auto 80px auto;
+                    margin: 0 auto;
+                    margin-bottom: 80px;
                     width: 50%;
                     max-width: 460px;
-
 
                     li {
                         display: none;
@@ -146,7 +149,6 @@
                 }
 
                 ul.people {
-                    margin: 0 0 50px;
                     font-size: 0;
 
                     li {
@@ -172,6 +174,7 @@
         }
 
         &.gym-badges {
+            background: $white;
             .wrapper {
                 ul {
                     font-size: 0;

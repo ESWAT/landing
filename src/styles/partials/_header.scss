@@ -1,6 +1,5 @@
 
 $nav-width: $wrapper-width;
-$letter-spacing: 1px;
 
 
 body.demo-flow .view-header {
@@ -10,6 +9,7 @@ body.demo-flow .view-header {
 
 
 .view-header {
+
     .contact-us {
         position: fixed;
         width: 100%;
@@ -64,7 +64,7 @@ body.demo-flow .view-header {
         }
 
         .logo {
-            line-height: 130px;
+            line-height: $header-height + 10px;
         }
 
         .nav-trigger { display: none; }
@@ -82,7 +82,7 @@ body.demo-flow .view-header {
                 font-size: 11px;
                 font-weight: 600;
                 letter-spacing: $letter-spacing;
-                line-height: 120px;
+                line-height: $header-height;
                 text-indent: $letter-spacing;
                 text-transform: uppercase;
 
