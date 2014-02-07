@@ -7,6 +7,11 @@ $slide-transition-speed: 0.7s;
 html, body {
     height: 100%;
     width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background: $off-white;
 }
 
 
@@ -34,11 +39,13 @@ body > .onscreen {
     }
 
     & > header {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
         height: $header-height;
     }
 
-    & > main {
-    }
+    & > main {}
 
     & > footer {
         height: $footer-height;

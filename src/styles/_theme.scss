@@ -26,13 +26,10 @@ $base-font-size: 15px;
 $font-stack: "museo-sans", sans-serif;
 $letter-spacing: 1px;
 
+
 html {
     font-size: $base-font-size;
     font-family: $font-stack;
-}
-
-body {
-    overflow-y: hidden;
 }
 
 .onscreen {
