@@ -10,9 +10,6 @@ html(lang='en', ng-app="42.landing")
   head
     title 42 &mdash; Big Data For Retailers
 
-    //- angular.ui.router requirement
-    //- base(href="/")
-
     block meta
       include includes/mobile-meta-tags
       meta(charset="utf-8")
@@ -26,13 +23,11 @@ html(lang='en', ng-app="42.landing")
       mixin js-lib("angular.animate")
       mixin js-lib("angular.ui")
       mixin js-lib("angular.ui.router")
-      mixin js-lib("angular.sanitize")
 
       mixin app-core("app")
       mixin app-core("router")
 
-      mixin typekit-sync('qzk2xqv')
-
+      mixin typekit-sync("qzk2xqv")
 
 
   body(ng-controller="MainController", ng-class="{'demo-flow':isDemoFlow}")
@@ -46,6 +41,7 @@ html(lang='en', ng-app="42.landing")
 
 
   block bottom-scripts
+    mixin js-lib("lodash")
 
     mixin app-directive("signup")
     mixin app-directive("flippable")
@@ -53,7 +49,4 @@ html(lang='en', ng-app="42.landing")
 
     mixin app-service("utils")
 
-    mixin js-lib("lodash")
     mixin app-controller("main")
-
-    mixin js-lib("scripts")
