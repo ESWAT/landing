@@ -12,14 +12,19 @@ $light-yellow: lighten($yellow, 6%);
 $dark-yellow: darken($yellow, 8%);
 
 $wrapper-width: 960px;
-$font-stack: "museo-sans", sans-serif;
-$letter-spacing: 1px;
-
 $box-shadow: 0 3px 0 rgba(36, 42, 51, 0.1);
+
+$base-font-size: 15px;
+$font-stack: "museo-sans", sans-serif;
+$light-weight-font: 100;
+$regular-weight-font: 300;
+$bold-weight-font: 500;
+$bolder-weight-font: 700;
+$letter-spacing: 1px;
 
 
 html {
-    font-size: 14px;
+    font-size: $base-font-size;
     font-family: $font-stack;
 }
 
@@ -41,8 +46,8 @@ a, a:visited {
         margin: 0 auto;
 
         color: $white;
-        font-size: 14px;
-        font-weight: 700;
+        font-size: $base-font-size;
+        font-weight: $bolder-weight-font;
         line-height: 66px;
         text-align: center;
         text-transform: uppercase;
@@ -53,14 +58,14 @@ a, a:visited {
 
     &.outine-btn {
         background: transparent;
-        padding: 10px 22px;
+        padding: 10px 18px 9px !important;
         border: 1px solid $white;
         border-radius: 3px;
         box-sizing: border-box;
 
         color: inherit;
         font-size: 11px;
-        font-weight: 600;
+        font-weight: $bold-weight-font;
         letter-spacing: $letter-spacing;
         text-indent: $letter-spacing;
         text-transform: uppercase;
@@ -77,22 +82,22 @@ a, a:visited {
 
 
 h1 {
-    margin: 0 0 30px 0;
+    margin: 0 0 25px -2px;
 
     color: $dark-grey;
-    font-size: 34px;
-    font-weight: 300;
+    font-size: 35px;
+    font-weight: $light-weight-font;
     letter-spacing: 1px;
     line-height: 44px;
     text-transform: none;
 }
 
 h2 {
-    margin: 0 0 20px 0;
+    margin: 0 0 20px -2px;
 
     color: $navy;
-    font-size: 24px;
-    font-weight: 400;
+    font-size: 25px;
+    font-weight: $regular-weight-font;
     line-height: 32px;
     text-transform: none;
 }
@@ -101,7 +106,7 @@ h2 {
 h3 {
     color: $light-grey;
     font-size: 10px;
-    font-weight: 700;
+    font-weight: $bolder-weight-font;
     letter-spacing: $letter-spacing;
     line-height: 14px;
     text-indent: $letter-spacing;
@@ -112,8 +117,8 @@ h3 {
 
 h4 {
     color: $dark-grey;
-    font-size: 18px;
-    font-weight: 300;
+    font-size: 17px;
+    font-weight: $regular-weight-font;
     line-height: 32px;
     text-transform: none;
 }
@@ -121,6 +126,7 @@ h4 {
 
 p {
     color: $medium-grey;
+    font-weight: $regular-weight-font;
     line-height: 24px;
 
     &.hero { margin: 0 0 100px 0; }
@@ -137,7 +143,7 @@ p {
 
 .hero-content {
     p {
-        width: 335px;
+        width: 350px;
         margin: 0 0 80px 0;
     }
 }
@@ -152,7 +158,7 @@ label {
         @include transition(0.3s);
         color: $light-grey;
         font-size: 10px;
-        font-weight: 700;
+        font-weight: $bolder-weight-font;
         letter-spacing: 1px;
         text-transform: uppercase;
     }
@@ -164,14 +170,14 @@ label {
         font-family: $font-stack;
         -webkit-font-smoothing: antialiased;
         color: $navy;
-        font-size: 14px;
-        font-weight: 400;
+        font-size: $base-font-size;
+        font-weight: $regular-weight-font;
 
         @include placeholder {
             font-family: $font-stack;
             -webkit-font-smoothing: antialiased;
             color: $default-grey;
-            font-weight: 400;
+            font-weight: $regular-weight-font;
         }
     }
 
@@ -191,7 +197,7 @@ label {
     border-radius: 100%;
 
     color: $medium-grey;
-    font-weight: 700;
+    font-weight: $bolder-weight-font;
     line-height: 36px;
     text-align: center;
 
@@ -208,5 +214,5 @@ label {
     vertical-align: top;
     margin: 0 2.5%;
 
-    font-size: 14px;
+    font-size: $base-font-size;
 }

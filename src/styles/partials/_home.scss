@@ -4,7 +4,7 @@
     section {
         &.hero {
             height: 600px;
-            background: #8fc9e0;
+            background: $navy;
 
             .wrapper {
                 .hero-content {
@@ -32,7 +32,7 @@
                     display: inline-block;
                     vertical-align: top;
 
-                    font-size: 14px;
+                    font-size: $base-font-size;
 
                     &:first-child { margin-left: 0; }
 
@@ -137,7 +137,7 @@
                         p {
                             color: $navy;
                             font-size: 24px;
-                            font-weight: 300;
+                            font-weight: $regular-weight-font;
                             line-height: 32px;
                             text-transform: none;
                             word-spacing: 1px;
@@ -150,6 +150,7 @@
                     font-size: 0;
 
                     li {
+                        @include transition(0.3s);
                         width: 240px;
                         display: inline-block;
                         vertical-align: top;
