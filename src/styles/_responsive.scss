@@ -1,13 +1,40 @@
 $tablet-land: 1024px;
-$tablet-port: 850px;
-$mobile-land: 480px;
+$tablet-port: 768px;
+$mobile-land: 580px;
 $mobile-port: 320px;
+
+
+@media only screen and (max-width : $tablet-land ) {
+
+    .view-header {
+        nav {
+            left: 0;
+            margin: 0;
+            padding: 0 60px;
+            width: 100%;
+
+            ul {
+                li { margin: 0 15px; }
+            }
+
+            ul.main {
+                left: 200px;
+                margin: 0;
+            }
+
+            ul.account {
+                right: 60px;
+            }
+        }
+    }
+
+}
 
 // Tablet
 @media only screen and (max-width : $tablet-port ) {
 
     .wrapper {
-        width: $tablet-port;
+        width: 100%;
         padding: 60px;
     }
 
@@ -140,7 +167,20 @@ $mobile-port: 320px;
             left: 0;
             margin: 0;
             padding: 0 60px;
-            width: $tablet-port;
+            width: 100%;
+
+            ul {
+                li { margin: 0 15px; }
+            }
+
+            ul.main {
+                left: 200px;
+                margin: 0;
+            }
+
+            ul.account {
+                display: none;
+            }
         }
     }
 

@@ -56,6 +56,7 @@ body.demo-flow .view-header {
         width: $nav-width;
         margin-left: -($nav-width/2);
         color: $white;
+        @include transition(0.3s);
 
         &.nav-black {
             color: $navy;
@@ -69,7 +70,7 @@ body.demo-flow .view-header {
 
         ul {
             position: absolute;
-            top: 0;
+            top: -3px;
             display: inline-block;
 
             font-size: 0;
