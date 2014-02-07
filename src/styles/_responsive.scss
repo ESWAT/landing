@@ -6,6 +6,11 @@ $mobile-port: 320px;
 
 @media only screen and (max-width : $tablet-land ) {
 
+    .wrapper {
+        width: 100%;
+        padding: 0 60px;
+    }
+
     .view-header {
         nav {
             left: 0;
@@ -28,6 +33,77 @@ $mobile-port: 320px;
         }
     }
 
+    .view-home {
+        section.key .wrapper .key-content {
+            width: 30%;
+            margin: 70px 2.5%;
+        }
+
+        section.feature {
+            .wrapper {
+                .hero-content {
+                    margin: 65px 0 95px;
+                }
+
+                .filters, .paper {
+                    right: 0;
+                    left: 450px;
+                    max-height: 350px;
+                    width: auto;
+                }
+
+                .how-it-works {
+                    display: none;
+                }
+            }
+        }
+
+        section.feature.how {
+            .wrapper {
+                section, a {
+                    display: inline-block;
+
+                    p { margin: 0 0 50px 0; }
+                }
+            }
+        }
+
+        section.testimonials .wrapper {
+            ul.bragging-rights { width: 80%; }
+
+            ul.people {
+                li {
+                    text-align: left;
+
+                    img {
+                        width: 50px;
+                        display: inline-block;
+                        margin: 0 20px 0 0;
+                        vertical-align: top;
+                    }
+
+                    div {
+                        display: inline-block;
+                        vertical-align: top;
+                        width: 170px;
+                    }
+                }
+            }
+        }
+
+        section.gym-badges .wrapper {
+            ul {
+                font-size: 0;
+
+                li {
+                    width: 25%;
+                    margin: 0;
+
+                    img { width: 100%; }
+                }
+            }
+        }
+    }
 }
 
 // Tablet
@@ -123,25 +199,6 @@ $mobile-port: 320px;
             ul.bragging-rights {
                 width: 100%;
                 margin: 30px auto;
-            }
-
-            ul.people {
-                li {
-                    text-align: left;
-
-                    img {
-                        width: 50px;
-                        display: inline-block;
-                        margin: 0 20px 0 0;
-                        vertical-align: top;
-                    }
-
-                    div {
-                        display: inline-block;
-                        vertical-align: top;
-                        width: 170px;
-                    }
-                }
             }
         }
 
