@@ -1,8 +1,10 @@
+
 $content-width: 1000px;
 $content-height: 360px;
 
 
 .view-demo-upload {
+    position: absolute;
     top: 50%;
     left: 50%;
     width: $content-width;

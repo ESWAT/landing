@@ -1,3 +1,4 @@
+
 app.directive('signupForm', function() {
     return {
         restrict: 'C',
@@ -19,6 +20,7 @@ app.directive('signupForm', function() {
         }
     }
 });
+
 
 app.directive('viewDemoSignup', function(Utils) {
     return {

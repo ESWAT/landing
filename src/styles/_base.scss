@@ -1,6 +1,5 @@
 
 $header-height: 120px;
-$footer-height: 0;
 $slide-transition-speed: 0.7s;
 
 
@@ -46,9 +45,4 @@ body > .onscreen {
     }
 
     & > main {}
-
-    & > footer {
-        height: $footer-height;
-        display: none;
-    }
 }

@@ -5,7 +5,7 @@ $dark-grey: #5d6569;
 $medium-grey: #73838e;
 $light-grey: #95a0a5;
 $default-grey: #ccc;
-$off-white: #f7f7f7; // #f5f2f0
+$off-white: #f5f2f0;
 $white: #fff;
 $yellow: #ffc928;
 $light-yellow: lighten($yellow, 6%);
@@ -31,8 +31,6 @@ html {
     font-size: $base-font-size;
     font-family: $font-stack;
 }
-
-.onscreen { background-color: $navy; }
 
 
 // Typography
@@ -119,7 +117,7 @@ h3 {
     text-transform: uppercase;
 }
 
-// Change this when you have time
+// Change typography hierarchy
 
 h4 {
     margin: 0 0 8px;
@@ -141,6 +139,8 @@ p {
 
 
 // Layout
+
+.onscreen { background-color: $navy; }
 
 .wrapper {
     width: $wrapper-width;
@@ -205,7 +205,7 @@ label {
 
     color: $medium-grey;
     font-weight: $bolder-weight-font;
-    line-height: 36px;
+    line-height: 38px;
     text-align: center;
 
     &:before {
