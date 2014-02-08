@@ -19,41 +19,74 @@
         }
 
         &.features {
+            padding: 100px 0 50px;
             background: $white;
 
             .wrapper {
-                padding: 100px 0;
+                width: 100%;
 
                 section {
+                    @include transition(0.3s);
+                    position: relative;
+                    display: block;
+                    opacity: 0.3;
+                    
+                    &:hover, &.active { opacity: 1; }
+                    
                     text-align: right;
 
-                    ul {
-                        padding: 60px 0 20px;
-
-                        li {
-                            display: inline-block;
-
-                            &.line {
-                                content: '';
-                                width: 540px;
-                                padding: 3px 0 0 0;
-                                border-top: 1px solid $navy;
-                            }
-
-                            h3 {
-                                margin: 0 15px 0 0;
-                                color: $navy;
-                            }
-                        }
+                    &.revenue {
+                        .shrink-wrap { background: url(../images/revenue.svg) no-repeat 0 55%; }
                     }
 
-                    article {
-                        width: 400px;
-                        display: inline-block;
+                    &.customers {
+                        .shrink-wrap { background: url(../images/customers.svg) no-repeat 0 55%; }
+                    }
 
-                        text-align: left;
+                    &.merchandising {
+                        .shrink-wrap { background: url(../images/merchandising.svg) no-repeat 0 55%; }
+                    }
 
-                        p { margin: 0 0 50px; }
+                    &.items {
+                        .shrink-wrap { background: url(../images/items.svg) no-repeat 0 55%; }
+                    }
+
+                    &.custom {
+                        .shrink-wrap { background: url(../images/custom.svg) no-repeat 0 55%; }
+                    }
+
+                    .shrink-wrap {
+                        width: 960px;
+                        margin: 0 auto;
+
+                        ul {
+                            padding: 60px 0 20px;
+
+                            li {
+                                display: inline-block;
+
+                                &.line {
+                                    content: '';
+                                    width: 540px;
+                                    padding: 3px 0 0 0;
+                                    border-top: 1px solid $navy;
+                                }
+
+                                h3 {
+                                    margin: 0 15px 0 0;
+                                    color: $navy;
+                                }
+                            }
+                        }
+
+                        article {
+                            width: 350px;
+                            display: inline-block;
+
+                            text-align: left;
+
+                            p { margin: 0 0 50px; }
+                        }
                     }
                 }
             }

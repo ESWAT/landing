@@ -102,21 +102,8 @@ app.directive('viewHeader', function($window) {
 });
 
 
-// Safe keeps for Sarah
-
-// app.directive('contactTrigger', function($window) {
-//     return {
-//         restrict: 'C',
-//         link: function (scope, element) {
-//             var $element = $(element);
-
-//             $('#contact-link').on('click', function (){
-//                 $('.contact-us').fadeToggle(300);
-//             });
-
-//             $('nav ul li a, .logo').not(document.getElementById('contact-link')).on('click', function (){
-//                 $('.contact-us').fadeOut(300);
-//             });
-//         }
-//     }
-// });
+app.directive('hoverFeature', function($window) {
+    $('.revenue').hover(function() {
+        $(this).removeClass('active');
+    });
+});
