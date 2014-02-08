@@ -1,7 +1,7 @@
 $tablet-land: 1023px;
 $tablet-port: 767px;
 $mobile-land: 579px;
-$mobile-port: 319px;
+$mobile-port: 321px;
 
 // @media only screen and (max-width : 900px ) {
 
@@ -246,20 +246,6 @@ $mobile-port: 319px;
 
             &.gym-badges { display: none; }
         }
-
-        footer {
-            height: auto;
-
-            .wrapper {
-                padding: 0 30px 10px;
-
-                article { margin: 70px 0 80px 0; }
-
-                li { margin: 0 10px 15px 10px; }
-
-                li:nth-child(even) { display: none; }
-            }
-        }
     }
 
 
@@ -351,8 +337,16 @@ $mobile-port: 319px;
                 }
             }
         }
+    }
 
-        footer .wrapper { padding: 0; }
+    footer {
+        height: 265px;
+
+        .wrapper {
+            padding: 0;
+
+            article { margin: 70px 0 80px 0; }
+        }
     }
 
 }
@@ -402,10 +396,6 @@ $mobile-port: 319px;
                 img, .how-it-works { display: none; }
             }
         }
-
-        footer {
-            h1 { font-size: 28px; }
-        }
     }
 
     .view-about {
@@ -436,7 +426,24 @@ $mobile-port: 319px;
 
             &.social .wrapper ul li { margin: 10px 15px; }
         }
+    }
 
-        footer li:nth-child(even) { display: none; }
+    footer {
+        height: 285px;
+
+        .wrapper {
+            article {
+                h1 { font-size: 28px; }
+            }
+
+            nav {
+                ul {
+                    li { margin: 0 10px 10px; }
+                    li:nth-child(even) { display: none; }
+                }
+            }
+        }
     }
 }
+
+@media only screen and (max-width : $mobile-port ) {}
