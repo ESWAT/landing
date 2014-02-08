@@ -33,9 +33,7 @@ $mobile-port: 319px;
                 li { margin: 0 10px; }
             }
 
-            ul.account {
-                right: 60px;
-            }
+            ul.account { right: 60px; }
         }
     }
 
@@ -51,9 +49,7 @@ $mobile-port: 319px;
 
             &.feature {
                 .wrapper {
-                    .hero-content {
-                        margin: 65px 0 95px;
-                    }
+                    .hero-content { margin: 65px 0 95px; }
 
                     .filters, .paper {
                         right: 0;
@@ -72,9 +68,7 @@ $mobile-port: 319px;
             &.feature.how {
                 .wrapper {
                     .hero-content {
-                        li:last-child {
-                            margin: 20px 30px 0 0;
-                        }
+                        li:last-child { margin: 20px 30px 0 0; }
                     }
                 }
             }
@@ -112,6 +106,16 @@ $mobile-port: 319px;
 
                         img { width: 100%; }
                     }
+                }
+            }
+        }
+    }
+
+    .view-about {
+        section {
+            &.the-team {
+                .wrapper {
+                    padding: 70px 30px;
                 }
             }
         }
@@ -312,9 +316,7 @@ $mobile-port: 319px;
                         font-weight: 400;
                     }
 
-                    &.active {
-                        display: block;
-                    }
+                    &.active { display: block; }
                 }
 
                 &.account { display: none; }
@@ -322,30 +324,36 @@ $mobile-port: 319px;
         }
     }
 
-    // .view-header {
-    //     nav {
-    //         left: 0;
-    //         margin: 0;
-    //         padding: 0 60px;
-    //         width: 100%;
+    .view-about {
+        section {
+            .two-col {
+                width: 100%;
+                margin: 0 0 50px 0;
+            }
 
-    //         ul {
-    //             li { margin: 0 15px; }
-    //         }
+            &.hero, &.social {
+                .wrapper { padding: 0 50px; }
+            }
 
-    //         ul.main {
-    //             left: 200px;
-    //             margin: 0;
-    //         }
+            &.the-team {
+                .wrapper {
+                    padding: 70px 30px;
 
-    //         ul.account {
-    //             display: none;
-    //         }
+                    .team-head:nth-child(even) {
+                        width: 28%;
+                        margin: 0 19% 30px 1%;
+                    }
 
+                    .team-head:nth-child(odd) {
+                        width: 28%;
+                        margin: 0 1% 30px 19%;
+                    }
+                }
+            }
+        }
 
-
-    //     }
-    // }
+        footer .wrapper { padding: 0; }
+    }
 
 }
 
@@ -360,7 +368,6 @@ $mobile-port: 319px;
     .view-home {
         section {
             &.hero {
-
                 .wrapper {
                     .hero-content {
                         p { width: 250px; }
@@ -392,14 +399,44 @@ $mobile-port: 319px;
             &.how.feature .wrapper {
                 padding: 30px 30px 0 30px;
 
-                img, .how-it-works {
-                    display: none;
-                }
+                img, .how-it-works { display: none; }
             }
         }
 
         footer {
             h1 { font-size: 28px; }
         }
+    }
+
+    .view-about {
+        section {
+            .two-col {
+                width: 100%;
+            }
+
+            &.the-team {
+                .wrapper {
+                    padding: 70px 30px;
+
+                    .team-head {
+                        img { width: 75%; }
+                    }
+
+                    .team-head:nth-child(even) {
+                        width: 30%;
+                        margin: 0 15% 30px 3%;
+                    }
+
+                    .team-head:nth-child(odd) {
+                        width: 30%;
+                        margin: 0 3% 30px 15%;
+                    }
+                }
+            }
+
+            &.social .wrapper ul li { margin: 10px 15px; }
+        }
+
+        footer li:nth-child(even) { display: none; }
     }
 }
