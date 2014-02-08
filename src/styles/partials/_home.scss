@@ -41,6 +41,7 @@
 
                     font-size: $base-font-size;
 
+                    h2 { max-width: 200px; }
                     &:first-child { margin-left: 0; }
                     &:last-child { margin-right: 0; }
                 }
@@ -106,14 +107,19 @@
 
                     counter-reset: step;
 
-                    section {
+                    li {
+                        margin: 20px 30px 40px 0;
+                        display: block;
+
+
                         .step { margin: 5px 20px 0 0; }
 
-                        p.leader {
-                            margin: 0 0 30px 0;
-                            max-width: 295px;
-                        }
+                        p { max-width: 300px; }
+
+                        a { margin: 8px 0 0 0; }
                     }
+
+                    p { margin: 0; }
 
                     a {
                         border: 1px solid $medium-grey;

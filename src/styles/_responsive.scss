@@ -1,8 +1,16 @@
-$tablet-land: 1024px;
-$tablet-port: 768px;
-$mobile-land: 580px;
-$mobile-port: 320px;
+$tablet-land: 1023px;
+$tablet-port: 767px;
+$mobile-land: 579px;
+$mobile-port: 319px;
 
+// @media only screen and (max-width : 900px ) {
+
+//     .view-header nav {
+//             ul {
+//                 li { margin: 0 50px; }
+//             }
+//     }
+// }
 
 @media only screen and (max-width : $tablet-land ) {
 
@@ -18,13 +26,11 @@ $mobile-port: 320px;
             padding: 0 60px;
             width: 100%;
 
-            ul {
-                li { margin: 0 15px; }
-            }
-
             ul.main {
-                left: 200px;
+                left: 180px;
                 margin: 0;
+
+                li { margin: 0 10px; }
             }
 
             ul.account {
@@ -34,72 +40,78 @@ $mobile-port: 320px;
     }
 
     .view-home {
-        section.key .wrapper .key-content {
-            width: 30%;
-            margin: 70px 2.5%;
-        }
+        section {
 
-        section.feature {
-            .wrapper {
-                .hero-content {
-                    margin: 65px 0 95px;
-                }
+            &.hero .wrapper .hero-content p { max-width: 300px; }
 
-                .filters, .paper {
-                    right: 0;
-                    left: 450px;
-                    max-height: 350px;
-                    width: auto;
-                }
-
-                .how-it-works {
-                    display: none;
-                }
+            &.key .wrapper .key-content {
+                width: 30%;
+                margin: 70px 2.5%;
             }
-        }
 
-        section.feature.how {
-            .wrapper {
-                section, a {
-                    display: inline-block;
-
-                    p { margin: 0 0 50px 0; }
-                }
-            }
-        }
-
-        section.testimonials .wrapper {
-            ul.bragging-rights { width: 80%; }
-
-            ul.people {
-                li {
-                    text-align: left;
-
-                    img {
-                        width: 50px;
-                        display: inline-block;
-                        margin: 0 20px 0 0;
-                        vertical-align: top;
+            &.feature {
+                .wrapper {
+                    .hero-content {
+                        margin: 65px 0 95px;
                     }
 
-                    div {
-                        display: inline-block;
-                        vertical-align: top;
-                        width: 170px;
+                    .filters, .paper {
+                        right: 0;
+                        left: 450px;
+                        max-height: 350px;
+                        width: auto;
+                    }
+
+                    .how-it-works {
+                        width: 48%;
+                        right: 52px;
                     }
                 }
             }
-        }
 
-        section.gym-badges .wrapper {
-            ul {
-                font-size: 0;
+            &.feature.how {
+                .wrapper {
+                    .hero-content {
+                        li:last-child {
+                            margin: 20px 30px 0 0;
+                        }
+                    }
+                }
+            }
 
-                li {
-                    width: 25%;
-                    margin: 0;
+            &.testimonials .wrapper {
+                ul.bragging-rights { width: 80%; }
 
-                    img { width: 100%; }
+                ul.people {
+                    li {
+                        text-align: left;
+
+                        img {
+                            width: 50px;
+                            display: inline-block;
+                            margin: 0 20px 0 0;
+                            vertical-align: top;
+                        }
+
+                        div {
+                            display: inline-block;
+                            vertical-align: top;
+                            width: 170px;
+                        }
+                    }
+                }
+            }
+
+            &.gym-badges .wrapper {
+                ul {
+                    font-size: 0;
+
+                    li {
+                        width: 25%;
+                        margin: 0;
+
+                        img { width: 100%; }
+                    }
                 }
             }
         }
@@ -117,92 +129,119 @@ $mobile-port: 320px;
     // Home
 
     .view-home {
+        section {
+            &.hero {
+                height: 430px;
+                overflow: hidden;
 
-        section.hero {
-            height: 430px;
-            overflow: hidden;
+                .wrapper {
+                    .hero-content {
+                        top: 140px;
 
-            .wrapper {
-                .hero-content {
-                    top: 140px;
+                        p {
+                            margin: 0 0 50px;
+                            width: 250px;
+                        }
 
-                    p {
-                        margin: 0 0 50px;
-                        width: 300px;
+                        a.signup-btn { display: inline-block; }
+                        a.demo-btn { display: none; }
                     }
 
-                    a.signup-btn { display: inline-block; }
-                    a.demo-btn { display: none; }
+                    img {
+                        position: relative;
+                        top: 60px;
+                        left: 55%;
+                    }
+                }
+            }
+
+            &.key .wrapper {
+                .key-content {
+                    margin: 15px 30px 30px 0;
+                    width: 100%;
+                    max-width: 330px;
+                }
+            }
+
+            &.feature .wrapper {
+                padding: 30px 60px 0 60px;
+                overflow: hidden;
+
+                .hero-content {
+                    margin: 40px 0 80px;
+
+                    p {
+                        width: 100%;
+                        margin: 0 0 50px;
+                        max-width: 300px;
+                    }
+                }
+
+                .filters, .paper {
+                    left: 400px;
+                    max-height: 280px;
+                }
+            }
+
+            &.right {
+                background: $white;
+
+                .wrapper {
+                    text-align: left;
+
+                    .hero-content { text-align: left; }
+                }
+            }
+
+            &.how.feature .wrapper {
+                padding: 30px 60px;
+
+                .hero-content {
+                    margin: 30px 0 60px 0;
+
+                    li {
+                        margin: 20px 30px 40px 0;
+                        display: inline-block;
+                        vertical-align: top;
+                        width: 40%;
+
+                        .step { margin: 5px 0 0 0; }
+
+                        p {
+                            width: 100%;
+                            margin: 0 0 0 50px;
+                            padding: 0 50px 0 0;
+                        }
+
+                        a { margin: 8px 0 0 0; }
+                    }
+
+                    .how-it-works { display: none; }
                 }
 
                 img {
+                    margin: 0 0 40px 0;
                     position: relative;
-                    top: 60px;
-                    left: 55%;
-                }
-            }
-        }
-
-        section.key .wrapper {
-            .key-content {
-                margin: 15px 30px 30px 0;
-                width: 100%;
-                max-width: 196px;
-            }
-        }
-
-        section.feature .wrapper {
-            padding: 30px 60px 0 60px;
-            overflow: hidden;
-
-            .hero-content {
-                margin: 40px 0 80px;
-
-                p {
+                    display: block;
                     width: 100%;
-                    margin: 0 0 50px;
-                    max-width: 300px;
+                    top: 0;
+                    right: 0;
                 }
             }
 
-            .filters, .paper {
-                left: 400px;
-                max-height: 280px;
-            }
-        }
+            &.testimonials {
+                padding: 0;
 
-        section.how.feature .wrapper {
-            padding: 30px 60px;
-
-            .hero-content {
-                margin: 30px 0 60px 0;
-
-                section {
-                    display: inline-block;
-                    margin: 0 20px 0 0;
+                .wrapper {
+                    ul.bragging-rights {
+                        width: 100%;
+                        margin: 30px auto;
+                    }
                 }
-
-                a { display: inline-block; }
             }
 
-            img {
-                margin: 0 0 40px 0;
-                position: relative;
-                display: block;
-                width: 100%;
-                top: 0;
-                right: 0;
-            }
+            &.gym-badges { display: none; }
         }
-
-        section.testimonials .wrapper {
-            ul.bragging-rights {
-                width: 100%;
-                margin: 30px auto;
-            }
-        }
-
-        section.gym-badges { display: none; }
 
         footer {
             height: auto;
@@ -219,36 +258,6 @@ $mobile-port: 320px;
         }
     }
 
-    .view-header {
-        nav {
-            left: 0;
-            margin: 0;
-            padding: 0 60px;
-            width: 100%;
-
-            ul {
-                li { margin: 0 15px; }
-            }
-
-            ul.main {
-                left: 200px;
-                margin: 0;
-            }
-
-            ul.account {
-                display: none;
-            }
-        }
-    }
-
-}
-
-// Mobile
-@media only screen and (max-width : $mobile-land) {
-    .wrapper {
-        width: 100%;
-        padding: 30px;
-    }
 
     // Header
     .view-header {
@@ -313,48 +322,79 @@ $mobile-port: 320px;
         }
     }
 
+    // .view-header {
+    //     nav {
+    //         left: 0;
+    //         margin: 0;
+    //         padding: 0 60px;
+    //         width: 100%;
+
+    //         ul {
+    //             li { margin: 0 15px; }
+    //         }
+
+    //         ul.main {
+    //             left: 200px;
+    //             margin: 0;
+    //         }
+
+    //         ul.account {
+    //             display: none;
+    //         }
+
+
+
+    //     }
+    // }
+
+}
+
+// Mobile
+@media only screen and (max-width : $mobile-land) {
+    .wrapper {
+        width: 100%;
+        padding: 30px;
+    }
+
     // Home
     .view-home {
+        section {
+            &.hero {
 
-        section.hero {
+                .wrapper {
+                    .hero-content {
+                        p { width: 250px; }
+                    }
 
-            .wrapper {
-                .hero-content {
-                    p { width: 250px; }
+                    img { display: none; }
                 }
-
-                img { display: none; }
-            }
-        }
-
-        section.key .wrapper {
-            .key-content {
-                margin: 15px 0 30px;
-                max-width: 300px;
-            }
-        }
-
-        section.feature .wrapper {
-            padding: 0 30px;
-
-            .filters, .paper {
-                position: relative;
-                width: auto;
-                left: 0;
-                right: 4px;
-                max-height: 280px;
-            }
-        }
-
-        section.how.feature .wrapper {
-            padding: 30px 30px 0 30px;
-
-            .hero-content {
-                section .step { margin: 5px 20px 40px 0; }
             }
 
-            img, .how-it-works {
-                display: none;
+            &.key .wrapper {
+                .key-content {
+                    margin: 15px 0 30px;
+                    max-width: 300px;
+                }
+            }
+
+            &.feature .wrapper {
+                padding: 0 30px;
+
+                .filters, .paper {
+                    position: relative;
+                    width: auto;
+                    left: 0;
+                    right: 4px;
+                    max-height: 280px;
+                }
+            }
+
+            &.how.feature .wrapper {
+                padding: 30px 30px 0 30px;
+
+                img, .how-it-works {
+                    display: none;
+                }
             }
         }
 

@@ -16,7 +16,8 @@ article.view.view-header
 
         p.nav-trigger.icon-list
 
-        ul.main.active
+        ul.main
+            li: a(ui-sref="root.home", ng-click="contactUs.hide()") Home
             li: a(ui-sref="root.features", ng-click="contactUs.hide()") Features
             li: a(ui-sref="root.blog",     ng-click="contactUs.hide()") Blog
             li: a(ui-sref="root.about",    ng-click="contactUs.hide()") About
