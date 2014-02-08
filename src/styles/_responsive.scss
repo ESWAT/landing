@@ -340,12 +340,15 @@ $mobile-port: 321px;
     }
 
     footer {
-        height: 265px;
+        height: 270px;
 
         .wrapper {
             padding: 0;
 
-            article { margin: 70px 0 80px 0; }
+            article {
+                margin: 70px 0 80px 0;
+                h1 { font-size: 28px; }
+            }
         }
     }
 
@@ -429,14 +432,13 @@ $mobile-port: 321px;
     }
 
     footer {
-        height: 285px;
+        height: 280px;
 
         .wrapper {
-            article {
-                h1 { font-size: 28px; }
-            }
-
             nav {
+                width: 300px;
+                margin: 0 auto;
+
                 ul {
                     li { margin: 0 10px 10px; }
                     li:nth-child(even) { display: none; }
