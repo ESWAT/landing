@@ -51,26 +51,26 @@ body.demo-flow .view-header {
 
 
     nav {
+        @include transition(0.3s);
         position: absolute;
         left: 50%;
         width: $nav-width;
         margin-left: -($nav-width/2);
-        color: $white;
-        @include transition(0.3s);
 
-        &.nav-black {
-            color: $navy;
-        }
+        color: $white;
 
         .logo {
-            line-height: $header-height + 10px;
+            width: 120px;
+            height: 120px;
+            
+            a { line-height: 132px }
         }
 
         .nav-trigger { display: none; }
 
         ul {
             position: absolute;
-            top: -3px;
+            top: 0;
             display: inline-block;
 
             font-size: 0;

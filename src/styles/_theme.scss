@@ -5,13 +5,15 @@ $dark-grey: #5d6569;
 $medium-grey: #73838e;
 $light-grey: #95a0a5;
 $default-grey: #ccc;
-$off-white: #f5f2f0;
+$off-white: #f7f5f3;
 $white: #fff;
-$yellow: #ffc928;
+$yellow: #ffd028;
 $light-yellow: lighten($yellow, 6%);
 $dark-yellow: darken($yellow, 8%);
 
 $wrapper-width: 960px;
+$form-width: 440px;
+$form-height: 66px * 5;
 $box-shadow: 0 3px 0 rgba(36, 42, 51, 0.1);
 
 $base-font-size: 15px;
@@ -46,15 +48,17 @@ a, a:visited {
         height: 66px;
         background: $yellow;
         padding: 0;
-        border: 0;
+        border-bottom: 2px solid #f4b700;
+        border-radius: 3px;
         margin: 0 auto;
 
         color: $white;
-        font-size: $base-font-size;
+        font-size: 14px;
         font-weight: $bolder-weight-font;
         line-height: 66px;
         text-align: center;
         text-transform: uppercase;
+        text-shadow: 0 1px 1px #d6a000;
         display: block;
 
         &:hover { background: $light-yellow; }
@@ -91,8 +95,9 @@ h1 {
     color: $dark-grey;
     font-size: 35px;
     font-weight: $light-weight-font;
-    letter-spacing: 1px;
+    letter-spacing: $letter-spacing;
     line-height: 44px;
+    text-indent: $letter-spacing;
     text-transform: none;
 }
 
@@ -158,15 +163,25 @@ p {
 
 label {
     @include transition(0.3s);
-    color: $light-grey;
+    width: $form-width/2;
+    height: $form-height/5;
     background: $white;
+    display: inline-block;
+    border-bottom: 1px solid #eee;
+    cursor: text;
+    
+    color: $light-grey;
 
     span {
         @include transition(0.3s);
+        margin: 12px 0 0 14px;
+        display: block;
+
         color: $light-grey;
         font-size: 10px;
         font-weight: $bolder-weight-font;
         letter-spacing: 1px;
+        text-indent: $letter-spacing;
         text-transform: uppercase;
     }
 

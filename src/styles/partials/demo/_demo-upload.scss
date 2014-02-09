@@ -1,5 +1,5 @@
 
-$content-width: 1000px;
+$content-width: $wrapper-width;
 $content-height: 360px;
 
 
@@ -28,6 +28,6 @@ $content-height: 360px;
         width: 1px;
         height: 200px;
         background: $default-grey;
-        margin: -75px 0 0 50px; 
+        margin: -75px 0 0 35px; 
     }
 }

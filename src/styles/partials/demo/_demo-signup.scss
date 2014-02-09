@@ -1,8 +1,4 @@
 
-$form-width: 440px;
-$form-height: 66px * 5;
-
-
 .view-demo-signup {
     .signup-form-container {
         position: absolute;
@@ -24,18 +20,7 @@ $form-height: 66px * 5;
         font-size: 0;
 
         label {
-            width: 220px;
-            height: 66px;
-            display: inline-block;
-            border-bottom: 1px solid #eee;
-            cursor: text;
-
-            span {
-                margin: 12px 0 0 14px;
-                display: block;
-            }
-
-            input { margin: 8px 0 0 14px; }
+            input { margin: 9px 0 0 14px; }
         }
 
         label:nth-child(1n+5) { border-bottom: none; }
@@ -44,7 +29,10 @@ $form-height: 66px * 5;
 
         label.full-width { width: 100%; }
 
-        a.solid-btn { width: $form-width; }
+        a.solid-btn {
+            width: $form-width;
+            border-radius: 0 0 3px 3px;
+        }
     }
 
     .background-images {
