@@ -430,11 +430,13 @@ $mobile-port: 321px;
 
 }
 
-// Mobile
+// Mobile 579
 @media only screen and (max-width : $mobile-land) {
     .wrapper {
         width: 100%;
         padding: 30px;
+
+        .section-heading { padding: 0 0 40px 0; }
     }
 
     // Home
@@ -472,6 +474,11 @@ $mobile-port: 321px;
             &.how.feature .wrapper {
                 padding: 30px 30px 0 30px;
 
+                .hero-content li {
+                    width: 100%;
+                    margin: 10px 30px 20px 0;
+                }
+
                 img, .how-it-works { display: none; }
             }
         }
@@ -481,29 +488,50 @@ $mobile-port: 321px;
         section {
             .two-col {
                 width: 100%;
-            }
+                margin: 0 0 80px 0;
 
-            &.the-team {
-                .wrapper {
-                    padding: 70px 30px;
-
-                    .team-head {
-                        img { width: 75%; }
-                    }
-
-                    .team-head:nth-child(even) {
-                        width: 30%;
-                        margin: 0 15% 30px 3%;
-                    }
-
-                    .team-head:nth-child(odd) {
-                        width: 30%;
-                        margin: 0 3% 30px 15%;
-                    }
+                ul {
+                    max-width: 320px;
+                    margin: 0 auto;
                 }
             }
 
-            &.social .wrapper ul li { margin: 10px 15px; }
+            .two-col:last-child { margin: 0; }
+
+            &.the-team .wrapper .team-head:nth-child(odd), &.the-team .wrapper .team-head:nth-child(even)  {
+                width: 100%;
+                max-width: 320px;
+                margin: 0 0 30px 0;
+                text-align: left;
+
+
+                .team-head-label {
+                    display: inline-block;
+                    vertical-align: top;
+                    margin: 9px 0 0 0;
+                }
+
+                img {
+                    width: 60px;
+                    margin: 0 15px 0 0;
+                }
+            }
+
+            &.social .wrapper {
+                padding: 0;
+
+                ul {
+                    margin: 30px 0;
+
+                    li {
+                        margin: 10px 5px;
+                        width: 45px;
+                        height: 45px;
+
+                        a p:before { line-height: 43px; }
+                    }
+                }
+            }
         }
     }
 
@@ -550,4 +578,16 @@ $mobile-port: 321px;
     }
 }
 
-@media only screen and (max-width : $mobile-port ) {}
+@media only screen and (max-width : $mobile-port ) {
+    .view-about {
+        section {
+
+            &.social {
+                .wrapper {
+                    padding: 0 30px;
+                }
+            }
+        }
+    }
+
+}

@@ -145,11 +145,32 @@ p {
 
 // Layout
 
+section {
+    &.hero {
+        height: 420px;
+        background: $navy;
+
+        .wrapper {
+            .hero-points {
+                position: relative;
+                text-align: center;
+                top: 55%;
+                -webkit-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+
+                h1, p { color: $white; }
+            }
+        }
+    }
+}
+
 .onscreen { background-color: $navy; }
 
 .wrapper {
     width: $wrapper-width;
     margin: 0 auto;
+    height: 100%;
 }
 
 
@@ -169,7 +190,7 @@ label {
     display: inline-block;
     border-bottom: 1px solid #eee;
     cursor: text;
-    
+
     color: $light-grey;
 
     span {

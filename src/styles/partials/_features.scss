@@ -4,18 +4,6 @@
         &.hero {
             height: 420px;
             background: $navy;
-
-            .wrapper {
-                .hero-points {
-                    position: relative;
-                    text-align: center;
-                    top: 180px;
-
-                    h1, p {
-                        color: $white;
-                    }
-                }
-            }
         }
 
         &.features {
@@ -30,9 +18,9 @@
                     position: relative;
                     display: block;
                     opacity: 0.3;
-                    
+
                     &:hover, &.active { opacity: 1; }
-                    
+
                     text-align: right;
 
                     &.revenue {

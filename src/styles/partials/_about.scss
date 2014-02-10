@@ -4,17 +4,6 @@
         &.hero {
             height: 420px;
             background: $navy;
-
-            .wrapper {
-                .hero-points {
-                    position: relative;
-                    top: 180px;
-
-                    text-align: center;
-
-                    h1, p { color: $white; }
-                }
-            }
         }
 
         &.the-team {
