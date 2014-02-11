@@ -4,8 +4,29 @@
     section {
         position: relative;
 
+        &.hero.home {
+            height: 700px;
+            background: $navy;
+
+            .hero-img-contain {
+                height: 700px;
+
+                img {
+                    position: position;
+                    width: auto;
+                    min-height: 550px;
+                    top: 0;
+                    bottom: 0px;
+                    left: 0;
+                    -webkit-transform: none;
+                    -ms-transform: none;
+                    transform: none;
+                }
+            }
+        }
+
         &.hero {
-            height: 660px;
+            height: 750px;
             background: $white;
             border-bottom: 1px solid #eee;
 
@@ -15,7 +36,10 @@
                 position: relative;
                 .hero-content {
                     position: absolute;
-                    top: 222px;
+                    top: 50%;
+                    text-align: left;
+
+                    h1, p { color: $navy; }
 
                     a.outline-btn { border: 1px solid $navy; }
 
@@ -24,12 +48,13 @@
                         span.demo-btn { display: inline-block; }
                     }
                 }
+            }
 
-                img {
-                    position: absolute;
-                    top: 198px;
-                    left: 50%;
-                }
+            .laptop {
+                position: absolute;
+                top: 193px;
+                left: 40%;
+                z-index: 99;
             }
         }
 
@@ -147,7 +172,7 @@
 
             .wrapper {
                 text-align: center;
-                
+
                 q {
                     @include transition(0.3s);
                     display: block;
