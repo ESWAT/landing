@@ -179,8 +179,10 @@ $mobile-port: 321px;
                             width: 250px;
                         }
 
-                        a.signup-btn { display: inline-block; }
-                        a.demo-btn { display: none; }
+                        a {
+                            span.signup-btn { display: inline-block; }
+                            span.demo-btn { display: none; }
+                        }
                     }
 
                     img {

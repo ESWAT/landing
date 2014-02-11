@@ -13,8 +13,10 @@
                     top: 222px;
                     h1, p, a { color: $white; }
 
-                    a.signup-btn { display: none; }
-                    a.demo-btn { display: inline-block; }
+                    a {
+                        span.signup-btn { display: none; }
+                        span.demo-btn { display: inline-block; }
+                    }
                 }
 
                 img {
@@ -58,7 +60,10 @@
 
                     color: $medium-grey;
 
-                    a { border: 1px solid $medium-grey; }
+                    a {
+                        border: 1px solid $medium-grey;
+                        color: #73838e;
+                    }
                 }
 
                 .filters, .paper, .how-it-works {
@@ -121,7 +126,7 @@
 
                     a {
                         border: 1px solid $medium-grey;
-                        color: $light-grey;
+                        color: $medium-grey;
                     }
                 }
 

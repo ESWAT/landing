@@ -3,15 +3,16 @@ article.view.view-home
 
     section.hero.home
         .hero-img-contain
-            img(src="/assets/images/home-hero.jpg")
+            //- img(src="/assets/images/home-hero.jpg")
 
         .wrapper
             article.hero-content
                 h1 Grow Revenue
                 p Big data made simple. Leave the numbers to us, we'll give the answers to insights you want to see.
 
-                a.outine-btn.demo-btn(ui-sref="root.home") Try Our Free Demo
-                a.outine-btn.signup-btn(ui-sref="root.demo.signup") Sign Up
+                a.outine-btn(ui-sref="root.home")
+                    span.demo-btn Try Our Free Demo
+                    span.signup-btn Sign up
 
             //- img(src="/assets/images/dash.svg")
 
@@ -31,43 +32,6 @@ article.view.view-home
             article.key-content
                 h2 Monetize Your POS Data
                 p Instantly share your findings with clients and colleagues. Export PDFs and&nbsp;graphs.
-
-
-    section.feature
-
-        .wrapper
-
-            article.hero-content
-                h1 Smart-Ass Filters
-                p Big data made simple. Leave the numbers to us, we'll give the answers to insights you want to see.
-
-                a.outine-btn(ui-sref="root.home") See How Smart They Are
-
-            img.filters(src="/assets/images/filters-landing.svg")
-
-
-    section.feature.right
-
-        .wrapper
-
-            article.hero-content
-                h1 Data Consolidation
-                p Big data made simple. Leave the numbers to us, we'll give the answers to insights you want to see.
-
-                a.outine-btn(ui-sref="root.home") Consolidate Now
-
-
-    section.feature.exporting
-
-        .wrapper
-
-            article.hero-content
-                h1 Simple Exporting
-                p Big data made simple. Leave the numbers to us, we'll give the answers to insights you want to see.
-
-                a.outine-btn(ui-sref="root.home") See How Simple It Is
-
-            img.paper(src="/assets/images/paper-report.png")
 
 
     section.how.feature
