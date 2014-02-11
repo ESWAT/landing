@@ -1,12 +1,13 @@
 
 article.view.view-home
 
-    section.hero
+    section.hero.home
         .hero-img-contain
-            //- img(src="/assets/images/home-hero.jpg")
+            img(src="/assets/images/home-hero-bg.png")
+        img.laptop(src="/assets/images/home-hero-laptop.png")
 
         .wrapper
-            article.hero-content
+            article.hero-content.hero-points
                 h1 Grow Revenue
                 p Big data made simple. Leave the numbers to us, we'll give the answers to insights you want to see.
 
@@ -56,9 +57,10 @@ article.view.view-home
                 img.how-it-works(src="/assets/images/how.svg")
 
 
-    section.testimonials(ng-mouseenter="carousel.stop()", ng-mouseleave="carousel.start()")
+    section.testimonials
 
-        .wrapper
+        .wrapper(ng-mouseenter="carousel.stop()", ng-mouseleave="carousel.start()")
+
             q(ng-bind-html="testimonials[carousel.state.index].quote")
 
             ul.people
@@ -82,4 +84,3 @@ article.view.view-home
                 li: img(src="/assets/images/sauder.svg")
                 li: img(src="/assets/images/benz.svg")
                 li: img(src="/assets/images/code_n.svg")
-

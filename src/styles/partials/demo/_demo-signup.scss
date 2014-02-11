@@ -1,11 +1,16 @@
 
 .view-demo-signup {
+
+    position: absolute;
+    top: 0; right: 0; left: 0;
+    bottom: $footer-height;
+
     .signup-form-container {
         position: absolute;
         right: 0;
         bottom: 0;
         left: 0;
-        height: $form-height;
+        top: 0;
     }
 
     .signup-form {
@@ -16,7 +21,6 @@
         width: 440px;
         margin-top: -($form-height/2);
         margin-left: -($form-width/2);
-
         font-size: 0;
 
         label {

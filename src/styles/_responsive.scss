@@ -19,6 +19,44 @@ $mobile-port: 321px;
         padding: 0 60px;
     }
 
+    section.hero {
+        height: 550px;
+        overflow: hidden;
+
+        .hero-img-contain {
+            position: absolute;
+            height: 550px;
+            z-index: 0;
+            overflow: hidden;
+            width: 100%;
+
+            img {
+                position: relative;
+                height: 650px;
+                width: auto;
+                min-width: 100%;
+            }
+        }
+
+        .wrapper {
+            .hero-content {
+                p {
+                    margin: 0 0 50px;
+                    width: 250px;
+                }
+
+                a.signup-btn { display: inline-block; }
+                a.demo-btn { display: none; }
+            }
+
+            img {
+                position: relative;
+                top: 60px;
+                left: 55%;
+            }
+        }
+    }
+
     .view-header {
         nav {
             left: 0;
@@ -39,6 +77,48 @@ $mobile-port: 321px;
 
     .view-home {
         section {
+            &.hero.home {
+                height: 700px;
+                background: $navy;
+
+                .hero-img-contain {
+                    position: absolute;
+                    height: 700px;
+                    z-index: 0;
+                    overflow: hidden;
+                    width: 100%;
+
+                    img {
+                        position: relative;
+                        height: 700px;
+                        width: auto;
+                    }
+                }
+            }
+
+            &.hero {
+                height: 550px;
+                overflow: hidden;
+
+                .wrapper {
+                    .hero-content {
+
+                        p {
+                            margin: 0 0 50px;
+                            width: 250px;
+                        }
+
+                        a.signup-btn { display: inline-block; }
+                        a.demo-btn { display: none; }
+                    }
+
+                    img {
+                        position: relative;
+                        top: 60px;
+                        left: 55%;
+                    }
+                }
+            }
 
             &.hero .wrapper .hero-content p { max-width: 300px; }
 
@@ -183,27 +263,30 @@ $mobile-port: 321px;
     }
 
     // Home
-
     .view-home {
         section {
             &.hero {
                 height: 450px;
                 overflow: hidden;
 
+                .laptop {
+                    top: 400px;
+                    left: -25px;
+                }
+
                 .wrapper {
                     .hero-content {
-                        top: 140px;
+                        top: 250px;
+
+                        p {
+                            width: 350px;
+                            max-width: 500px;
+                        }
 
                         a {
                             span.signup-btn { display: none; }
                             span.demo-btn { display: inline-block; }
                         }
-                    }
-
-                    img {
-                        position: relative;
-                        top: 60px;
-                        left: 55%;
                     }
                 }
             }
@@ -304,7 +387,7 @@ $mobile-port: 321px;
             left: 60px;
             margin: 0;
             width: 100%;
-            
+
             .logo {
                 position: absolute;
                 left: 0px;
@@ -451,35 +534,21 @@ $mobile-port: 321px;
         .section-heading { padding: 0 0 40px 0; }
     }
 
-    section.hero {
-        height: 420px;
-        background: $navy;
-
-        .hero-img-contain {
-            position: absolute;
-            height: 420px;
-            z-index: 0;
-            overflow: hidden;
-            width: 100%;
-
-            img {
-                position: relative;
-                height: 420px;
-                width: auto;
-            }
-        }
-    }
-
     // Home
     .view-home {
         section {
             &.hero {
+                .laptop {
+                    top: 445px;
+                    left: 50%;
+                    margin: 0 0 0 -200px;
+                    width: 400px;
+                }
+
                 .wrapper {
                     .hero-content {
                         p { width: 250px; }
                     }
-
-                    img { display: none; }
                 }
             }
 
@@ -516,7 +585,7 @@ $mobile-port: 321px;
     }
 
     // Header
-    
+
     .view-header {
         nav {
             left: 30px;
@@ -623,6 +692,16 @@ $mobile-port: 321px;
 
 // Mobile 321
 @media only screen and (max-width : $mobile-port ) {
+    .view-home {
+        section {
+            &.hero.home { height: 500px; }
+
+            &.hero {
+                .laptop { display: none; }
+            }
+        }
+    }
+
     .view-about {
         section {
             &.social {

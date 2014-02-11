@@ -35,7 +35,7 @@ body.demo-flow .view-header {
                 }
 
                 a {
-                    @include transition(0.3s);
+                    @include transition(color 0.3s);
                     color: $white;
                     font-size: 60px;
                     font-weight: $bolder-weight-font;
@@ -51,20 +51,18 @@ body.demo-flow .view-header {
 
 
     nav {
-        @include transition(0.3s);
         position: absolute;
         left: 50%;
         width: $nav-width;
         margin-left: -($nav-width/2);
-
         color: $white;
 
         .logo {
-            width: 120px;
-            height: 120px;
-            
+            width:  $header-height;
+            height: $header-height;
+
             a {
-                line-height: 160px;
+                line-height: $header-height + 30px;
             }
         }
 
@@ -76,7 +74,6 @@ body.demo-flow .view-header {
             height: 40px;
             padding-top: 12px;
             margin: 0 -6px 0 0;
-            box-sizing: border-box;
             transition: .5s cubic-bezier(1.000, 0.000, 0.645, 0.650);
         }
 
@@ -97,7 +94,9 @@ body.demo-flow .view-header {
             animation-play-state: initial !important;
         }
 
-        .bar2 { opacity: 1; }
+        .bar2 {
+            opacity: 1;
+        }
 
         .bar3 {
             bottom: 0;
@@ -124,6 +123,10 @@ body.demo-flow .view-header {
             bottom: 25%;
             animation: bottombar-x .5s;
             animation-fill-mode: both;
+        }
+
+        .nav-trigger {
+            display: none;
         }
 
         ul {

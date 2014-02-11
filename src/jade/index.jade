@@ -31,7 +31,7 @@ html(lang='en', ng-app="42.landing")
       mixin typekit-sync("qzk2xqv")
 
 
-  body(ng-controller="MainController", ng-class="{'demo-flow':isDemoFlow}")
+  body(ng-controller="MainController", ng-class="{'demo-flow':isDemoFlow, 'home':isHome}")
 
     section.offscreen.animation-offscreen(ui-view='offscreen')
 

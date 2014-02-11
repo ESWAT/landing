@@ -28,5 +28,7 @@ article.view.view-header
             li: a.contact-link(ng-click="contactUs.toggle()") Contact
 
         ul.account
-            li: a(ui-sref="root.home") Log In
-            li: a.outline-btn(ui-sref="root.demo.signup") Sign Up
+            //- li: a(ui-sref="root.home")
+            //-     | Log In
+            li: a.outline-btn(ui-sref="root.demo.signup")
+                | request a demo

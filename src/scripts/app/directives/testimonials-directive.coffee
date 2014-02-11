@@ -22,18 +22,19 @@ app.directive 'testimonials', (Testimonials) ->
         scope.selected = null
 
         scope.carousel =
-            timers: []
+            timer: []
             state: index: 0
             start: ->
                 console.log 'starting carousel'
-                @timers.push setInterval (=>
+                @stop()
+                @timer = setInterval (=>
                     @state.index += 1
                     scope.$apply()
                     console.log 'updating index', @state.index
                 ), 3000
             stop: ->
-                @timers.forEach (x) -> clearInterval(x)
-                @timers = []
+                clearInterval(@timer)
+                @timer = null
 
         scope.select = (index) ->
             scope.carousel.stop()
