@@ -1,0 +1,24 @@
+{
+  "name": "landing-service",
+  "version": "0.0.0",
+  "description": "",
+  "main": "app.coffee",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/42technologies/landing-v3"
+  },
+  "author": "42",
+  "license": "proprietary",
+  "bugs": {
+    "url": "https://github.com/42technologies/landing-v3/issues"
+  },
+  "homepage": "https://github.com/42technologies/landing-v3",
+  "dependencies": {
+    "service": "git://github.com/42debut/service.git#master",
+    "postmark": "~0.2.0",
+    "validator": "~3.2.1"
+  }
+}
