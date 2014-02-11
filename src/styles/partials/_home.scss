@@ -10,6 +10,7 @@
 
             .hero-img-contain {
                 height: 700px;
+                background: $off-white;
 
                 img {
                     position: position;
@@ -39,7 +40,10 @@
                     top: 50%;
                     text-align: left;
 
-                    h1, p { color: $navy; }
+                    h1, p {
+                        color: $navy;
+                        width: 250px;
+                    }
 
                     a.outline-btn { border: 1px solid $navy; }
 
@@ -52,9 +56,12 @@
 
             .laptop {
                 position: absolute;
-                top: 193px;
-                left: 40%;
+                top: 110px;
+                left: 43%;
                 z-index: 99;
+                width: 650px;
+
+                &.mobile { display: none; }
             }
         }
 

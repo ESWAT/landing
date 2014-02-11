@@ -244,7 +244,7 @@ $mobile-port: 321px;
     }
 
     // Form
-    
+
     .view-demo-signup {
         .signup-form {
             position: absolute;
@@ -252,9 +252,9 @@ $mobile-port: 321px;
             left: 0;
             width: 100%;
             margin: 0;
-            
+
             label { width: 100%; }
-            
+
             a.solid-btn {
                 width: 100%;
                 border-radius: 0 0 3px 3px;
@@ -270,8 +270,14 @@ $mobile-port: 321px;
                 overflow: hidden;
 
                 .laptop {
-                    top: 400px;
-                    left: -25px;
+                    top: 380px;
+                    width: 100%;
+                    left: 0;
+                    padding: 0 50px;
+                    display: none;
+
+                    &.desktop { display: none; }
+                    &.mobile { display: block; }
                 }
 
                 .wrapper {
@@ -539,15 +545,16 @@ $mobile-port: 321px;
         section {
             &.hero {
                 .laptop {
-                    top: 445px;
-                    left: 50%;
-                    margin: 0 0 0 -200px;
-                    width: 400px;
+                    width: 550px;
+                    padding: 0 20px;
                 }
 
                 .wrapper {
                     .hero-content {
-                        p { width: 250px; }
+                        p {
+                            width: 350px;
+                            max-width: 75%;
+                        }
                     }
                 }
             }
@@ -693,11 +700,14 @@ $mobile-port: 321px;
 // Mobile 321
 @media only screen and (max-width : $mobile-port ) {
     .view-home {
+
         section {
             &.hero.home { height: 500px; }
 
             &.hero {
-                .laptop { display: none; }
+                .wrapper .hero-content p { width: 250px; }
+
+                .laptop.mobile { display: none; }
             }
         }
     }
