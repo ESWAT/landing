@@ -146,9 +146,35 @@ p {
 // Layout
 
 section {
-    &.hero {
-        height: 420px;
+    &.hero.home {
+        height: 700px;
         background: $navy;
+
+        .hero-img-contain { height: 750px; }
+    }
+
+    &.hero {
+        height: 550px;
+        background: $navy;
+
+        .hero-img-contain {
+            position: absolute;
+            height: 550px;
+            z-index: 0;
+            overflow: hidden;
+            width: 100%;
+
+            img {
+                position: relative;
+                width: 100%;
+                min-height: 550px;
+                top: 50%;
+                left: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
+        }
 
         .wrapper {
             .hero-points {

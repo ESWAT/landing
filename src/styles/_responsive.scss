@@ -439,6 +439,25 @@ $mobile-port: 321px;
         .section-heading { padding: 0 0 40px 0; }
     }
 
+    section.hero {
+        height: 420px;
+        background: $navy;
+
+        .hero-img-contain {
+            position: absolute;
+            height: 420px;
+            z-index: 0;
+            overflow: hidden;
+            width: 100%;
+
+            img {
+                position: relative;
+                height: 420px;
+                width: auto;
+            }
+        }
+    }
+
     // Home
     .view-home {
         section {

@@ -5,8 +5,6 @@
         position: relative;
 
         &.hero {
-            height: 600px;
-            background: $navy;
 
             .wrapper {
                 position: relative;
@@ -55,7 +53,7 @@
                 position: relative;
 
                 .hero-content {
-                    margin: 135px 0 175px;
+                    margin: 125px 0 145px;
                     display: inline-block;
 
                     color: $medium-grey;
@@ -81,7 +79,7 @@
         }
 
         &.exporting {
-            background: $navy;
+            background: $yellow;
             overflow: hidden;
         }
 

@@ -1,17 +1,12 @@
 
 .view-about {
     section {
-        &.hero {
-            height: 420px;
-            background: $navy;
-        }
-
         &.the-team {
             background: $white;
 
             .wrapper {
                 font-size: 0;
-                padding: 160px 0 100px;
+                padding: 100px 0;
 
                 .about-the-team {
                     text-align: center;
