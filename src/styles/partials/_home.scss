@@ -5,13 +5,20 @@
         position: relative;
 
         &.hero {
+            height: 660px;
+            background: $white;
+            border-bottom: 1px solid #eee;
+
+            .hero-img-contain { height: 750px; }
 
             .wrapper {
                 position: relative;
                 .hero-content {
                     position: absolute;
                     top: 222px;
-                    h1, p, a { color: $white; }
+                    // h1, p, a { color: $white; }
+
+                    a.outline-btn { border: 1px solid $navy; }
 
                     a {
                         span.signup-btn { display: none; }

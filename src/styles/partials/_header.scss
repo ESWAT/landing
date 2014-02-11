@@ -57,13 +57,19 @@ body.demo-flow .view-header {
         width: $nav-width;
         margin-left: -($nav-width/2);
 
-        color: $white;
+        color: $navy;
 
         .logo {
             width: 120px;
             height: 120px;
             
-            a { line-height: 132px }
+            a {
+                line-height: 132px;
+                
+                img {
+                    width: 94px;
+                }
+            }
         }
 
         .hamburger {
@@ -150,7 +156,7 @@ body.demo-flow .view-header {
 
                     &:hover, .selected {
                         padding: 0 0 3px;
-                        border-bottom: 2px solid $white;
+                        border-bottom: 2px solid $navy;
                     }
                 }
             }
@@ -166,7 +172,7 @@ body.demo-flow .view-header {
                 li:last-child {
                     margin: 0 0 0 -2px;
 
-                    a { border: 1px solid $white; }
+                    a { border: 1px solid $navy; }
                 }
             }
         }

@@ -11,8 +11,9 @@ article.view.view-header
 
 
     nav
-        .logo: a(ui-sref="root.home", ng-click="contactUs.hide()")
-            img(src="/assets/images/logo.svg")
+        .logo
+            a(ui-sref="root.home", ng-click="contactUs.hide()")
+                img(src="/assets/images/logo.svg")
 
         a#menu-toggle.hamburger
             span.menu-bar.bar1
@@ -20,7 +21,7 @@ article.view.view-header
             span.menu-bar.bar3
 
         ul.main
-            li: a(ui-sref="root.home", ng-click="contactUs.hide()") Home
+            li: a(ui-sref="root.home",     ng-click="contactUs.hide()") Home
             li: a(ui-sref="root.features", ng-click="contactUs.hide()") Features
             li: a(ui-sref="root.blog",     ng-click="contactUs.hide()") Blog
             li: a(ui-sref="root.about",    ng-click="contactUs.hide()") About
@@ -28,4 +29,4 @@ article.view.view-header
 
         ul.account
             li: a(ui-sref="root.home") Log In
-            li: a.outine-btn(ui-sref="root.demo.signup") Sign Up
+            li: a.outline-btn(ui-sref="root.demo.signup") Sign Up
