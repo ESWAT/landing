@@ -10,7 +10,11 @@
 # Angular UI configuration
 app.value 'ui.config', {}
 
- 
+
+app.value 'isMobile', do ->
+    return typeof window.ontouchstart isnt 'undefined'
+
+
 # Allows CORS
 app.config ($httpProvider) ->
     $httpProvider.defaults.useXDomain = true

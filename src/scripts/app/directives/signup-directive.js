@@ -22,10 +22,12 @@ app.directive('signupForm', function() {
 });
 
 
-app.directive('viewDemoSignup', function(Utils) {
+
+app.directive('viewDemoSignup', function(Utils, isMobile) {
     return {
         restrict: 'C',
         link: function(scope, element) {
+            if (isMobile) return;
 
             var $body = $('body')
               , $element = $(element)
@@ -101,11 +103,4 @@ app.directive('viewHeader', function($window) {
             }
         }
     }
-});
-
-
-app.directive('hoverFeature', function($window) {
-    $('.revenue').hover(function() {
-        $(this).removeClass('active');
-    });
 });
