@@ -57,7 +57,7 @@ body.demo-flow .view-header {
         width: $nav-width;
         margin-left: -($nav-width/2);
 
-        color: $navy;
+        color: $white;
 
         .logo {
             width: 120px;
@@ -87,7 +87,7 @@ body.demo-flow .view-header {
         .menu-bar {
             display: block;
             position: relative;
-            background: $navy;
+            background: $white;
             width: 26px;
             height: 2px;
             transition: 300ms;
@@ -156,7 +156,7 @@ body.demo-flow .view-header {
 
                     &:hover, .selected {
                         padding: 0 0 3px;
-                        border-bottom: 2px solid $navy;
+                        border-bottom: 2px solid $white;
                     }
                 }
             }
@@ -172,7 +172,7 @@ body.demo-flow .view-header {
                 li:last-child {
                     margin: 0 0 0 -2px;
 
-                    a { border: 1px solid $navy; }
+                    a { border: 1px solid $white; }
                 }
             }
         }

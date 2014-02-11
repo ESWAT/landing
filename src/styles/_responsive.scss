@@ -163,6 +163,25 @@ $mobile-port: 321px;
         padding: 30px 60px;
     }
 
+    // Form
+    
+    .view-demo-signup {
+        .signup-form {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            margin: 0;
+            
+            label { width: 100%; }
+            
+            a.solid-btn {
+                width: 100%;
+                border-radius: 0 0 3px 3px;
+            }
+        }
+    }
+
     // Home
 
     .view-home {
@@ -602,10 +621,10 @@ $mobile-port: 321px;
     }
 }
 
+// Mobile 321
 @media only screen and (max-width : $mobile-port ) {
     .view-about {
         section {
-
             &.social {
                 .wrapper {
                     padding: 0 30px;
@@ -613,5 +632,4 @@ $mobile-port: 321px;
             }
         }
     }
-
 }
