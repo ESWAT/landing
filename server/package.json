@@ -20,6 +20,8 @@
   "dependencies": {
     "service": "git://github.com/42debut/service.git#master",
     "postmark": "~0.2.0",
-    "validator": "~3.2.1"
+    "validator": "~3.2.1",
+    "bluebird": "~1.0.4",
+    "nodemon": "~1.0.14"
   }
 }
