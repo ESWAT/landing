@@ -8,14 +8,14 @@ app.controller 'MainController', ($rootScope, $scope, $animate) ->
         $scope.isHome     = state.name.indexOf('root.home') is 0
 
 
-app.service 'LandingAPI', ($http, config) ->
-    url = config.services.landing.url
+app.factory 'LandingAPI', ($http, config) -> ({url} = {}) ->
+    url ?= config.services.landing.url
     sendDemoRequest: (request) ->
         endpoint = '/demo/request'
         return $http.post("#{url}#{endpoint}", request)
 
 
-app.controller 'SignupController', ($scope, LandingAPI) ->
+app.controller 'SignupController', ($scope, config, LandingAPI) ->
     landingAPI = new LandingAPI()
     $scope.request = {}
     $scope.sendDemoRequest = (request) ->
