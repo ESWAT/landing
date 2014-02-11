@@ -8,6 +8,31 @@ body.demo-flow .view-header {
 }
 
 
+
+.home .view-header {
+    nav {
+        color: $navy;
+        
+        ul {
+            li {
+                a {
+                    &:hover, .selected {
+                        border-bottom: 2px solid $navy;
+                    }
+                }
+            }
+
+            &.account {
+                li:last-child {
+                    a { border: 1px solid $navy; }
+                }
+            }
+        }
+    }
+}
+
+
+
 .view-header {
 
     .contact-us {
@@ -62,7 +87,8 @@ body.demo-flow .view-header {
             height: $header-height;
 
             a {
-                line-height: $header-height + 30px;
+                font-size: 18px;
+                line-height: $header-height + 22px;
             }
         }
 
