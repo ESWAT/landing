@@ -1,9 +1,13 @@
 
 Promise   = require 'bluebird'
 validator = require 'validator'
+errors    = require('service').errors.controller
 
 
-module.exports = ({postmark}) ->
+module.exports = ({sender, postmark}) ->
+
+    throw new errors.MissingArgumentError('sender') if not sender
+
 
     sanitize = (info) ->
         Object.keys(info).reduce ((result, key) ->
@@ -42,15 +46,16 @@ module.exports = ({postmark}) ->
 
     send = ({from, to, subject, body}) ->
         deferred = Promise.defer()
-        postmark.send {From:from, To:to, Subject:subject, TextBody:body}, (err) ->
+        console.log from, to, subject
+        postmark.send {From:from, To:to, Subject:subject, HtmlBody:body}, (err) ->
             return deferred.reject err if err
             return deferred.resolve()
-        return deferred
+        return deferred.promise
 
 
     sendDemoRequest: (info) ->
         return send
-            from:    info.email
-            to:      "nick@42debut.com"
+            from:    sender
+            to:      sender
             subject: "[42 Demo Request] #{info.firstName} #{info.lastName} from #{info.company} wants a demo!"
             body:    compile(info)
