@@ -57,9 +57,10 @@ article.view.view-home
                 img.how-it-works(src="/assets/images/how.svg")
 
 
-    section.testimonials(ng-mouseenter="carousel.stop()", ng-mouseleave="carousel.start()")
+    section.testimonials
 
-        .wrapper
+        .wrapper(ng-mouseenter="carousel.stop()", ng-mouseleave="carousel.start()")
+
             q(ng-bind-html="testimonials[carousel.state.index].quote")
 
             ul.people
