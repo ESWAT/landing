@@ -7,31 +7,31 @@ article.view.view-demo-signup
             img.image-mountains(src="/assets/images/mountains.svg")
             img.image-lines(src="/assets/images/lines.svg")
 
-
-        form.signup-form
+        form.signup-form(ng-controller="SignupController")
 
             label.border-right
                 span First Name
-                input(placeholder='Johnny')
+                input(name="first_name", ng-model="request.firstName", type="text", placeholder='Johnny', novalidate)
 
             label
                 span Last Name
-                input(placeholder='Appleseed')
+                input(name="last_name", ng-model="request.lastName", type="text", placeholder='Appleseed', novalidate)
 
             label.full-width
                 span Company
-                input(placeholder='Appleseed Inc.')
+                input(name="company", ng-model="request.company", type="text", placeholder='Appleseed Inc.', novalidate)
 
             label.full-width
-                span Phone Number
-                input(placeholder='1 (123) 456-7890', type="telephone")
+                span Email Address
+                input(name="email", ng-model="request.email", type="email", placeholder='you@mail.com', novalidate)
 
             label.full-width
-                span E-mail
-                input(placeholder='you@mail.com')
+                span Phone Number (optional)
+                input(name="tel", ng-model="request.phone", type="tel", placeholder='1 (123) 456-7890', novalidate)
 
             //- label
             //-     span Password
             //-     input(placeholder='secretcode', type="password")
 
-            a.solid-btn(ui-sref="root.demo.upload") Request Demo
+            a.solid-btn(ui-sref="root.demo.upload", ng-click="sendDemoRequest(request)")
+                | Request Demo

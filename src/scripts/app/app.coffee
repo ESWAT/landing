@@ -10,7 +10,7 @@
 # Angular UI configuration
 app.value 'ui.config', {}
 
-  
+ 
 # Allows CORS
 app.config ($httpProvider) ->
     $httpProvider.defaults.useXDomain = true
@@ -19,3 +19,9 @@ app.config ($httpProvider) ->
 
 app.config ($sceProvider) ->
     $sceProvider.enabled false
+
+
+app.value 'config',
+    services:
+        landing:
+            url: 'http://localhost:10000'
