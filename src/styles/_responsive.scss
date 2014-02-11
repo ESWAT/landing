@@ -78,12 +78,13 @@ $mobile-port: 321px;
 
                 ul.people {
                     li {
+                        margin: 20px;
                         text-align: left;
 
                         img {
                             width: 50px;
                             display: inline-block;
-                            margin: 0 20px 0 0;
+                            margin: 0 15px 0 0;
                             vertical-align: top;
                         }
 
@@ -167,17 +168,12 @@ $mobile-port: 321px;
     .view-home {
         section {
             &.hero {
-                height: 430px;
+                height: 450px;
                 overflow: hidden;
 
                 .wrapper {
                     .hero-content {
                         top: 140px;
-
-                        .button {
-                            margin: 0 0 50px;
-                            width: 250px;
-                        }
 
                         a {
                             span.signup-btn { display: none; }
@@ -299,10 +295,8 @@ $mobile-port: 321px;
                 }
             }
 
-            .button {
+            .hamburger {
                 display: block;
-                position: absolute;
-                top: 38px;
                 right: 120px;
             }
 
@@ -508,7 +502,7 @@ $mobile-port: 321px;
         nav {
             left: 30px;
 
-            .button {
+            .hamburger {
                 right: 60px;
             }
         }

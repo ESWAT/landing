@@ -12,14 +12,7 @@ app.service 'Testimonials', -> [
         title: "INVESTMENT BANKING ANALYST, MERRILL LYNCH"
         quote: "I love that it’s personalized and not generic. <br> It will bring me into stores and make me feel closer to the brand."
         image: "http://placekitten.com/100/100"
-    }
-
-    {
-        name:  "Louise Broni-Mensah"
-        title: "CEO, Shoobs"
-        quote: "Louise says the shiz. That 42 dominates <br> the retail analytics domain."
-        image: "http://placekitten.com/100/100"
-    }
+    }   
 ]
 
 
