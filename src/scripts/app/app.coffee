@@ -3,14 +3,19 @@
     'ui'
     'ui.router'
     'ngAnimate'
+    'ngSanitize'
 ]
 
 
 # Angular UI configuration
 app.value 'ui.config', {}
 
-
+  
 # Allows CORS
 app.config ($httpProvider) ->
     $httpProvider.defaults.useXDomain = true
     delete $httpProvider.defaults.headers.common['X-Requested-With']
+
+
+app.config ($sceProvider) ->
+    $sceProvider.enabled false

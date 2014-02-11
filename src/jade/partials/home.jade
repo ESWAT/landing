@@ -92,36 +92,21 @@ article.view.view-home
                 img.how-it-works(src="/assets/images/how.svg")
 
 
-    section.testimonials
+    section.testimonials(ng-mouseenter="carousel.stop()", ng-mouseleave="carousel.start()")
 
         .wrapper
-
-            ul.bragging-rights
-                li.active
-                    p “One of the most disruptive things on the front-end that we’ve seen in a while.”
-                li
-                    p “Something Phoebe said about us being awesome.”
-                li
-                    p “Louise says we're just so awesome.”
+            q(ng-bind-html="testimonials[carousel.state.index].quote")
 
             ul.people
-                li.active
-                    img(src="http://placekitten.com/100/100")
-                    div
-                        h4 Uri Minkoff
-                        h3 CEO, Rebecca Minkoff
+                li(ng-repeat="testimonial in testimonials"
+                  ,ng-class="{active:carousel.state.index == $index}"
+                  ,ng-mouseover="select($index)")
 
-                li
-                    img(src="http://placekitten.com/100/100")
-                    div
-                        h4 Phoebe Yu
-                        h3 INVESTMENT BANKING ANALYST, <br> MERRILL LYNCH
+                    img(ng-src="{{ testimonial.image }}")
 
-                li
-                    img(src="http://placekitten.com/100/100")
                     div
-                        h4 Louise Broni-Mensah
-                        h3 CEO, SHOOBS
+                        h4(ng-bind-html="testimonial.name")
+                        h3(ng-bind-html="testimonial.title")
 
 
     section.gym-badges
