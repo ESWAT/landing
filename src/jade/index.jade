@@ -38,7 +38,7 @@ html(lang='en', ng-app="42.landing")
     section.onscreen
       header(ui-view="header")
       main.content(ui-view='')
-      footer(ui-view="footer")
+      footer(ui-view="footer", ng-hide="isDemoFlow")
 
 
   block bottom-scripts
