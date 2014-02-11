@@ -14,7 +14,10 @@ article.view.view-header
         .logo: a(ui-sref="root.home", ng-click="contactUs.hide()")
             img(src="/assets/images/logo.svg")
 
-        p.nav-trigger.icon-list
+        a#menu-toggle.button
+            span.menu-bar.bar1
+            span.menu-bar.bar2
+            span.menu-bar.bar3
 
         ul.main
             li: a(ui-sref="root.home", ng-click="contactUs.hide()") Home

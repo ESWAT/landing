@@ -174,14 +174,14 @@ $mobile-port: 321px;
                     .hero-content {
                         top: 140px;
 
-                        p {
+                        .button {
                             margin: 0 0 50px;
                             width: 250px;
                         }
 
                         a {
-                            span.signup-btn { display: inline-block; }
-                            span.demo-btn { display: none; }
+                            span.signup-btn { display: none; }
+                            span.demo-btn { display: inline-block; }
                         }
                     }
 
@@ -286,10 +286,10 @@ $mobile-port: 321px;
     // Header
     .view-header {
         nav {
-            left: 30px;
+            left: 60px;
             margin: 0;
             width: 100%;
-
+            
             .logo {
                 position: absolute;
                 left: 0px;
@@ -299,14 +299,11 @@ $mobile-port: 321px;
                 }
             }
 
-            .nav-trigger {
+            .button {
                 display: block;
-                font-size: 14px;
-                color: $white;
-                text-align: right;
                 position: absolute;
-                top: 44px;
-                right: 60px;
+                top: 38px;
+                right: 120px;
             }
 
             ul {
@@ -501,6 +498,18 @@ $mobile-port: 321px;
                 }
 
                 img, .how-it-works { display: none; }
+            }
+        }
+    }
+
+    // Header
+    
+    .view-header {
+        nav {
+            left: 30px;
+
+            .button {
+                right: 60px;
             }
         }
     }

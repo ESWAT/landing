@@ -66,7 +66,62 @@ body.demo-flow .view-header {
             a { line-height: 132px }
         }
 
-        .nav-trigger { display: none; }
+        .button {
+            display: none;
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            padding-top: 12px;
+            box-sizing: border-box;
+            transition: .5s cubic-bezier(1.000, 0.000, 0.645, 0.650);
+        }
+
+        .menu-bar {
+            display: block;
+            position: relative;
+            background: $white;
+            width: 26px;
+            height: 2px;
+            border-radius: 1px;
+            transition: 300ms;
+            margin: 0 auto;
+        }
+
+        .bar1 {
+            top: 0;
+            animation: topbar-back .5s;
+            animation-fill-mode: both;
+            animation-play-state: initial !important;
+        }
+
+        .bar2 { opacity: 1; }
+
+        .bar3 {
+            bottom: 0;
+            animation: bottombar-back .5s;
+            animation-fill-mode: both;
+            animation-play-state: initial !important;
+        }
+
+        .menu-bar + .menu-bar {
+            margin-top: 5px;
+        }
+
+        .toggled .bar1 {
+            top: 25%;
+            animation: topbar-x .5s;
+            animation-fill-mode: both;
+        }
+
+        .toggled .bar2 {
+            opacity: 0;
+        }
+
+        .toggled .bar3 {
+            bottom: 25%;
+            animation: bottombar-x .5s;
+            animation-fill-mode: both;
+        }
 
         ul {
             position: absolute;
@@ -114,5 +169,86 @@ body.demo-flow .view-header {
                 }
             }
         }
+    }
+}
+
+
+@keyframes topbar-x {
+    0% {
+        top: 0;
+        @include transform(rotate(0deg));
+    }
+
+    45% {
+        top: 25%;
+        @include transform(rotate(145deg));
+    }
+
+    75% {
+        @include transform(rotate(130deg));
+    }
+
+    100% {
+        @include transform(rotate(135deg));
+    }
+}
+
+@keyframes topbar-back {
+    0% {
+        top: 25%;
+        @include transform(rotate(135deg));
+    }
+
+    45% {
+        @include transform(rotate(-10deg));
+    }
+
+    75% {
+        @include transform(rotate(5deg));
+    }
+
+    100% {
+        top: 0;
+        @include transform(rotate(0));
+    }
+}
+
+@keyframes bottombar-x {
+    0% {
+        bottom: 0;
+        @include transform(rotate(0deg));
+    }
+
+    45% {
+        bottom: 25%;
+        @include transform(rotate(-145deg));
+    }
+
+    75% {
+        @include transform(rotate(-130deg));
+    }
+
+    100% {
+        @include transform(rotate(-135deg));
+    }
+}
+
+@keyframes bottombar-back {
+    0% {
+        bottom: 25%;
+        @include transform(rotate(-135deg));
+    }
+
+    45% {
+        @include transform(rotate(10deg));
+    }
+
+    75% {
+        @include transform(rotate(-5deg));
+    }
+
+    100% {
+        bottom: 0;
+        @include transform(rotate(0));
     }
 }
