@@ -79,7 +79,6 @@ $mobile-port: 321px;
         section {
             &.hero.home {
                 height: 700px;
-                background: $navy;
 
                 .hero-img-contain {
                     position: absolute;
@@ -271,13 +270,13 @@ $mobile-port: 321px;
                 overflow: hidden;
 
                 .laptop {
-                    top: 380px;
+                    top: 570px;
+                    left: 50%;
                     width: 100%;
-                    left: 0;
-                    padding: 0 50px;
                     display: none;
+                    margin-left: -50%;
 
-                    &.desktop { display: none; }
+                    
                     &.mobile { display: block; }
                 }
 
@@ -546,8 +545,7 @@ $mobile-port: 321px;
         section {
             &.hero {
                 .laptop {
-                    width: 550px;
-                    padding: 0 20px;
+                    top: 600px;
                 }
 
                 .wrapper {

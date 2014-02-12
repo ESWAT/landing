@@ -11,27 +11,27 @@ body.demo-flow .view-header {
 
 .home .view-header {
     nav {
-        color: $navy;
+        color: $white;
         
         ul {
             li {
                 a {
                     &:hover, .selected {
-                        border-bottom: 2px solid $navy;
+                        border-bottom: 2px solid $white;
                     }
                 }
             }
 
             &.account {
                 li:last-child {
-                    a { border: 1px solid $navy; }
+                    a { border: 1px solid $white; }
                 }
             }
         }
     }
 
     .menu-bar {
-        background: $navy;
+        background: $white;
     }
 }
 

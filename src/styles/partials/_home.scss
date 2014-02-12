@@ -6,7 +6,8 @@
 
         &.hero.home {
             height: 700px;
-            background: $navy;
+            background: $navy url('/assets/images/bg.png') no-repeat;
+            background-size: 100% 100%;
 
             .hero-img-contain {
                 height: 700px;
@@ -41,11 +42,18 @@
                     text-align: left;
 
                     h1, p {
-                        color: $navy;
+                        color: $white;
                         width: 250px;
+                        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
                     }
 
-                    a.outline-btn { border: 1px solid $navy; }
+                    a.outline-btn {
+                        border: 1px solid $white;
+                        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), inset 0 1px 2px rgba(0, 0, 0, 0.1);
+
+                        color: $white;
+                        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+                    }
 
                     a {
                         span.signup-btn { display: none; }
@@ -54,12 +62,15 @@
                 }
             }
 
+            $laptop-width: 550px;
+
             .laptop {
                 position: absolute;
-                top: 150px;
-                left: 46.5%;
-                z-index: 99;
-                width: 550px;
+                top: 50%;
+                left: 50%;
+                width: $laptop-width;
+                margin-top: -200px;
+                margin-left: -68px;
 
                 &.mobile { display: none; }
             }
