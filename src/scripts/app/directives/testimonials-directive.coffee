@@ -4,14 +4,14 @@ app.service 'Testimonials', -> [
         name:  "Uri Minkoff"
         title: "CEO, Rebecca Minkoff"
         quote: "One of the most disruptive things on <br> the front-end that we’ve seen in a while."
-        image: "http://placekitten.com/100/100"
+        image: "/assets/images/uri.svg"
     }
 
     {
         name:  "Phoebe Yu"
         title: "INVESTMENT BANKING ANALYST, MERRILL LYNCH"
         quote: "I love that it’s personalized and not generic. <br> It will bring me into stores and make me feel closer to the brand."
-        image: "http://placekitten.com/100/100"
+        image: "/assets/images/phoebe.svg"
     }   
 ]
 
