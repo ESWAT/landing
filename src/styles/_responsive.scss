@@ -332,19 +332,22 @@ $mobile-port: 321px;
 
                 .hero-content {
                     margin: 30px 0 60px 0;
+                    text-align: center;
 
                     li {
-                        margin: 20px 30px 40px 0;
+                        margin: 20px 0 40px 40px;
                         display: inline-block;
                         vertical-align: top;
-                        width: 40%;
+                        width: 300px;
 
                         .step { margin: 5px 0 0 0; }
 
                         p {
                             width: 100%;
-                            margin: 0 0 0 50px;
+                            margin: 0 0 0 60px;
                             padding: 0 50px 0 0;
+                            
+                            text-align: left;
                         }
 
                         a { margin: 8px 0 0 0; }
@@ -570,14 +573,15 @@ $mobile-port: 321px;
             }
 
             &.how.feature .wrapper {
-                padding: 30px 30px 0 30px;
-
-                .hero-content li {
-                    width: 100%;
-                    margin: 10px 30px 20px 0;
+                padding: 30px 0;
+                
+                .hero-content {
+                    ul {
+                        li {
+                            margin: 20px 0 40px 20px;
+                        }
+                    }
                 }
-
-                img, .how-it-works { display: none; }
             }
         }
     }
