@@ -104,3 +104,34 @@ app.directive('viewHeader', function($window) {
         }
     }
 });
+
+
+app.directive('hamburger', function($window) {
+    return {
+        restrict: 'C',
+        link: function (scope, element) {
+
+            var menu = document.getElementById('menu-toggle'),
+                toggled = false;
+
+            menu.addEventListener('click', function() {
+                $('.view-header nav ul.main').toggle();
+
+                if ( !toggled ) {
+                    this.className = this.className + " toggled";
+                    toggled = true;
+
+                    $('.main li a').on('click', function () {
+                        $('.view-header nav ul.main').hide();
+                        $('.hamburger').removeClass('toggled');
+                        toggled = false;
+                    });
+
+                } else {
+                    this.className = this.className.replace(/\b\stoggled\b/,'');
+                    toggled = false;
+                }
+            }, false);
+        }
+    }
+});
