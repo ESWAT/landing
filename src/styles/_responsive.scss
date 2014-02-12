@@ -3,14 +3,6 @@ $tablet-port: 767px;
 $mobile-land: 579px;
 $mobile-port: 321px;
 
-// @media only screen and (max-width : 900px ) {
-
-//     .view-header nav {
-//             ul {
-//                 li { margin: 0 50px; }
-//             }
-//     }
-// }
 
 @media only screen and (max-width : $tablet-land ) {
 
