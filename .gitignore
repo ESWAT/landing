@@ -2,10 +2,7 @@
 config/*
 !config/config.json.example
 
-!data/.gitkeep
-
 # grunt tasks
-build/
 tmp/
 
 # compass

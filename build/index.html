@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="42.landing">
+  <head>
+    <title>42 &mdash; Data Made Actionable</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta charset="utf-8">
+    <link href="assets/css/default.css" rel="stylesheet"/>
+    <script src="assets/js/libs/jquery.js"></script>
+    <script src="assets/js/libs/angular.js"></script>
+    <script src="assets/js/libs/angular.animate.js"></script>
+    <script src="assets/js/libs/angular.ui.js"></script>
+    <script src="assets/js/libs/angular.ui.router.js"></script>
+    <script src="assets/js/libs/angular.sanitize.js"></script>
+    <script src="assets/js/app/app.js"></script>
+    <script src="assets/js/app/router.js"></script>
+    <script type="text/javascript" src="//use.typekit.net/qzk2xqv.js"></script>
+    <script type="text/javascript">try { Typekit.load(); } catch (e) {}</script>
+  </head>
+  <body ng-controller="MainController" ng-class="{'demo-flow':isDemoFlow, 'home':isHome}">
+    <section ui-view="offscreen" class="offscreen animation-offscreen"></section>
+    <section class="onscreen">
+      <header ui-view="header"></header>
+      <main ui-view="" class="content"></main>
+      <footer ui-view="footer" ng-hide="isDemoFlow"></footer>
+    </section>
+  </body>
+  <script src="assets/js/libs/lodash.js"></script>
+  <script src="assets/js/app/directives/signup-directive.js" defer="defer"></script>
+  <script src="assets/js/app/directives/flippable-directive.js" defer="defer"></script>
+  <script src="assets/js/app/directives/modal-directive.js" defer="defer"></script>
+  <script src="assets/js/app/directives/testimonials-directive.js" defer="defer"></script>
+  <script src="assets/js/app/services/utils-service.js" defer="defer"></script>
+  <script src="assets/js/app/controllers/main-controller.js" defer="defer"></script>
+</html>

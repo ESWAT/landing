@@ -1,0 +1,28 @@
+
+<article class="view view-demo-upload-files">
+  <section>
+    <h1>Upload Your Files.</h1>
+    <p class="hero">Don’t worry about the format! Our support team will make sure your data integrates seamlessly with 42’s dashboard.</p><a ui-sref="root.demo.upload-sucess" class="solid-btn">Upload Files</a>
+    <p class="note">
+      Check out the integration details
+       <a ng-click="modal.show()" class="single-line">here</a>.
+    </p>
+  </section>
+  <modal model="modal">
+    <h1>Integration Details</h1>
+    <ul>
+      <li>
+        <h3>Customer Data</h3>
+        <p>Customer_ID, Any Other Fields</p>
+      </li>
+      <li>
+        <h3>Transation Data</h3>
+        <p>Transaction_ID, Customer_ID, Timestamp</p>
+      </li>
+      <li>
+        <h3>Transaction Item Data</h3>
+        <p>Transaction_ID, Cost, Any Other Item Fields</p>
+      </li>
+    </ul><a ng-click="modal.hide()" class="solid-btn">Cool, Got it</a>
+  </modal>
+</article>

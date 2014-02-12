@@ -1,0 +1,67 @@
+
+<article class="view view-home">
+  <section class="hero home">
+    <div class="hero-img-contain"></div><img src="/assets/images/home-hero.png" class="laptop desktop"/><img src="/assets/images/home-hero-mobile.png" class="laptop mobile"/>
+    <div class="wrapper">
+      <article class="hero-content hero-points">
+        <h1>Grow Revenue</h1>
+        <p>Big data made simple. Leave the numbers to us, we'll give the answers to insights you want to see.</p><a ui-sref="root.home" class="outline-btn"><span class="demo-btn">Try Our Free Demo</span><span class="signup-btn">Sign up</span></a>
+      </article>
+    </div>
+  </section>
+  <section class="key">
+    <div class="wrapper">
+      <article class="key-content">
+        <h2>Data You Can&nbsp;Understand</h2>
+        <p>Leave the numbers to us, we'll give the answer to insights you want to&nbsp;see.</p>
+      </article>
+      <article class="key-content">
+        <h2>Reduce Cost Grow Revenue</h2>
+        <p>Access your data from the cloud. No hardware, no downloads, no&nbsp;fuss.</p>
+      </article>
+      <article class="key-content">
+        <h2>Monetize Your POS Data</h2>
+        <p>Instantly share your findings with clients and colleagues. Export PDFs and&nbsp;graphs.</p>
+      </article>
+    </div>
+  </section>
+  <section class="how feature">
+    <div class="wrapper">
+      <article class="hero-content">
+        <h2>How It Works</h2>
+        <ul>
+          <li><i class="step"></i>
+            <p>Seemlessly integrate your data. We’ll take care of the&nbsp;rest.</p>
+          </li>
+          <li><i class="step"></i>
+            <p>Receive and explore your custom dashboard.</p>
+          </li>
+          <li><a ui-sref="root.home" class="outline-btn">Try It Today</a></li>
+        </ul><img src="/assets/images/how.svg" class="how-it-works"/>
+      </article>
+    </div>
+  </section>
+  <section class="testimonials">
+    <div ng-mouseenter="carousel.stop()" ng-mouseleave="carousel.start()" class="wrapper">
+      <q ng-bind-html="testimonials[carousel.state.index].quote"></q>
+      <ul class="people">
+        <li ng-repeat="testimonial in testimonials" ng-class="{active:carousel.state.index == $index}" ng-mouseover="select($index)"><img ng-src="{{ testimonial.image }}"/>
+          <div>
+            <h4 ng-bind-html="testimonial.name"></h4>
+            <h3 ng-bind-html="testimonial.title"></h3>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="gym-badges">
+    <div class="wrapper">
+      <ul>
+        <li><img src="/assets/images/techcrunch.svg"/></li>
+        <li><img src="/assets/images/sauder.svg"/></li>
+        <li><img src="/assets/images/benz.svg"/></li>
+        <li><img src="/assets/images/code_n.svg"/></li>
+      </ul>
+    </div>
+  </section>
+</article>

@@ -1,0 +1,23 @@
+
+<article class="view view-header">
+  <section ng-show="contactUs.isVisible" class="contact-us animation-ease">
+    <div class="wrapper">
+      <div class="contact-us-content">
+        <h3>E-mail Us</h3><a ui-sref="mailto:team@42debut.com">team@42debut.com</a>
+      </div>
+    </div>
+  </section>
+  <nav>
+    <div class="logo"><a ui-sref="root.home" ng-click="contactUs.hide()" class="icon-logo-42"></a></div><a id="menu-toggle" class="hamburger"><span class="menu-bar bar1"></span><span class="menu-bar bar2"></span><span class="menu-bar bar3"></span></a>
+    <ul class="main">
+      <li><a ui-sref="root.home" ng-click="contactUs.hide()">Home</a></li>
+      <li><a ui-sref="root.features" ng-click="contactUs.hide()">Features</a></li>
+      <li><a ui-sref="root.blog" ng-click="contactUs.hide()">Blog</a></li>
+      <li><a ui-sref="root.about" ng-click="contactUs.hide()">About</a></li>
+      <li><a ng-click="contactUs.toggle()" class="contact-link">Contact</a></li>
+    </ul>
+    <ul class="account">
+      <li><a ui-sref="root.demo.signup" class="outline-btn">request a demo</a></li>
+    </ul>
+  </nav>
+</article>
