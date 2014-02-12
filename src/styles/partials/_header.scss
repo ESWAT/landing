@@ -29,6 +29,10 @@ body.demo-flow .view-header {
             }
         }
     }
+
+    .menu-bar {
+        background: $navy;
+    }
 }
 
 
@@ -87,8 +91,8 @@ body.demo-flow .view-header {
             height: $header-height;
 
             a {
-                font-size: 18px;
-                line-height: $header-height + 22px;
+                font-size: 40px;
+                line-height: $header-height;
             }
         }
 
