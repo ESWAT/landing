@@ -47,6 +47,9 @@
     }).state('root.demo.signup', {
       url: '^/demo/signup',
       templateUrl: 'partials/demo/signup.html'
+    }).state('root.demo.thanks', {
+      url: '^/demo/thanks',
+      templateUrl: 'partials/demo/thanks.html'
     }).state('root.demo.upload', {
       url: '^/demo/upload',
       templateUrl: 'partials/demo/upload.html'

@@ -2,22 +2,22 @@
 <article class="view view-demo-signup">
   <section class="signup-form-container">
     <div class="background-images"><img src="/assets/images/mountains.svg" class="image-mountains"/><img src="/assets/images/lines.svg" class="image-lines"/></div>
-    <form ng-controller="SignupController" class="signup-form">
+    <form ng-controller="SignupController" ng-submit="submit()" class="signup-form">
       <label class="border-right"><span>First Name</span>
-        <input name="first_name" ng-model="request.firstName" type="text" placeholder="Johnny" novalidate="novalidate"/>
+        <input name="first_name" ng-model="request.firstName" type="text" placeholder="Johnny" required="required"/>
       </label>
       <label><span>Last Name</span>
-        <input name="last_name" ng-model="request.lastName" type="text" placeholder="Appleseed" novalidate="novalidate"/>
+        <input name="last_name" ng-model="request.lastName" type="text" placeholder="Appleseed" required="required"/>
       </label>
       <label class="full-width"><span>Company</span>
-        <input name="company" ng-model="request.company" type="text" placeholder="Appleseed Inc." novalidate="novalidate"/>
+        <input name="company" ng-model="request.company" type="text" placeholder="Appleseed Inc." required="required"/>
       </label>
       <label class="full-width"><span>Email Address</span>
-        <input name="email" ng-model="request.email" type="email" placeholder="you@mail.com" novalidate="novalidate"/>
+        <input name="email" ng-model="request.email" type="email" placeholder="you@mail.com" required="required"/>
       </label>
       <label class="full-width"><span>Phone Number (optional)</span>
-        <input name="tel" ng-model="request.phone" type="tel" placeholder="1 (123) 456-7890" novalidate="novalidate"/>
-      </label><a ui-sref="root.demo.upload" ng-click="sendDemoRequest(request)" class="solid-btn">Request Demo</a>
+        <input name="tel" ng-model="request.phone" type="tel" placeholder="1 (123) 456-7890"/>
+      </label><a ui-sref="root.demo.thanks" class="solid-btn">Request Demo</a>
     </form>
   </section>
 </article>
