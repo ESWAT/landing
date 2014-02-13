@@ -168,7 +168,7 @@ html {
   font-family: "museo-sans", sans-serif; }
 
 /* line 40, ../../../src/styles/_theme.scss */
-a, a:visited {
+button, a, a:visited {
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   -o-transition: 0.3s;
@@ -177,11 +177,12 @@ a, a:visited {
   text-decoration: none;
   cursor: pointer; }
   /* line 46, ../../../src/styles/_theme.scss */
-  a.solid-btn, a:visited.solid-btn {
+  button.solid-btn, a.solid-btn, a:visited.solid-btn {
     width: 220px;
     height: 66px;
     background: #ffcc00;
     padding: 0;
+    border: none;
     border-bottom: 2px solid #f4b700;
     border-radius: 3px;
     margin: 0 auto;
@@ -193,11 +194,11 @@ a, a:visited {
     text-transform: uppercase;
     text-shadow: 0 1px 1px #d6a000;
     display: block; }
-    /* line 64, ../../../src/styles/_theme.scss */
-    a.solid-btn:hover, a:visited.solid-btn:hover {
+    /* line 65, ../../../src/styles/_theme.scss */
+    button.solid-btn:hover, a.solid-btn:hover, a:visited.solid-btn:hover {
       background: #ffd21f; }
-  /* line 67, ../../../src/styles/_theme.scss */
-  a.outline-btn, a:visited.outline-btn {
+  /* line 68, ../../../src/styles/_theme.scss */
+  button.outline-btn, a.outline-btn, a:visited.outline-btn {
     background: transparent;
     padding: 10px 18px 9px !important;
     border: 1px solid white;
@@ -211,16 +212,20 @@ a, a:visited {
     letter-spacing: 1px;
     text-indent: 1px;
     text-transform: uppercase; }
-    /* line 81, ../../../src/styles/_theme.scss */
-    a.outline-btn:hover, a:visited.outline-btn:hover {
+    /* line 82, ../../../src/styles/_theme.scss */
+    button.outline-btn:hover, a.outline-btn:hover, a:visited.outline-btn:hover {
       background: rgba(0, 0, 0, 0.03); }
-  /* line 84, ../../../src/styles/_theme.scss */
-  a.single-line, a:visited.single-line {
+  /* line 85, ../../../src/styles/_theme.scss */
+  button.single-line, a.single-line, a:visited.single-line {
     padding: 0 0 2px;
     border-bottom: 2px solid #95a0a5;
     cursor: pointer; }
 
 /* line 92, ../../../src/styles/_theme.scss */
+button.solid-btn {
+  width: 100%; }
+
+/* line 97, ../../../src/styles/_theme.scss */
 h1 {
   margin: 0 0 25px -2px;
   color: #5d6569;
@@ -231,7 +236,7 @@ h1 {
   text-indent: 1px;
   text-transform: none; }
 
-/* line 104, ../../../src/styles/_theme.scss */
+/* line 109, ../../../src/styles/_theme.scss */
 h2 {
   margin: 0 0 20px -2px;
   color: #242a33;
@@ -240,7 +245,7 @@ h2 {
   line-height: 32px;
   text-transform: none; }
 
-/* line 115, ../../../src/styles/_theme.scss */
+/* line 120, ../../../src/styles/_theme.scss */
 h3 {
   color: #95a0a5;
   font-size: 11px;
@@ -250,7 +255,7 @@ h3 {
   text-indent: 1px;
   text-transform: uppercase; }
 
-/* line 127, ../../../src/styles/_theme.scss */
+/* line 132, ../../../src/styles/_theme.scss */
 h4 {
   margin: 0 0 8px;
   color: #5d6569;
@@ -259,27 +264,27 @@ h4 {
   line-height: 19px;
   text-transform: none; }
 
-/* line 137, ../../../src/styles/_theme.scss */
+/* line 142, ../../../src/styles/_theme.scss */
 p {
   color: #73838e;
   font-weight: 300;
   line-height: 24px; }
-  /* line 142, ../../../src/styles/_theme.scss */
+  /* line 147, ../../../src/styles/_theme.scss */
   p.hero {
     margin: 0 0 100px 0; }
 
-/* line 149, ../../../src/styles/_theme.scss */
+/* line 154, ../../../src/styles/_theme.scss */
 section.hero {
   height: 550px;
   background: #242a33; }
-  /* line 153, ../../../src/styles/_theme.scss */
+  /* line 158, ../../../src/styles/_theme.scss */
   section.hero .hero-img-contain {
     position: absolute;
     height: 550px;
     z-index: 0;
     overflow: hidden;
     width: 100%; }
-    /* line 160, ../../../src/styles/_theme.scss */
+    /* line 165, ../../../src/styles/_theme.scss */
     section.hero .hero-img-contain img {
       position: relative;
       width: 100%;
@@ -289,7 +294,7 @@ section.hero {
       -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%); }
-  /* line 173, ../../../src/styles/_theme.scss */
+  /* line 178, ../../../src/styles/_theme.scss */
   section.hero .wrapper .hero-points {
     position: relative;
     text-align: center;
@@ -297,26 +302,26 @@ section.hero {
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%); }
-    /* line 181, ../../../src/styles/_theme.scss */
+    /* line 186, ../../../src/styles/_theme.scss */
     section.hero .wrapper .hero-points h1, section.hero .wrapper .hero-points p {
       color: white; }
 
-/* line 187, ../../../src/styles/_theme.scss */
+/* line 192, ../../../src/styles/_theme.scss */
 .onscreen {
   background-color: #242a33; }
 
-/* line 189, ../../../src/styles/_theme.scss */
+/* line 194, ../../../src/styles/_theme.scss */
 .wrapper {
   width: 960px;
   margin: 0 auto;
   height: 100%; }
 
-/* line 197, ../../../src/styles/_theme.scss */
+/* line 202, ../../../src/styles/_theme.scss */
 .hero-content p {
   width: 350px;
   margin: 0 0 80px 0; }
 
-/* line 204, ../../../src/styles/_theme.scss */
+/* line 209, ../../../src/styles/_theme.scss */
 label {
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
@@ -329,7 +334,7 @@ label {
   border-bottom: 1px solid #eee;
   cursor: text;
   color: #95a0a5; }
-  /* line 215, ../../../src/styles/_theme.scss */
+  /* line 220, ../../../src/styles/_theme.scss */
   label span {
     -webkit-transition: 0.3s;
     -moz-transition: 0.3s;
@@ -343,7 +348,7 @@ label {
     letter-spacing: 1px;
     text-indent: 1px;
     text-transform: uppercase; }
-  /* line 228, ../../../src/styles/_theme.scss */
+  /* line 233, ../../../src/styles/_theme.scss */
   label input {
     background: transparent;
     border: none;
@@ -382,14 +387,14 @@ label {
       -webkit-font-smoothing: antialiased;
       color: #cccccc;
       font-weight: 300; }
-  /* line 246, ../../../src/styles/_theme.scss */
+  /* line 251, ../../../src/styles/_theme.scss */
   label.focus {
     background: #ddeeff; }
-    /* line 249, ../../../src/styles/_theme.scss */
+    /* line 254, ../../../src/styles/_theme.scss */
     label.focus span {
       color: #242a33; }
 
-/* line 253, ../../../src/styles/_theme.scss */
+/* line 258, ../../../src/styles/_theme.scss */
 .step {
   position: absolute;
   width: 40px;
@@ -401,12 +406,12 @@ label {
   font-weight: 700;
   line-height: 38px;
   text-align: center; }
-  /* line 266, ../../../src/styles/_theme.scss */
+  /* line 271, ../../../src/styles/_theme.scss */
   .step:before {
     counter-increment: step;
     content: counters(step, ""); }
 
-/* line 272, ../../../src/styles/_theme.scss */
+/* line 277, ../../../src/styles/_theme.scss */
 .two-col {
   position: relative;
   width: 45%;
@@ -415,21 +420,21 @@ label {
   margin: 0 2.5%;
   font-size: 15px; }
 
-/* line 282, ../../../src/styles/_theme.scss */
+/* line 287, ../../../src/styles/_theme.scss */
 .section-heading {
   position: relative;
   padding: 0 0 80px 0;
   text-align: center; }
-  /* line 288, ../../../src/styles/_theme.scss */
+  /* line 293, ../../../src/styles/_theme.scss */
   .section-heading li {
     display: inline-block; }
-    /* line 291, ../../../src/styles/_theme.scss */
+    /* line 296, ../../../src/styles/_theme.scss */
     .section-heading li.line {
       content: '';
       width: 20%;
       padding: 3px 0 0 0;
       border-top: 1px solid #242a33; }
-    /* line 298, ../../../src/styles/_theme.scss */
+    /* line 303, ../../../src/styles/_theme.scss */
     .section-heading li h3 {
       margin: 0 15px;
       color: #242a33; }
@@ -1275,34 +1280,15 @@ footer {
     border-right: 1px solid #cccccc;
     border-left: 1px solid #cccccc; }
 
-/* line 2, ../../../src/styles/partials/demo/_demo-signup.scss */
-.view-demo-thanks {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0px; }
-  /* line 7, ../../../src/styles/partials/demo/_demo-signup.scss */
-  .view-demo-thanks .signup-form {
-    background: white;
-    text-align: center;
-    height: 350px; }
-    /* line 12, ../../../src/styles/partials/demo/_demo-signup.scss */
-    .view-demo-thanks .signup-form h1 {
-      margin-top: 1em; }
-  /* line 17, ../../../src/styles/partials/demo/_demo-signup.scss */
-  .view-demo-thanks a {
-    color: #ffcc00; }
-
-/* line 24, ../../../src/styles/partials/demo/_demo-signup.scss */
-.view-demo-signup .signup-form-container, .view-demo-thanks .signup-form-container {
+/* line 4, ../../../src/styles/partials/demo/_demo-signup.scss */
+.view-demo-signup .signup-form-container {
   position: absolute;
   right: 0;
   bottom: 0;
   left: 0;
   top: 0; }
-/* line 32, ../../../src/styles/partials/demo/_demo-signup.scss */
-.view-demo-signup .background-images, .view-demo-thanks .background-images {
+/* line 12, ../../../src/styles/partials/demo/_demo-signup.scss */
+.view-demo-signup .background-images {
   position: absolute;
   left: 50px;
   right: 50px;
@@ -1311,22 +1297,22 @@ footer {
   max-width: 900px;
   margin: 0 auto;
   bottom: 0; }
-  /* line 42, ../../../src/styles/partials/demo/_demo-signup.scss */
-  .view-demo-signup .background-images img, .view-demo-thanks .background-images img {
+  /* line 22, ../../../src/styles/partials/demo/_demo-signup.scss */
+  .view-demo-signup .background-images img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%; }
 
-/* line 52, ../../../src/styles/partials/demo/_demo-signup.scss */
+/* line 32, ../../../src/styles/partials/demo/_demo-signup.scss */
 .view-demo-signup {
   position: absolute;
   top: 0;
   right: 0;
   left: 0;
   bottom: 0px; }
-  /* line 58, ../../../src/styles/partials/demo/_demo-signup.scss */
+  /* line 38, ../../../src/styles/partials/demo/_demo-signup.scss */
   .view-demo-signup .signup-form {
     position: absolute;
     top: 50%;
@@ -1336,22 +1322,34 @@ footer {
     margin-top: -165px;
     margin-left: -220px;
     font-size: 0; }
-    /* line 69, ../../../src/styles/partials/demo/_demo-signup.scss */
+    /* line 49, ../../../src/styles/partials/demo/_demo-signup.scss */
     .view-demo-signup .signup-form label input {
       margin: 9px 0 0 14px; }
-    /* line 72, ../../../src/styles/partials/demo/_demo-signup.scss */
+    /* line 52, ../../../src/styles/partials/demo/_demo-signup.scss */
     .view-demo-signup .signup-form label:nth-child(1n+5) {
       border-bottom: none; }
-    /* line 74, ../../../src/styles/partials/demo/_demo-signup.scss */
+    /* line 54, ../../../src/styles/partials/demo/_demo-signup.scss */
     .view-demo-signup .signup-form label.border-right {
       border-right: 1px solid #eee; }
-    /* line 76, ../../../src/styles/partials/demo/_demo-signup.scss */
+    /* line 56, ../../../src/styles/partials/demo/_demo-signup.scss */
     .view-demo-signup .signup-form label.full-width {
       width: 100%; }
-    /* line 78, ../../../src/styles/partials/demo/_demo-signup.scss */
-    .view-demo-signup .signup-form a.solid-btn {
+    /* line 58, ../../../src/styles/partials/demo/_demo-signup.scss */
+    .view-demo-signup .signup-form .solid-btn {
       width: 440px;
       border-radius: 0 0 3px 3px; }
+  /* line 64, ../../../src/styles/partials/demo/_demo-signup.scss */
+  .view-demo-signup .signup-form .thanks {
+    background: white;
+    text-align: center;
+    height: 350px;
+    padding: 30px; }
+    /* line 70, ../../../src/styles/partials/demo/_demo-signup.scss */
+    .view-demo-signup .signup-form .thanks h3 {
+      line-height: 1.6; }
+    /* line 74, ../../../src/styles/partials/demo/_demo-signup.scss */
+    .view-demo-signup .signup-form .thanks a {
+      color: #ffcc00; }
 
 /* line 6, ../../../src/styles/partials/demo/_demo-upload.scss */
 .view-demo-upload {
@@ -1722,7 +1720,7 @@ footer {
     .view-demo-signup .signup-form label, .view-demo-thanks .signup-form label {
       width: 100%; }
     /* line 251, ../../../src/styles/_responsive.scss */
-    .view-demo-signup .signup-form a.solid-btn, .view-demo-thanks .signup-form a.solid-btn {
+    .view-demo-signup .signup-form button.solid-btn, .view-demo-signup .signup-form a.solid-btn, .view-demo-thanks .signup-form button.solid-btn, .view-demo-thanks .signup-form a.solid-btn {
       width: 100%;
       border-radius: 0 0 3px 3px; }
 

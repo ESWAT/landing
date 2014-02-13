@@ -21,7 +21,7 @@
   app.value('config', {
     services: {
       landing: {
-        url: 'http://localhost:10000'
+        url: 'http://staging.landing.42debut.com'
       }
     }
   });

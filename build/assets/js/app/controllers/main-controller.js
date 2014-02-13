@@ -27,12 +27,18 @@
   app.controller('SignupController', function($scope, config, LandingAPI) {
     var landingAPI;
     landingAPI = new LandingAPI();
+    $scope.view = 'signup';
     $scope.request = {};
-    return $scope.sendDemoRequest = function(request) {
+    return $scope.submit = function() {
+      var request;
+      request = $scope.request;
       console.log("Sending demo request:", request);
-      return landingAPI.sendDemoRequest(request).then(function() {
+      landingAPI.sendDemoRequest(request).then((function() {
         return console.log("Demo request sent successfully.");
-      });
+      }), (function() {
+        return console.error('could not send demo request..');
+      }));
+      return $scope.view = 'thanks';
     };
   });
 
