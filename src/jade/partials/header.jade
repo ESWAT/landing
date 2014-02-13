@@ -21,10 +21,10 @@ article.view.view-header
             span.menu-bar.bar3
 
         ul.main
-            li: a(ui-sref="root.home",     ng-click="contactUs.hide()") Home
+            li: a(ui-sref="root.home", ng-click="contactUs.hide()") Home
             li: a(ui-sref="root.features", ng-click="contactUs.hide()") Features
-            li: a(ui-sref="root.blog",     ng-click="contactUs.hide()") Blog
-            li: a(ui-sref="root.about",    ng-click="contactUs.hide()") About
+            li: a(href="http://42technologies.tumblr.com/", ng-click="contactUs.hide()", target="_blank") Blog
+            li: a(ui-sref="root.about", ng-click="contactUs.hide()") About
             li: a.contact-link(ng-click="contactUs.toggle()") Contact
 
         ul.account
