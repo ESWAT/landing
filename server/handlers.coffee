@@ -1,4 +1,5 @@
 
+Promise   = require 'bluebird'
 {swagger} = require 'service'
 
 
