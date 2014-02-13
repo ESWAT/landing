@@ -17,8 +17,14 @@ app.factory 'LandingAPI', ($http, config) -> ({url} = {}) ->
 
 app.controller 'SignupController', ($scope, config, LandingAPI) ->
     landingAPI = new LandingAPI()
+
+    $scope.view = 'signup'
     $scope.request = {}
-    $scope.sendDemoRequest = (request) ->
+
+    $scope.submit = ->
+        request = $scope.request
         console.log "Sending demo request:", request
-        landingAPI.sendDemoRequest(request).then ->
-            console.log "Demo request sent successfully."
+        landingAPI.sendDemoRequest(request)
+        .then (-> console.log "Demo request sent successfully.")
+        ,     (-> console.error 'could not send demo request..')
+        $scope.view = 'thanks'

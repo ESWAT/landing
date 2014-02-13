@@ -9,7 +9,7 @@ module.exports = ({sender, postmark}) ->
     throw new errors.MissingArgumentError('sender') if not sender
 
 
-    sanitize = (info) ->
+    sanitize = (info = {}) ->
         Object.keys(info).reduce ((result, key) ->
             result[key] = validator.escape info[key]
             return result
@@ -59,3 +59,4 @@ module.exports = ({sender, postmark}) ->
             to:      sender
             subject: "[42 Demo Request] #{info.firstName} #{info.lastName} from #{info.company} wants a demo!"
             body:    compile(info)
+

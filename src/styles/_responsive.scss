@@ -248,7 +248,7 @@ $mobile-port: 321px;
 
             label { width: 100%; }
 
-            a.solid-btn {
+            button.solid-btn, a.solid-btn {
                 width: 100%;
                 border-radius: 0 0 3px 3px;
             }
@@ -301,7 +301,7 @@ $mobile-port: 321px;
                     margin: 15px 30px 30px 0;
                     width: 100%;
                     text-align: center;
-                    
+
                     p {
                         margin: 0 auto;
                     }
@@ -356,7 +356,7 @@ $mobile-port: 321px;
                         p {
                             max-width: 100%;
                             margin: 0 0 0 60px;
-                            
+
                             text-align: left;
                         }
 
@@ -584,7 +584,7 @@ $mobile-port: 321px;
 
             &.how.feature .wrapper {
                 padding: 30px 0;
-                
+
                 .hero-content {
                     ul {
                         li {
@@ -723,11 +723,11 @@ $mobile-port: 321px;
                 .wrapper {
                     .hero-content {
                         width: 100%;
-                        
+
                         ul {
                             li {
                                 margin: 20px 0 40px 20px;
-                                
+
                                 p {
                                     width: 70%;
                                 }
