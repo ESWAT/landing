@@ -140,7 +140,7 @@ $mobile-port: 321px;
             &.feature.how {
                 .wrapper {
                     .hero-content {
-                        li:last-child { margin: 20px 30px 0 0; }
+                        li:last-child { margin: 20px 0 0 0; }
                     }
                 }
             }
@@ -155,6 +155,7 @@ $mobile-port: 321px;
 
                         img {
                             width: 50px;
+                            height: 50px;
                             display: inline-block;
                             margin: 0 15px 0 0;
                             vertical-align: top;
@@ -275,8 +276,14 @@ $mobile-port: 321px;
                 .wrapper {
                     .hero-content {
                         top: 250px;
+                        width: 100%;
+
+                        text-align: center;
+
+                        h1 { width: 100%; }
 
                         p {
+                            margin: 0 auto 50px;
                             width: 350px;
                             max-width: 500px;
                         }
@@ -339,7 +346,7 @@ $mobile-port: 321px;
                     text-align: center;
 
                     li {
-                        margin: 20px 0 40px 40px;
+                        margin: 20px 80px 40px 0;
                         display: inline-block;
                         vertical-align: top;
                         width: 300px;
@@ -347,9 +354,8 @@ $mobile-port: 321px;
                         .step { margin: 5px 0 0 0; }
 
                         p {
-                            width: 100%;
+                            max-width: 100%;
                             margin: 0 0 0 60px;
-                            padding: 0 50px 0 0;
                             
                             text-align: left;
                         }
@@ -534,7 +540,8 @@ $mobile-port: 321px;
 @media only screen and (max-width : $mobile-land) {
     .wrapper {
         width: 100%;
-        padding: 30px;
+        padding: 30px 0;
+        text-align: center;
 
         .section-heading { padding: 0 0 40px 0; }
     }
@@ -559,8 +566,7 @@ $mobile-port: 321px;
 
             &.key .wrapper {
                 .key-content {
-                    margin: 15px 0 30px;
-                    max-width: 300px;
+                    margin: 15px 0;
                 }
             }
 
@@ -582,7 +588,7 @@ $mobile-port: 321px;
                 .hero-content {
                     ul {
                         li {
-                            margin: 20px 0 40px 20px;
+                            margin: 20px 60px 40px 0;
                         }
                     }
                 }
@@ -701,12 +707,34 @@ $mobile-port: 321px;
     .view-home {
 
         section {
-            &.hero.home { height: 500px; }
+            &.hero.home {height: 500px; }
 
             &.hero {
-                .wrapper .hero-content p { width: 250px; }
+                .wrapper {
+                    .hero-content {
+                        p { width: 250px; }
+                    }
+                }
 
                 .laptop.mobile { display: none; }
+            }
+
+            &.how.feature {
+                .wrapper {
+                    .hero-content {
+                        width: 100%;
+                        
+                        ul {
+                            li {
+                                margin: 20px 0 40px 20px;
+                                
+                                p {
+                                    width: 70%;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
