@@ -6,23 +6,16 @@
 
         &.hero.home {
             height: 700px;
-            background: $navy url('/assets/images/bg.png') no-repeat;
-            background-size: 100% 100%;
 
             .hero-img-contain {
+                position: absolute;
                 height: 700px;
                 background: $off-white;
 
                 img {
                     position: position;
-                    width: auto;
-                    min-height: 550px;
-                    top: 0;
-                    bottom: 0px;
-                    left: 0;
-                    -webkit-transform: none;
-                    -ms-transform: none;
-                    transform: none;
+                    width: 100%;
+                    min-height: 700px;
                 }
             }
         }
