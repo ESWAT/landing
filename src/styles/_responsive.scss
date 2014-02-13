@@ -237,7 +237,7 @@ $mobile-port: 321px;
 
     // Form
 
-    .view-demo-signup {
+    .view-demo-signup, .view-demo-thanks {
         .signup-form {
             position: absolute;
             top: 0;
@@ -268,7 +268,7 @@ $mobile-port: 321px;
                     display: none;
                     margin-left: -50%;
 
-                    
+
                     &.mobile { display: block; }
                 }
 
