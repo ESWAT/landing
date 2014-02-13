@@ -1,25 +1,5 @@
 
-.view-demo-thanks {
-    position: absolute;
-    top: 0; right: 0; left: 0;
-    bottom: $footer-height;
-
-    .signup-form {
-        background: $white;
-        text-align: center;
-        height: 350px;
-
-        h1 {
-            margin-top: 1em;
-        }
-    }
-
-    a {
-        color: $yellow;
-    }
-}
-
-.view-demo-signup, .view-demo-thanks {
+.view-demo-signup {
 
     .signup-form-container {
         position: absolute;
@@ -75,9 +55,24 @@
 
         label.full-width { width: 100%; }
 
-        a.solid-btn {
+        .solid-btn {
             width: $form-width;
             border-radius: 0 0 3px 3px;
+        }
+    }
+
+    .signup-form .thanks {
+        background: $white;
+        text-align: center;
+        height: 350px;
+        padding: 30px;
+
+        h3 {
+            line-height: 1.6;
+        }
+
+        a {
+            color: $yellow;
         }
     }
 }
