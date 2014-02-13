@@ -21,10 +21,11 @@ module.exports = ({controller}) ->
             errorResponses: [
             ]
         action: (req) ->
+            console.log JSON.stringify(req.params, null, 2)
 
             info =
-                firstName: req.params.first_name
-                lastName:  req.params.last_name
+                firstName: req.params.firstName
+                lastName:  req.params.lastName
                 company:   req.params.company
                 phone:     req.params.phone
                 email:     req.params.email
