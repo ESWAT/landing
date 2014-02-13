@@ -4,34 +4,43 @@ $nav-width: $wrapper-width;
 
 body.demo-flow .view-header {
     background: $white;
-    a { color: $medium-grey !important; }
-}
+    a {
+        color: $medium-grey !important;
 
+        &:hover {
+            border-bottom: 2px solid $medium-grey;
+        }
+
+        &.outline-btn {
+            border: 1px solid $medium-grey !important;
+        }
+    }
+}
 
 
 .home .view-header {
     nav {
-        color: $navy;
-        
+        color: $white;
+
         ul {
             li {
                 a {
                     &:hover, .selected {
-                        border-bottom: 2px solid $navy;
+                        border-bottom: 2px solid $white;
                     }
                 }
             }
 
             &.account {
                 li:last-child {
-                    a { border: 1px solid $navy; }
+                    a { border: 1px solid $white; }
                 }
             }
         }
     }
 
     .menu-bar {
-        background: $navy;
+        background: $white;
     }
 }
 
@@ -105,6 +114,7 @@ body.demo-flow .view-header {
             padding-top: 12px;
             margin: 0 -6px 0 0;
             transition: .5s cubic-bezier(1.000, 0.000, 0.645, 0.650);
+            z-index: 999;
         }
 
         .menu-bar {
@@ -155,10 +165,6 @@ body.demo-flow .view-header {
             animation-fill-mode: both;
         }
 
-        .nav-trigger {
-            display: none;
-        }
-
         ul {
             position: absolute;
             top: 0;
@@ -192,7 +198,7 @@ body.demo-flow .view-header {
 
             &.main {
                 left: 50%;
-                margin-left: -(440px/2);
+                margin-left: -275px;
             }
 
             &.account {

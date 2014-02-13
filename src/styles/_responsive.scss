@@ -3,14 +3,6 @@ $tablet-port: 767px;
 $mobile-land: 579px;
 $mobile-port: 321px;
 
-// @media only screen and (max-width : 900px ) {
-
-//     .view-header nav {
-//             ul {
-//                 li { margin: 0 50px; }
-//             }
-//     }
-// }
 
 @media only screen and (max-width : $tablet-land ) {
 
@@ -79,7 +71,6 @@ $mobile-port: 321px;
         section {
             &.hero.home {
                 height: 700px;
-                background: $navy;
 
                 .hero-img-contain {
                     position: absolute;
@@ -149,7 +140,7 @@ $mobile-port: 321px;
             &.feature.how {
                 .wrapper {
                     .hero-content {
-                        li:last-child { margin: 20px 30px 0 0; }
+                        li:last-child { margin: 20px 0 0 0; }
                     }
                 }
             }
@@ -164,6 +155,7 @@ $mobile-port: 321px;
 
                         img {
                             width: 50px;
+                            height: 50px;
                             display: inline-block;
                             margin: 0 15px 0 0;
                             vertical-align: top;
@@ -241,12 +233,12 @@ $mobile-port: 321px;
 
     .wrapper {
         width: 100%;
-        padding: 30px 60px;
+        padding: 30px 0;
     }
 
     // Form
 
-    .view-demo-signup {
+    .view-demo-signup, .view-demo-thanks {
         .signup-form {
             position: absolute;
             top: 0;
@@ -271,21 +263,27 @@ $mobile-port: 321px;
                 overflow: hidden;
 
                 .laptop {
-                    top: 380px;
+                    top: 570px;
+                    left: 50%;
                     width: 100%;
-                    left: 0;
-                    padding: 0 50px;
                     display: none;
+                    margin-left: -50%;
 
-                    &.desktop { display: none; }
+
                     &.mobile { display: block; }
                 }
 
                 .wrapper {
                     .hero-content {
                         top: 250px;
+                        width: 100%;
+
+                        text-align: center;
+
+                        h1 { width: 100%; }
 
                         p {
+                            margin: 0 auto 50px;
                             width: 350px;
                             max-width: 500px;
                         }
@@ -302,7 +300,11 @@ $mobile-port: 321px;
                 .key-content {
                     margin: 15px 30px 30px 0;
                     width: 100%;
-                    max-width: 330px;
+                    text-align: center;
+                    
+                    p {
+                        margin: 0 auto;
+                    }
                 }
             }
 
@@ -341,19 +343,21 @@ $mobile-port: 321px;
 
                 .hero-content {
                     margin: 30px 0 60px 0;
+                    text-align: center;
 
                     li {
-                        margin: 20px 30px 40px 0;
+                        margin: 20px 80px 40px 0;
                         display: inline-block;
                         vertical-align: top;
-                        width: 40%;
+                        width: 300px;
 
                         .step { margin: 5px 0 0 0; }
 
                         p {
-                            width: 100%;
-                            margin: 0 0 0 50px;
-                            padding: 0 50px 0 0;
+                            max-width: 100%;
+                            margin: 0 0 0 60px;
+                            
+                            text-align: left;
                         }
 
                         a { margin: 8px 0 0 0; }
@@ -536,7 +540,8 @@ $mobile-port: 321px;
 @media only screen and (max-width : $mobile-land) {
     .wrapper {
         width: 100%;
-        padding: 30px;
+        padding: 30px 0;
+        text-align: center;
 
         .section-heading { padding: 0 0 40px 0; }
     }
@@ -546,8 +551,7 @@ $mobile-port: 321px;
         section {
             &.hero {
                 .laptop {
-                    width: 550px;
-                    padding: 0 20px;
+                    top: 600px;
                 }
 
                 .wrapper {
@@ -562,8 +566,7 @@ $mobile-port: 321px;
 
             &.key .wrapper {
                 .key-content {
-                    margin: 15px 0 30px;
-                    max-width: 300px;
+                    margin: 15px 0;
                 }
             }
 
@@ -580,14 +583,15 @@ $mobile-port: 321px;
             }
 
             &.how.feature .wrapper {
-                padding: 30px 30px 0 30px;
-
-                .hero-content li {
-                    width: 100%;
-                    margin: 10px 30px 20px 0;
+                padding: 30px 0;
+                
+                .hero-content {
+                    ul {
+                        li {
+                            margin: 20px 60px 40px 0;
+                        }
+                    }
                 }
-
-                img, .how-it-works { display: none; }
             }
         }
     }
@@ -703,12 +707,34 @@ $mobile-port: 321px;
     .view-home {
 
         section {
-            &.hero.home { height: 500px; }
+            &.hero.home {height: 500px; }
 
             &.hero {
-                .wrapper .hero-content p { width: 250px; }
+                .wrapper {
+                    .hero-content {
+                        p { width: 250px; }
+                    }
+                }
 
                 .laptop.mobile { display: none; }
+            }
+
+            &.how.feature {
+                .wrapper {
+                    .hero-content {
+                        width: 100%;
+                        
+                        ul {
+                            li {
+                                margin: 20px 0 40px 20px;
+                                
+                                p {
+                                    width: 70%;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }

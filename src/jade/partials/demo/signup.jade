@@ -7,31 +7,27 @@ article.view.view-demo-signup
             img.image-mountains(src="/assets/images/mountains.svg")
             img.image-lines(src="/assets/images/lines.svg")
 
-        form.signup-form(ng-controller="SignupController")
+        form.signup-form(ng-controller="SignupController", ng-submit="submit()")
 
             label.border-right
                 span First Name
-                input(name="first_name", ng-model="request.firstName", type="text", placeholder='Johnny', novalidate)
+                input(name="first_name", ng-model="request.firstName", type="text", placeholder='Johnny', required)
 
             label
                 span Last Name
-                input(name="last_name", ng-model="request.lastName", type="text", placeholder='Appleseed', novalidate)
+                input(name="last_name", ng-model="request.lastName", type="text", placeholder='Appleseed', required)
 
             label.full-width
                 span Company
-                input(name="company", ng-model="request.company", type="text", placeholder='Appleseed Inc.', novalidate)
+                input(name="company", ng-model="request.company", type="text", placeholder='Appleseed Inc.', required)
 
             label.full-width
                 span Email Address
-                input(name="email", ng-model="request.email", type="email", placeholder='you@mail.com', novalidate)
+                input(name="email", ng-model="request.email", type="email", placeholder='you@mail.com', required)
 
             label.full-width
                 span Phone Number (optional)
-                input(name="tel", ng-model="request.phone", type="tel", placeholder='1 (123) 456-7890', novalidate)
+                input(name="tel", ng-model="request.phone", type="tel", placeholder='1 (123) 456-7890')
 
-            //- label
-            //-     span Password
-            //-     input(placeholder='secretcode', type="password")
-
-            a.solid-btn(ui-sref="root.demo.upload", ng-click="sendDemoRequest(request)")
+            a.solid-btn(ui-sref="root.demo.thanks")
                 | Request Demo
