@@ -83,6 +83,7 @@
 
                     font-size: $base-font-size;
 
+                    h2 { max-width: 200px; }
                     p { max-width: 340px; }
                     &:first-child { margin-left: 0; }
                     &:last-child { margin-right: 0; }
@@ -190,7 +191,7 @@
                 q {
                     @include transition(0.3s);
                     display: block;
-                    padding: 20px 0 80px;
+                    padding: 20px 30px 50px 30px;
 
                     color: $navy;
                     font-size: 24px;

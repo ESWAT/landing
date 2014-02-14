@@ -121,15 +121,21 @@ app.directive('hamburger', function($window) {
                     this.className = this.className + " toggled";
                     toggled = true;
 
+                    $('#menu-toggle').css('position', 'fixed');
+
                     $('.main li a').on('click', function () {
                         $('.view-header nav ul.main').hide();
                         $('.hamburger').removeClass('toggled');
                         toggled = false;
+
+                        $('#menu-toggle').css('position', 'absolute');
                     });
 
                 } else {
                     this.className = this.className.replace(/\b\stoggled\b/,'');
                     toggled = false;
+
+                    $('#menu-toggle').css('position', 'absolute');
                 }
             }, false);
         }
