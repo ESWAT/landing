@@ -441,28 +441,40 @@ label {
 
 /* line 6, ../../../src/styles/_base.scss */
 html, body {
-  height: 100%;
-  overflow-x: hidden; }
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: scroll; }
 
-/* line 11, ../../../src/styles/_base.scss */
+/* line 12, ../../../src/styles/_base.scss */
 body {
   background: #f7f5f3; }
 
-/* line 16, ../../../src/styles/_base.scss */
-body.demo-flow > .onscreen {
-  top: calc(100% - 120px); }
+/* line 17, ../../../src/styles/_base.scss */
+body.demo-flow {
+  height: 100%; }
 
-/* line 25, ../../../src/styles/_base.scss */
+/* line 23, ../../../src/styles/_base.scss */
+body.demo-flow > .onscreen {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(100% - 120px);
+  bottom: 0; }
+
+/* line 33, ../../../src/styles/_base.scss */
 body > .offscreen {
   z-index: 0;
   top: 0;
   bottom: 120px;
-  background: #f7f5f3; }
+  background: #f7f5f3;
+  position: absolute;
+  left: 0;
+  right: 0; }
 
-/* line 33, ../../../src/styles/_base.scss */
+/* line 44, ../../../src/styles/_base.scss */
 body > .onscreen {
   position: relative; }
-  /* line 39, ../../../src/styles/_base.scss */
+  /* line 50, ../../../src/styles/_base.scss */
   body > .onscreen > header {
     position: absolute;
     z-index: 1;
@@ -890,30 +902,33 @@ footer {
         vertical-align: top;
         font-size: 15px; }
         /* line 86, ../../../src/styles/partials/_home.scss */
+        .view-home section.key .wrapper .key-content h2 {
+          max-width: 200px; }
+        /* line 87, ../../../src/styles/partials/_home.scss */
         .view-home section.key .wrapper .key-content p {
           max-width: 340px; }
-        /* line 87, ../../../src/styles/partials/_home.scss */
+        /* line 88, ../../../src/styles/partials/_home.scss */
         .view-home section.key .wrapper .key-content:first-child {
           margin-left: 0; }
-        /* line 88, ../../../src/styles/partials/_home.scss */
+        /* line 89, ../../../src/styles/partials/_home.scss */
         .view-home section.key .wrapper .key-content:last-child {
           margin-right: 0; }
-  /* line 93, ../../../src/styles/partials/_home.scss */
+  /* line 94, ../../../src/styles/partials/_home.scss */
   .view-home section.feature {
     background: #f7f7f7; }
-    /* line 96, ../../../src/styles/partials/_home.scss */
+    /* line 97, ../../../src/styles/partials/_home.scss */
     .view-home section.feature .wrapper {
       position: relative; }
-      /* line 99, ../../../src/styles/partials/_home.scss */
+      /* line 100, ../../../src/styles/partials/_home.scss */
       .view-home section.feature .wrapper .hero-content {
         margin: 125px 0 145px;
         display: inline-block;
         color: #73838e; }
-        /* line 105, ../../../src/styles/partials/_home.scss */
+        /* line 106, ../../../src/styles/partials/_home.scss */
         .view-home section.feature .wrapper .hero-content a {
           border: 1px solid #73838e;
           color: #73838e; }
-      /* line 111, ../../../src/styles/partials/_home.scss */
+      /* line 112, ../../../src/styles/partials/_home.scss */
       .view-home section.feature .wrapper .filters, .view-home section.feature .wrapper .paper, .view-home section.feature .wrapper .how-it-works {
         position: absolute;
         right: -55px;
@@ -921,96 +936,96 @@ footer {
         width: 65%;
         max-width: 600px;
         display: inline-block; }
-      /* line 120, ../../../src/styles/partials/_home.scss */
+      /* line 121, ../../../src/styles/partials/_home.scss */
       .view-home section.feature .wrapper .how-it-works {
         top: 140px;
         right: -12px; }
-  /* line 128, ../../../src/styles/partials/_home.scss */
+  /* line 129, ../../../src/styles/partials/_home.scss */
   .view-home section.exporting {
     background: #ffcc00;
     overflow: hidden; }
-  /* line 133, ../../../src/styles/partials/_home.scss */
+  /* line 134, ../../../src/styles/partials/_home.scss */
   .view-home section.right {
     background: white; }
-    /* line 136, ../../../src/styles/partials/_home.scss */
+    /* line 137, ../../../src/styles/partials/_home.scss */
     .view-home section.right .wrapper {
       text-align: right; }
-      /* line 139, ../../../src/styles/partials/_home.scss */
+      /* line 140, ../../../src/styles/partials/_home.scss */
       .view-home section.right .wrapper .hero-content {
         text-align: left; }
-  /* line 143, ../../../src/styles/partials/_home.scss */
+  /* line 144, ../../../src/styles/partials/_home.scss */
   .view-home section.how {
     background: #f7f7f7;
     border-top: 1px solid #eee;
     border-bottom: 1px solid #eee; }
-    /* line 149, ../../../src/styles/partials/_home.scss */
+    /* line 150, ../../../src/styles/partials/_home.scss */
     .view-home section.how .wrapper .hero-content {
       margin: 95px 0 130px;
       display: inline-block;
       counter-reset: step; }
-      /* line 155, ../../../src/styles/partials/_home.scss */
+      /* line 156, ../../../src/styles/partials/_home.scss */
       .view-home section.how .wrapper .hero-content li {
         margin: 20px 30px 40px 0;
         display: block; }
-        /* line 160, ../../../src/styles/partials/_home.scss */
+        /* line 161, ../../../src/styles/partials/_home.scss */
         .view-home section.how .wrapper .hero-content li .step {
           margin: 5px 20px 0 0; }
-        /* line 162, ../../../src/styles/partials/_home.scss */
+        /* line 163, ../../../src/styles/partials/_home.scss */
         .view-home section.how .wrapper .hero-content li p {
           max-width: 250px;
           margin: 0 0 0 60px; }
-        /* line 167, ../../../src/styles/partials/_home.scss */
+        /* line 168, ../../../src/styles/partials/_home.scss */
         .view-home section.how .wrapper .hero-content li a {
           margin: 8px 0 0 0; }
-      /* line 170, ../../../src/styles/partials/_home.scss */
+      /* line 171, ../../../src/styles/partials/_home.scss */
       .view-home section.how .wrapper .hero-content p {
         margin: 0; }
-      /* line 172, ../../../src/styles/partials/_home.scss */
+      /* line 173, ../../../src/styles/partials/_home.scss */
       .view-home section.how .wrapper .hero-content a {
         border: 1px solid #73838e;
         color: #73838e; }
-    /* line 178, ../../../src/styles/partials/_home.scss */
+    /* line 179, ../../../src/styles/partials/_home.scss */
     .view-home section.how .wrapper img {
       margin: 0 0 -25px 20px; }
-  /* line 182, ../../../src/styles/partials/_home.scss */
+  /* line 183, ../../../src/styles/partials/_home.scss */
   .view-home section.testimonials {
     background: white;
     border-bottom: 1px solid #eee;
     padding: 80px 0px 60px; }
-    /* line 187, ../../../src/styles/partials/_home.scss */
+    /* line 188, ../../../src/styles/partials/_home.scss */
     .view-home section.testimonials .wrapper {
       text-align: center; }
-      /* line 190, ../../../src/styles/partials/_home.scss */
+      /* line 191, ../../../src/styles/partials/_home.scss */
       .view-home section.testimonials .wrapper q {
         -webkit-transition: 0.3s;
         -moz-transition: 0.3s;
         -o-transition: 0.3s;
         transition: 0.3s;
         display: block;
-        padding: 20px 0 80px;
+        padding: 20px 30px 50px 30px;
         color: #242a33;
         font-size: 24px;
         font-weight: 300;
         line-height: 32px;
         text-transform: none;
         word-spacing: 1px; }
-      /* line 203, ../../../src/styles/partials/_home.scss */
+      /* line 204, ../../../src/styles/partials/_home.scss */
       .view-home section.testimonials .wrapper ul.bragging-rights {
         margin: 0 auto;
         margin-bottom: 80px;
         width: 50%;
         max-width: 460px; }
-        /* line 209, ../../../src/styles/partials/_home.scss */
+        /* line 210, ../../../src/styles/partials/_home.scss */
         .view-home section.testimonials .wrapper ul.bragging-rights li {
           display: none;
           vertical-align: middle; }
-          /* line 213, ../../../src/styles/partials/_home.scss */
+          /* line 214, ../../../src/styles/partials/_home.scss */
           .view-home section.testimonials .wrapper ul.bragging-rights li.active {
             display: inline-block; }
-      /* line 217, ../../../src/styles/partials/_home.scss */
+      /* line 218, ../../../src/styles/partials/_home.scss */
       .view-home section.testimonials .wrapper ul.people {
         font-size: 0; }
-        /* line 220, ../../../src/styles/partials/_home.scss */
+        /* line 221, ../../../src/styles/partials/_home.scss */
         .view-home section.testimonials .wrapper ul.people li {
           -webkit-transition: 0.3s;
           -moz-transition: 0.3s;
@@ -1020,30 +1035,30 @@ footer {
           display: inline-block;
           vertical-align: top;
           opacity: 0.3; }
-          /* line 227, ../../../src/styles/partials/_home.scss */
+          /* line 228, ../../../src/styles/partials/_home.scss */
           .view-home section.testimonials .wrapper ul.people li.active {
             opacity: 1; }
-          /* line 229, ../../../src/styles/partials/_home.scss */
+          /* line 230, ../../../src/styles/partials/_home.scss */
           .view-home section.testimonials .wrapper ul.people li:hover {
             cursor: pointer;
             opacity: 1; }
-          /* line 234, ../../../src/styles/partials/_home.scss */
+          /* line 235, ../../../src/styles/partials/_home.scss */
           .view-home section.testimonials .wrapper ul.people li img {
             width: 80px;
             border-radius: 100%;
             margin: 0 0 10px 0; }
-  /* line 244, ../../../src/styles/partials/_home.scss */
+  /* line 245, ../../../src/styles/partials/_home.scss */
   .view-home section.gym-badges {
     background: white; }
-    /* line 247, ../../../src/styles/partials/_home.scss */
+    /* line 248, ../../../src/styles/partials/_home.scss */
     .view-home section.gym-badges .wrapper ul {
       font-size: 0;
       text-align: center; }
-      /* line 251, ../../../src/styles/partials/_home.scss */
+      /* line 252, ../../../src/styles/partials/_home.scss */
       .view-home section.gym-badges .wrapper ul li {
         margin: 0 20px;
         display: inline-block; }
-        /* line 255, ../../../src/styles/partials/_home.scss */
+        /* line 256, ../../../src/styles/partials/_home.scss */
         .view-home section.gym-badges .wrapper ul li img {
           margin: 70px 0; }
 
@@ -1760,9 +1775,13 @@ footer {
   /* line 300, ../../../src/styles/_responsive.scss */
   .view-home section.key .wrapper .key-content {
     margin: 15px 30px 30px 0;
+    padding: 0 30px;
     width: 100%;
     text-align: center; }
-    /* line 305, ../../../src/styles/_responsive.scss */
+    /* line 306, ../../../src/styles/_responsive.scss */
+    .view-home section.key .wrapper .key-content h2 {
+      max-width: none; }
+    /* line 307, ../../../src/styles/_responsive.scss */
     .view-home section.key .wrapper .key-content p {
       margin: 0 auto; }
   /* line 311, ../../../src/styles/_responsive.scss */
@@ -1876,8 +1895,8 @@ footer {
           display: block;
           line-height: 30px;
           text-align: center;
-          font-size: 30px;
-          line-height: 80px;
+          font-size: 25px;
+          line-height: 65px;
           letter-spacing: 3px;
           font-weight: 400; }
         /* line 443, ../../../src/styles/_responsive.scss */
@@ -1970,79 +1989,82 @@ footer {
     max-width: 75%; }
   /* line 568, ../../../src/styles/_responsive.scss */
   .view-home section.key .wrapper .key-content {
-    margin: 15px 0; }
-  /* line 573, ../../../src/styles/_responsive.scss */
+    margin: 20px 0; }
+    /* line 571, ../../../src/styles/_responsive.scss */
+    .view-home section.key .wrapper .key-content h2 {
+      margin: 0 0 10px 0; }
+  /* line 575, ../../../src/styles/_responsive.scss */
   .view-home section.feature .wrapper {
     padding: 0 30px; }
-    /* line 576, ../../../src/styles/_responsive.scss */
+    /* line 578, ../../../src/styles/_responsive.scss */
     .view-home section.feature .wrapper .filters, .view-home section.feature .wrapper .paper {
       position: relative;
       width: auto;
       left: 0;
       right: 4px;
       max-height: 280px; }
-  /* line 585, ../../../src/styles/_responsive.scss */
+  /* line 587, ../../../src/styles/_responsive.scss */
   .view-home section.how.feature .wrapper {
     padding: 30px 0; }
-    /* line 590, ../../../src/styles/_responsive.scss */
+    /* line 592, ../../../src/styles/_responsive.scss */
     .view-home section.how.feature .wrapper .hero-content ul li {
       margin: 20px 60px 40px 0; }
 
-  /* line 602, ../../../src/styles/_responsive.scss */
+  /* line 604, ../../../src/styles/_responsive.scss */
   .view-header nav {
     left: 30px; }
-    /* line 605, ../../../src/styles/_responsive.scss */
+    /* line 607, ../../../src/styles/_responsive.scss */
     .view-header nav .hamburger {
       right: 60px; }
 
-  /* line 613, ../../../src/styles/_responsive.scss */
+  /* line 615, ../../../src/styles/_responsive.scss */
   .view-about section .two-col {
     width: 100%;
     margin: 0 0 80px 0; }
-    /* line 617, ../../../src/styles/_responsive.scss */
+    /* line 619, ../../../src/styles/_responsive.scss */
     .view-about section .two-col ul {
       max-width: 320px;
       margin: 0 auto; }
-  /* line 623, ../../../src/styles/_responsive.scss */
+  /* line 625, ../../../src/styles/_responsive.scss */
   .view-about section .two-col:last-child {
     margin: 0; }
-  /* line 625, ../../../src/styles/_responsive.scss */
+  /* line 627, ../../../src/styles/_responsive.scss */
   .view-about section.the-team .wrapper .team-head:nth-child(odd), .view-about section.the-team .wrapper .team-head:nth-child(even) {
     width: 100%;
     max-width: 320px;
     margin: 0 0 30px 0;
     text-align: left; }
-    /* line 632, ../../../src/styles/_responsive.scss */
+    /* line 634, ../../../src/styles/_responsive.scss */
     .view-about section.the-team .wrapper .team-head:nth-child(odd) .team-head-label, .view-about section.the-team .wrapper .team-head:nth-child(even) .team-head-label {
       display: inline-block;
       vertical-align: top;
       margin: 9px 0 0 0; }
-    /* line 638, ../../../src/styles/_responsive.scss */
+    /* line 640, ../../../src/styles/_responsive.scss */
     .view-about section.the-team .wrapper .team-head:nth-child(odd) img, .view-about section.the-team .wrapper .team-head:nth-child(even) img {
       width: 60px;
       margin: 0 15px 0 0; }
-  /* line 644, ../../../src/styles/_responsive.scss */
+  /* line 646, ../../../src/styles/_responsive.scss */
   .view-about section.social .wrapper {
     padding: 0; }
-    /* line 647, ../../../src/styles/_responsive.scss */
+    /* line 649, ../../../src/styles/_responsive.scss */
     .view-about section.social .wrapper ul {
       margin: 30px 0; }
-      /* line 650, ../../../src/styles/_responsive.scss */
+      /* line 652, ../../../src/styles/_responsive.scss */
       .view-about section.social .wrapper ul li {
         margin: 10px 5px;
         width: 45px;
         height: 45px; }
-        /* line 655, ../../../src/styles/_responsive.scss */
+        /* line 657, ../../../src/styles/_responsive.scss */
         .view-about section.social .wrapper ul li a p:before {
           line-height: 43px; }
 
-  /* line 667, ../../../src/styles/_responsive.scss */
+  /* line 669, ../../../src/styles/_responsive.scss */
   .view-features section.features .wrapper section .shrink-wrap article {
     width: 100%; }
-  /* line 671, ../../../src/styles/_responsive.scss */
+  /* line 673, ../../../src/styles/_responsive.scss */
   .view-features section.features .wrapper section .shrink-wrap ul {
     margin: 0; }
-    /* line 674, ../../../src/styles/_responsive.scss */
+    /* line 676, ../../../src/styles/_responsive.scss */
     .view-features section.features .wrapper section .shrink-wrap ul li.line {
       width: 50%;
       display: block;
@@ -2050,40 +2072,40 @@ footer {
       border-top: 1px solid #95a0a5;
       max-width: 300px; }
 
-  /* line 688, ../../../src/styles/_responsive.scss */
+  /* line 690, ../../../src/styles/_responsive.scss */
   footer {
     height: 280px; }
-    /* line 692, ../../../src/styles/_responsive.scss */
+    /* line 694, ../../../src/styles/_responsive.scss */
     footer .wrapper nav {
       width: 300px;
       margin: 0 auto; }
-      /* line 697, ../../../src/styles/_responsive.scss */
+      /* line 699, ../../../src/styles/_responsive.scss */
       footer .wrapper nav ul li {
         margin: 0 10px 10px; }
-      /* line 698, ../../../src/styles/_responsive.scss */
+      /* line 700, ../../../src/styles/_responsive.scss */
       footer .wrapper nav ul li:nth-child(even) {
         display: none; } }
 @media only screen and (max-width: 321px) {
-  /* line 710, ../../../src/styles/_responsive.scss */
+  /* line 712, ../../../src/styles/_responsive.scss */
   .view-home section.hero.home {
     height: 500px; }
-  /* line 715, ../../../src/styles/_responsive.scss */
+  /* line 717, ../../../src/styles/_responsive.scss */
   .view-home section.hero .wrapper .hero-content p {
     width: 250px; }
-  /* line 719, ../../../src/styles/_responsive.scss */
+  /* line 721, ../../../src/styles/_responsive.scss */
   .view-home section.hero .laptop.mobile {
     display: none; }
-  /* line 724, ../../../src/styles/_responsive.scss */
+  /* line 726, ../../../src/styles/_responsive.scss */
   .view-home section.how.feature .wrapper .hero-content {
     width: 100%; }
-    /* line 728, ../../../src/styles/_responsive.scss */
+    /* line 730, ../../../src/styles/_responsive.scss */
     .view-home section.how.feature .wrapper .hero-content ul li {
       margin: 20px 0 40px 20px; }
-      /* line 731, ../../../src/styles/_responsive.scss */
+      /* line 733, ../../../src/styles/_responsive.scss */
       .view-home section.how.feature .wrapper .hero-content ul li p {
         width: 70%; }
 
-  /* line 745, ../../../src/styles/_responsive.scss */
+  /* line 747, ../../../src/styles/_responsive.scss */
   .view-about section.social .wrapper {
     padding: 0 30px; } }
 @font-face {
