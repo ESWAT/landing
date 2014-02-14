@@ -4,8 +4,9 @@ $slide-transition-speed: 0.7s;
 
 
 html, body {
-    height: 100%;
+    height: auto;
     overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 body {
@@ -13,11 +14,18 @@ body {
 }
 
 
-body.demo-flow > .onscreen {
-    top: calc(100% - #{$header-height});
-    & > main.animation-fade {
-        // Fix this later Nick
-        // @include transition-delay($slide-transition-speed);
+body.demo-flow {
+    height: 100%;
+}
+
+
+body.demo-flow {
+    & > .onscreen {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: calc(100% - #{$header-height});
+        bottom: 0;
     }
 }
 
@@ -27,6 +35,9 @@ body > .offscreen {
     top: 0;
     bottom: $header-height;
     background: $off-white;
+    position: absolute;
+    left: 0;
+    right: 0;
 }
 
 

@@ -299,12 +299,12 @@ $mobile-port: 321px;
             &.key .wrapper {
                 .key-content {
                     margin: 15px 30px 30px 0;
+                    padding: 0 30px;
                     width: 100%;
                     text-align: center;
 
-                    p {
-                        margin: 0 auto;
-                    }
+                    h2 { max-width: none; }
+                    p { margin: 0 auto; }
                 }
             }
 
@@ -434,8 +434,8 @@ $mobile-port: 321px;
                         display: block;
                         line-height: 30px;
                         text-align: center;
-                        font-size: 30px;
-                        line-height: 80px;
+                        font-size: 25px;
+                        line-height: 65px;
                         letter-spacing: 3px;
                         font-weight: 400;
                     }
@@ -566,7 +566,9 @@ $mobile-port: 321px;
 
             &.key .wrapper {
                 .key-content {
-                    margin: 15px 0;
+                    margin: 20px 0;
+
+                    h2 { margin: 0 0 10px 0; }
                 }
             }
 
