@@ -454,14 +454,18 @@ body.demo-flow {
   height: 100%; }
 
 /* line 23, ../../../src/styles/_base.scss */
+body.demo-flow > .offscreen {
+  z-index: 2; }
+/* line 26, ../../../src/styles/_base.scss */
 body.demo-flow > .onscreen {
   position: absolute;
   left: 0;
   right: 0;
-  top: calc(100% - 120px);
-  bottom: 0; }
+  bottom: 0;
+  height: 120px;
+  margin-top: -120px; }
 
-/* line 33, ../../../src/styles/_base.scss */
+/* line 37, ../../../src/styles/_base.scss */
 body > .offscreen {
   z-index: 0;
   top: 0;
@@ -471,10 +475,10 @@ body > .offscreen {
   left: 0;
   right: 0; }
 
-/* line 44, ../../../src/styles/_base.scss */
+/* line 48, ../../../src/styles/_base.scss */
 body > .onscreen {
   position: relative; }
-  /* line 50, ../../../src/styles/_base.scss */
+  /* line 54, ../../../src/styles/_base.scss */
   body > .onscreen > header {
     position: absolute;
     z-index: 1;
