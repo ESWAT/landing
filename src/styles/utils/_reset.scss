@@ -15,7 +15,7 @@
     @include box-sizing(border-box);
 
     // No select for you
-    @include user-select(none);
+    // @include user-select(none);
 }
 
 html {
