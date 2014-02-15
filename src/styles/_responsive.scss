@@ -231,6 +231,30 @@ $mobile-port: 321px;
 // Tablet 767
 @media only screen and (max-width : $tablet-port ) {
 
+    .demo-flow {
+
+        overflow: scroll;
+
+        .offscreen {
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+            z-index: 900;
+        }
+
+        .onscreen {
+            display: inline-block !important;
+            z-index: 0;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 120px;
+            margin-bottom: -120px;
+            height: 120px;
+        }
+    }
+
     .wrapper {
         width: 100%;
         padding: 30px 0;
@@ -538,6 +562,7 @@ $mobile-port: 321px;
 
 // Mobile 579
 @media only screen and (max-width : $mobile-land) {
+
     .wrapper {
         width: 100%;
         padding: 30px 0;
@@ -706,6 +731,7 @@ $mobile-port: 321px;
 
 // Mobile 321
 @media only screen and (max-width : $mobile-port ) {
+
     .view-home {
 
         section {
