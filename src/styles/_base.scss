@@ -20,12 +20,16 @@ body.demo-flow {
 
 
 body.demo-flow {
+    & > .offscreen {
+        z-index: 2;
+    }
     & > .onscreen {
         position: absolute;
         left: 0;
         right: 0;
-        top: calc(100% - #{$header-height});
         bottom: 0;
+        height: 120px;
+        margin-top: -120px;
     }
 }
 
