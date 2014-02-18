@@ -12,15 +12,18 @@
   <section class="key">
     <div class="wrapper">
       <article class="key-content">
+        <p class="icon customicon-home-point-1"></p>
         <h2>Data You Can Understand</h2>
         <p>No convoluted spreadsheets or legacy software. 42 makes data&nbsp;intuitive.</p>
       </article>
       <article class="key-content">
-        <h2>Reduce Cost Grow Revenue</h2>
+        <p class="icon customicon-home-point-2"></p>
+        <h2>Reduce Cost, Grow&nbsp;Revenue</h2>
         <p>Access your data from the cloud. No hardware, no downloads, no&nbsp;fuss.</p>
       </article>
       <article class="key-content">
-        <h2>Monetize Your POS Data</h2>
+        <p class="icon customicon-home-point-3"></p>
+        <h2>Monetize Your POS&nbsp;Data</h2>
         <p>Instantly share your findings with clients and colleagues. Export PDFs and&nbsp;graphs.</p>
       </article>
     </div>
@@ -31,7 +34,7 @@
         <h2>How It Works</h2>
         <ul>
           <li><i class="step"></i>
-            <p>We take raw data and process it on our web platform.</p>
+            <p>We take raw data and process it on our web&nbsp;platform.</p>
           </li>
           <li><i class="step"></i>
             <p>Our algorithms scan the data to find the best ways to grow your business. 42's technology can identify opportunity areas to increase growth and reduce inefficiencies.</p>
@@ -46,7 +49,9 @@
   </section>
   <section class="testimonials">
     <div ng-mouseenter="carousel.stop()" ng-mouseleave="carousel.start()" class="wrapper">
-      <q ng-bind-html="testimonials[carousel.state.index].quote"></q>
+      <div class="quote-wrapper">
+        <q ng-bind-html="testimonials[carousel.state.index].quote"></q>
+      </div>
       <ul class="people">
         <li ng-repeat="testimonial in testimonials" ng-class="{active:carousel.state.index == $index}" ng-mouseover="select($index)"><img ng-src="{{ testimonial.image }}"/>
           <div>
