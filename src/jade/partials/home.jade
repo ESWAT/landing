@@ -64,8 +64,8 @@ article.view.view-home
     section.testimonials
 
         .wrapper(ng-mouseenter="carousel.stop()", ng-mouseleave="carousel.start()")
-
-            q(ng-bind-html="testimonials[carousel.state.index].quote")
+            .quote-wrapper
+                q(ng-bind-html="testimonials[carousel.state.index].quote")
 
             ul.people
                 li(ng-repeat="testimonial in testimonials"

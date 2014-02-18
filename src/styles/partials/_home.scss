@@ -183,22 +183,36 @@
         &.testimonials {
             background: $white;
             border-bottom: 1px solid #eee;
-            padding: 80px 0px 60px;
+            padding: 60px 0px;
 
             .wrapper {
                 text-align: center;
 
-                q {
-                    @include transition(0.3s);
-                    display: block;
-                    padding: 20px 30px 50px 30px;
+                .quote-wrapper {
+                    position: relative;
+                    max-width: 700px;
+                    margin: 0 auto;
+                    height: 200px;
+                    width: 80%;
 
-                    color: $navy;
-                    font-size: 24px;
-                    font-weight: $regular-weight-font;
-                    line-height: 32px;
-                    text-transform: none;
-                    word-spacing: 1px;
+                    q {
+                        @include transition(0.3s);
+                        display: block;
+                        padding: 20px 30px 50px 30px;
+
+                        color: $navy;
+                        font-size: 24px;
+                        font-weight: $regular-weight-font;
+                        line-height: 32px;
+                        text-transform: none;
+                        word-spacing: 1px;
+
+                        position: absolute;
+                        top: 50%;
+                        -webkit-transform: translateY(-50%);
+                        -ms-transform: translateY(-50%);
+                        transform: translateY(-50%);
+                    }
                 }
 
                 ul.bragging-rights {

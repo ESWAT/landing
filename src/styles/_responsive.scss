@@ -613,11 +613,31 @@ $mobile-port: 321px;
                 padding: 30px 0;
 
                 .hero-content {
+                    width: 100%;
+
                     ul {
                         li {
                             margin: 20px 60px 40px 0;
+                            padding: 0 30px;
+
+                            p { max-width: 180px; }
                         }
                     }
+                }
+            }
+
+            &.testimonials .wrapper {
+                .quote-wrapper {
+                    position: relative;
+                    height: 240px;
+                    margin: 0 auto;
+                }
+                q {
+                    position: absolute;
+                    top: 50%;
+                    -webkit-transform: translateY(-50%);
+                    -ms-transform: translateY(-50%);
+                    transform: translateY(-50%);
                 }
             }
         }
@@ -763,6 +783,12 @@ $mobile-port: 321px;
                         }
                     }
                 }
+            }
+
+            &.testimonials .wrapper {
+                .quote-wrapper { width: 100%; }
+
+                q { width: 100%; }
             }
         }
     }
