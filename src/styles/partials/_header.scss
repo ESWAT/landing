@@ -198,6 +198,7 @@ body.demo-flow .view-header {
             &.main {
                 left: 50%;
                 margin-left: -275px;
+                z-index: 998;
             }
 
             &.account {
