@@ -204,7 +204,9 @@ $mobile-port: 351px;
                     .shrink-wrap {
                         width: 100%;
 
-                        ul li.line { width: 420px; }
+                        ul li {
+                            &.line { width: 420px; }
+                        }
 
                     }
 
@@ -329,6 +331,13 @@ $mobile-port: 351px;
 
                     h2 { max-width: none; }
                     p { margin: 0 auto; }
+
+                    p.icon {
+                        display: inline-block;
+                        font-size: 25px;
+                        margin: 0 0 10px 0;
+                        color: $light-grey;
+                    }
                 }
             }
 
@@ -512,35 +521,45 @@ $mobile-port: 351px;
             &.features {
                 padding: 0;
 
-                .wrapper section {
-                    text-align: center;
+                .wrapper {
+                    padding: 0;
 
-                    .shrink-wrap {
-                        width: 100%;
+                    section {
+                        text-align: center;
 
-                        ul {
-                            width: 420px;
-                            margin: 0 auto;
-                            padding: 60px 0 40px;
-                            text-align: left;
+                        .shrink-wrap {
+                            width: 100%;
 
-                            li.line { width: 60%; }
-                        }
-
-                        article {
-                            width: 420px;
-                            text-align: center;
-
-                            h2, p {
-                                max-width: 420px;
+                            ul {
+                                width: 420px;
+                                margin: 0 auto;
+                                padding: 60px 0 40px;
                                 text-align: left;
+
+                                li {
+                                    &.line { display: none; }
+
+                                    p { display: inline-block; }
+
+                                    h3 { line-height: 50px; }
+                                }
                             }
+
+                            article {
+                                width: 420px;
+                                text-align: center;
+
+                                h2, p {
+                                    // max-width: 420px;
+                                    text-align: left;
+                                }
+                            }
+
                         }
 
-                    }
-
-                    &.revenue, &.customers, &.items, &.merchandising, &.custom {
-                        .shrink-wrap { background: none; }
+                        &.revenue, &.customers, &.items, &.merchandising, &.custom {
+                            .shrink-wrap { background: none; }
+                        }
                     }
                 }
             }
@@ -603,7 +622,7 @@ $mobile-port: 351px;
 
             &.key .wrapper {
                 .key-content {
-                    margin: 20px 0;
+                    margin: 25px 0;
 
                     h2 { margin: 0 0 10px 0; }
                 }
@@ -738,11 +757,7 @@ $mobile-port: 351px;
                             margin: 0;
 
                             li.line {
-                                width: 50%;
-                                display: block;
-                                margin: 15px 0 0 0;
-                                border-top: 1px solid $light-grey;
-                                max-width: 300px;
+                                display: none;
                             }
                         }
                     }

@@ -95,14 +95,13 @@ body.demo-flow .view-header {
         margin-left: -($nav-width/2);
         color: $white;
 
-        .logo {
+        .customicon-logo-42 {
+            position: absolute;
+            top: 13px;
             width:  $header-height;
             height: $header-height;
-
-            a {
-                font-size: 40px;
-                line-height: $header-height;
-            }
+            line-height: $header-height;
+            font-size: 20px;
         }
 
         .hamburger {

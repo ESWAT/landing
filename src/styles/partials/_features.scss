@@ -54,6 +54,16 @@
                                 h3 {
                                     margin: 0 15px 0 0;
                                     color: $navy;
+                                    display: inline-block;
+                                    vertical-align: top;
+                                    line-height: 20px;
+                                }
+
+                                p {
+                                    display: none;
+                                    font-size: 25px;
+                                    margin: 0 10px 0 0;
+                                    color: $light-grey;
                                 }
                             }
                         }

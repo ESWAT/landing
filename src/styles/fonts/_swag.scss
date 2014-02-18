@@ -26,9 +26,33 @@
     line-height: 1em;
 }
 
-[class^="logo"]:before,
-[class*=" logo"]:before {
-    font-family: "swag";
+.customicon-logo-42:before {
+  content: "a";
 }
-
-.logo-42:before { content: "a"; }
+.customicon-eye:before {
+  content: "b";
+}
+.customicon-features-1:before {
+  content: "c";
+}
+.customicon-features-2:before {
+  content: "d";
+}
+.customicon-features-3:before {
+  content: "e";
+}
+.customicon-features-4:before {
+  content: "f";
+}
+.customicon-features-5:before {
+  content: "g";
+}
+.customicon-home-point-1:before {
+  content: "h";
+}
+.customicon-home-point-2:before {
+  content: "i";
+}
+.customicon-home-point-3:before {
+  content: "j";
+}

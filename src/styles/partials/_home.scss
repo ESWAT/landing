@@ -84,6 +84,7 @@
                     font-size: $base-font-size;
 
                     h2 { max-width: 200px; }
+                    p.icon { display: none; }
                     p { max-width: 340px; }
                     &:first-child { margin-left: 0; }
                     &:last-child { margin-right: 0; }
