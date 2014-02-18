@@ -12,10 +12,6 @@
                     @include transition(0.3s);
                     position: relative;
                     display: block;
-                    opacity: 0.3;
-
-                    &:hover, &.active { opacity: 1; }
-
                     text-align: right;
 
                     &.revenue {

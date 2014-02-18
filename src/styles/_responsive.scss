@@ -1,7 +1,7 @@
 $tablet-land: 1023px;
 $tablet-port: 767px;
 $mobile-land: 579px;
-$mobile-port: 321px;
+$mobile-port: 351px;
 
 
 @media only screen and (max-width : $tablet-land ) {
@@ -287,11 +287,11 @@ $mobile-port: 321px;
                 overflow: hidden;
 
                 .laptop {
-                    top: 570px;
+                    top: 600px;
                     left: 50%;
-                    width: 100%;
+                    width: 500px;
                     display: none;
-                    margin-left: -50%;
+                    margin-left: -250px;
 
 
                     &.mobile { display: block; }
@@ -418,6 +418,8 @@ $mobile-port: 321px;
 
     // Header
     .view-header {
+        .contact-us .wrapper .contact-us-content a { font-size: 45px; }
+
         nav {
             left: 60px;
             margin: 0;
@@ -571,12 +573,22 @@ $mobile-port: 321px;
         .section-heading { padding: 0 0 40px 0; }
     }
 
+    .view-header {
+        .contact-us .wrapper .contact-us-content a { font-size: 45px; }
+    }
+
     // Home
     .view-home {
         section {
+            &.hero.home {height: 600px; }
+
             &.hero {
                 .laptop {
                     top: 600px;
+                    left: 0;
+                    margin-left: 0;
+                    width: 100%;
+                    padding: 0 5%;
                 }
 
                 .wrapper {
@@ -617,10 +629,14 @@ $mobile-port: 321px;
 
                     ul {
                         li {
-                            margin: 20px 60px 40px 0;
-                            padding: 0 30px;
+                            margin: 20px 0 40px 0;
+                            padding: 0 10%;
+                            width: 80%;
 
-                            p { max-width: 180px; }
+                            p {
+                                width: 80%;
+                                max-width: 280px;
+                            }
                         }
                     }
                 }
@@ -653,6 +669,7 @@ $mobile-port: 321px;
                 right: 60px;
             }
         }
+        .contact-us .wrapper .contact-us-content a { font-size: 25px; }
     }
 
     .view-about {
@@ -711,6 +728,8 @@ $mobile-port: 321px;
             &.features {
                 .wrapper section {
                     .shrink-wrap {
+                        padding: 0 30px;
+
                         article {
                             width: 100%;
                         }
@@ -749,22 +768,18 @@ $mobile-port: 321px;
     }
 }
 
-// Mobile 321
+// Mobile 351
 @media only screen and (max-width : $mobile-port ) {
-
     .view-home {
-
         section {
-            &.hero.home {height: 500px; }
-
             &.hero {
+                .laptop { top: 620px; }
+
                 .wrapper {
                     .hero-content {
                         p { width: 250px; }
                     }
                 }
-
-                .laptop.mobile { display: none; }
             }
 
             &.how.feature {
@@ -774,11 +789,9 @@ $mobile-port: 321px;
 
                         ul {
                             li {
-                                margin: 20px 0 40px 20px;
+                                padding: 0;
 
-                                p {
-                                    width: 70%;
-                                }
+                                p { width: 70%; }
                             }
                         }
                     }
