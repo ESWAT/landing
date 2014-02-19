@@ -14,7 +14,7 @@
 
                 img {
                     position: position;
-                    width: 100%;
+                    width: 101%;
                     min-height: 700px;
                 }
             }
@@ -83,8 +83,18 @@
 
                     font-size: $base-font-size;
 
-                    h2 { max-width: 200px; }
-                    p.icon { display: none; }
+                    h2 {
+                        max-width: 200px;
+                        display: inline-block;
+                    }
+
+                    p.icon {
+                        display: inline-block;
+                        font-size: 25px;
+                        margin: 0 15px 10px 0;
+                        color: $light-grey;
+                    }
+
                     p { max-width: 340px; }
                     &:first-child { margin-left: 0; }
                     &:last-child { margin-right: 0; }
