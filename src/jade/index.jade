@@ -2,6 +2,7 @@
 include mixins/mixins-assets
 include mixins/mixins-assets-angular
 include mixins/mixins-typekit
+include mixins/mixins-google-analytics
 
 
 !!!
@@ -33,6 +34,7 @@ html(lang='en', ng-app="42.landing")
       mixin app-core("router")
 
       mixin typekit-sync("qzk2xqv")
+      mixin google-analytics('42debut.com', 'UA-43248089-1')
 
 
   body(ng-controller="MainController", ng-class="{'demo-flow':isDemoFlow, 'home':isHome}")
