@@ -1,6 +1,14 @@
 
 .view-about {
     section {
+        &.hero {
+            .wrapper {
+                width: 100%;
+                height: 550px;
+            }
+        }
+
+
         &.the-team {
             background: $white;
 
@@ -23,8 +31,8 @@
                     }
 
                     p {
-                        padding: 0 0 20px; 
-                    } 
+                        padding: 0 0 20px;
+                    }
                 }
 
                 .team-head {
