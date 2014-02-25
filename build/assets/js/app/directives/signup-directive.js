@@ -144,7 +144,7 @@ app.directive('hamburger', function($window) {
 
 
 
-app.directive('heroPoints', function($window) {
+app.directive('heroPoints', function($window, isMobile) {
 
     var $window = $($window);
 
@@ -174,6 +174,8 @@ app.directive('heroPoints', function($window) {
     return {
         restrict: 'C',
         link: function(scope, element) {
+            if (isMobile) return;
+
             var $element = $(element);
             scrollFade($element
                 , 0.5  // Friction (0 ~ 1): lower = none
