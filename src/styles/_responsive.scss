@@ -175,10 +175,9 @@ $mobile-port: 351px;
                     font-size: 0;
 
                     li {
-                        width: 25%;
-                        margin: 0;
-
-                        img { width: 100%; }
+                        img {
+                            margin: 20px 70px;
+                        }
                     }
                 }
             }
