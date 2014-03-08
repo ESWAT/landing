@@ -1,19 +1,47 @@
 
 footer {
     position: relative;
-    height: 300px;
+    height: 400px;
     background: $navy;
 
     text-align: center;
 
     .wrapper {
         article {
-            margin: 80px 0 90px;
+            margin: 80px 0 42px;
             display: inline-block;
 
             color: $white;
 
-            h1, a { color: $white;}
+            h1, p, a { color: $white;}
+        }
+
+        form {
+            margin: 0 auto 90px;
+            width: 450px;
+            height: 66px;
+
+            section {
+                label {
+                    float: left;
+                    width: 300px;
+                    border-radius: 2px 0 0 2px;
+
+                    span { text-align: left; }
+
+                    input {
+                        float: left;
+                        margin: 9px 0 0 14px;
+                    }
+                }
+
+                button {
+                    float: right;
+                    width: 150px;
+                    border: none;
+                    border-radius: 0 2px 2px 0;
+                }
+            }
         }
 
         nav {

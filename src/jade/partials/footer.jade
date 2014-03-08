@@ -7,10 +7,20 @@ article.view.view-footer
 
             article
                 h1 Know Your Data
+                p Let's stay in touch.
 
-                a.outline-btn(ui-sref="root.demo.signup") Sign Up
+                //- a.outline-btn(ui-sref="root.demo.signup") Sign Up
+
+            form.signup-form(ng-controller="SignupController", ng-submit="submit()", ng-switch="view")
+                section(ng-switch-when="signup")
+                    label.border-right
+                        span Email
+                        input(name="firstName", ng-model="request.firstName", type="text", placeholder='you@mail.com', required)
+
+                    button.solid-btn(type="submit")
+                        | Subscribe
+
 
             nav
                 ul
                     li: &copy; 2014 42 Technologies, Inc
-

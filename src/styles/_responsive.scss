@@ -564,15 +564,8 @@ $mobile-port: 351px;
     }
 
     footer {
-        height: 270px;
-
         .wrapper {
             padding: 0;
-
-            article {
-                margin: 70px 0 80px 0;
-                h1 { font-size: 28px; }
-            }
         }
     }
 
@@ -764,9 +757,26 @@ $mobile-port: 351px;
     }
 
     footer {
-        height: 280px;
+        height: 450px;
 
         .wrapper {
+            form {
+                width: 300px;
+                margin: 0 auto 140px;
+
+                section {
+                    label {
+                        width: 100%;
+                        border-radius: 2px 2px 0 0;
+                    }
+
+                    button {
+                        width: 100%;
+                        border-radius: 0 0 2px 2px;
+                    }
+                }
+            }
+
             nav {
                 width: 300px;
                 margin: 0 auto;
