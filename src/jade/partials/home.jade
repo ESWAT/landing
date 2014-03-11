@@ -5,8 +5,8 @@ article.view.view-home
         .hero-img-contain
             img.bg(src="/assets/images/bg.png")
 
-        img.laptop.desktop(src="/assets/images/home-hero.png")
-        img.laptop.mobile(src="/assets/images/home-hero-mobile.png")
+        img.home-hero-image.laptop.desktop(src="/assets/images/home-hero.png")
+        img.home-hero-mobile-image.laptop.mobile(src="/assets/images/home-hero-mobile.png")
 
         .wrapper
             article.hero-content.hero-points
@@ -14,8 +14,10 @@ article.view.view-home
                 p Big data made simple. Leave the numbers to us, we'll give the answers to insights you want to&nbsp;see.
 
                 a.outline-btn(ui-sref="root.demo.signup")
-                    span.demo-btn Try Our Free Demo
-                    span.signup-btn Sign up
+                    span.demo-btn
+                        | Try Our Free Demo
+                    span.signup-btn
+                        | Sign up
 
 
     section.key

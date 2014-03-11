@@ -7,13 +7,11 @@ article.view.view-header
 
             .contact-us-content
                 h3 E-mail Us
-                a(ui-sref="mailto:team@42debut.com") team@42debut.com
-
+                a(href="mailto:team@42debut.com") team@42debut.com
 
     nav
         .logo
-            a.customicon-logo-42(ui-sref="root.home", ng-click="contactUs.hide()")
-                //- img(src="/assets/images/logo-42.svg")
+            a.customicon-logo-42(ui-sref="root.home")
 
         a#menu-toggle.hamburger
             span.menu-bar.bar1
@@ -21,14 +19,17 @@ article.view.view-header
             span.menu-bar.bar3
 
         ul.main
-            li: a(ui-sref="root.home", ng-click="contactUs.hide()") Home
-            li: a(ui-sref="root.features", ng-click="contactUs.hide()") Features
-            li: a(href="http://42technologies.tumblr.com/", ng-click="contactUs.hide()", target="_blank") Blog
-            li: a(ui-sref="root.about", ng-click="contactUs.hide()") About
-            li: a.contact-link(ng-click="contactUs.toggle()") Contact
+            li: a(ui-sref="root.home")
+                | Home
+            li: a(ui-sref="root.features")
+                | Features
+            li: a(href="http://42technologies.tumblr.com", target="_blank")
+                | Blog
+            li: a(ui-sref="root.about")
+                | About
+            li: a.contact-link(ng-click="contactUs.toggle()")
+                | Contact
 
         ul.account
-            //- li: a(ui-sref="root.home")
-            //-     | Log In
             li: a.outline-btn(ui-sref="root.demo.signup")
                 | request a demo

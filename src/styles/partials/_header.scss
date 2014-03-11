@@ -4,7 +4,8 @@ $nav-width: $wrapper-width;
 
 body.demo-flow .view-header {
     background: $white;
-    a {
+
+    :not(.contact-us) a {
         color: $medium-grey !important;
 
         &:hover {
@@ -20,7 +21,7 @@ body.demo-flow .view-header {
 
 .home .view-header {
     nav {
-        color: $white;
+
 
         ul {
             li {
@@ -47,12 +48,18 @@ body.demo-flow .view-header {
 
 
 .view-header {
+    @include user-select(none);
 
     .contact-us {
         position: fixed;
         width: 100%;
         height: 100%;
         background: rgba(36, 42, 51, 0.98);
+        z-index: 9998;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
 
         .wrapper {
 
@@ -62,12 +69,10 @@ body.demo-flow .view-header {
                 left: 0;
                 width: 100%;
                 margin: -100px 0 0 0;
-
                 text-align: center;
 
                 h3 {
                     margin: 0 0 30px;
-
                     color: $white;
                     font-size: 13px;
                 }
@@ -94,6 +99,7 @@ body.demo-flow .view-header {
         width: $nav-width;
         margin-left: -($nav-width/2);
         color: $white;
+        z-index: 9999;
 
         .customicon-logo-42 {
             position: absolute;
