@@ -84,7 +84,7 @@ app.directive('viewDemoSignup', function(Utils, isMobile) {
 });
 
 
-app.directive('viewHeader', function($window) {
+app.directive('viewHeader', function($window, $rootScope) {
     return {
         restrict: 'C',
         link: function (scope, element) {
@@ -92,15 +92,22 @@ app.directive('viewHeader', function($window) {
 
             scope.contactUs = {}
             scope.contactUs.isVisible = false;
+
             scope.contactUs.show = function () {
                 scope.contactUs.isVisible = true;
             }
+
             scope.contactUs.hide = function() {
                 scope.contactUs.isVisible = false;
             }
+
             scope.contactUs.toggle = function() {
                 scope.contactUs.isVisible = !scope.contactUs.isVisible;
             }
+
+            $rootScope.$on('$stateChangeSuccess', function() {
+                scope.contactUs.hide();
+            });
         }
     }
 });
