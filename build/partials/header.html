@@ -3,17 +3,17 @@
   <section ng-show="contactUs.isVisible" class="contact-us animation-ease">
     <div class="wrapper">
       <div class="contact-us-content">
-        <h3>E-mail Us</h3><a ui-sref="mailto:team@42debut.com">team@42debut.com</a>
+        <h3>E-mail Us</h3><a href="mailto:team@42debut.com">team@42debut.com</a>
       </div>
     </div>
   </section>
   <nav>
-    <div class="logo"><a ui-sref="root.home" ng-click="contactUs.hide()" class="customicon-logo-42"></a></div><a id="menu-toggle" class="hamburger"><span class="menu-bar bar1"></span><span class="menu-bar bar2"></span><span class="menu-bar bar3"></span></a>
+    <div class="logo"><a ui-sref="root.home" class="customicon-logo-42"></a></div><a id="menu-toggle" class="hamburger"><span class="menu-bar bar1"></span><span class="menu-bar bar2"></span><span class="menu-bar bar3"></span></a>
     <ul class="main">
-      <li><a ui-sref="root.home" ng-click="contactUs.hide()">Home</a></li>
-      <li><a ui-sref="root.features" ng-click="contactUs.hide()">Features</a></li>
-      <li><a href="http://42technologies.tumblr.com/" ng-click="contactUs.hide()" target="_blank">Blog</a></li>
-      <li><a ui-sref="root.about" ng-click="contactUs.hide()">About</a></li>
+      <li><a ui-sref="root.home">Home</a></li>
+      <li><a ui-sref="root.features">Features</a></li>
+      <li><a href="http://42technologies.tumblr.com" target="_blank">Blog</a></li>
+      <li><a ui-sref="root.about">About</a></li>
       <li><a ng-click="contactUs.toggle()" class="contact-link">Contact</a></li>
     </ul>
     <ul class="account">
