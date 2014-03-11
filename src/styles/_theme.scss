@@ -6,7 +6,7 @@ $medium-grey: #73838e;
 $light-grey: #95a0a5;
 $default-grey: #ccc;
 $off-white: #f7f5f3;
-$white: #fff;
+$white: rgb(253,253,253);
 $yellow: #ffcc00;
 $light-yellow: lighten($yellow, 6%);
 $dark-yellow: darken($yellow, 8%);
@@ -207,6 +207,9 @@ section {
     p {
         width: 350px;
         margin: 0 0 80px 0;
+    }
+    .demo-btn {
+        color: $white;
     }
 }
 
