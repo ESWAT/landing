@@ -38,6 +38,10 @@ html(lang='en', ng-app="42.landing")
       mixin typekit-sync("qzk2xqv")
       mixin google-analytics('42debut.com', 'UA-43248089-1')
 
+    script
+      var img = new Image();
+      img.src = "/assets/images/bg.png";
+
 
   body(ng-controller="MainController", ng-class="{'demo-flow':isDemoFlow, 'home':isHome}")
 
