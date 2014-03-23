@@ -76,12 +76,11 @@ article.view.view-home
                 li(ng-repeat="testimonial in testimonials"
                   ,ng-class="{active:carousel.state.index == $index}"
                   ,ng-mouseover="select($index)")
-
-                    img(ng-src="{{ testimonial.image }}")
-
-                    div
-                        h4(ng-bind-html="testimonial.name")
-                        h3(ng-bind-html="testimonial.title")
+                    a(href="{{ testimonial.href }}", target="_blank")
+                        img(ng-src="{{ testimonial.image }}")
+                        div
+                            h4(ng-bind-html="testimonial.name")
+                            h3(ng-bind-html="testimonial.title")
 
 
     section.gym-badges
