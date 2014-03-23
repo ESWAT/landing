@@ -223,9 +223,7 @@
 
                         position: absolute;
                         top: 50%;
-                        -webkit-transform: translateY(-50%);
-                        -ms-transform: translateY(-50%);
-                        transform: translateY(-50%);
+                        @include transform(translateY(-50%));
                     }
                 }
 
@@ -262,7 +260,8 @@
 
                         img {
                             width: 80px;
-                            border-radius: 100%;
+                            max-height: 100%;
+                            @include border-radius(100%);
                             margin: 0 0 10px 0;
                         }
                     }
