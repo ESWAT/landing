@@ -5,12 +5,14 @@
         name: "Uri Minkoff",
         title: "CEO, Rebecca Minkoff",
         quote: "One of the most disruptive things on the front-end that we’ve seen in a while.",
-        image: "/assets/images/heads/uri.jpg"
+        href: "http://rebeccaminkoff.com",
+        image: "/assets/images/heads/quotes/uri.jpg"
       }, {
-        name: "Phoebe Yu",
-        title: "INVESTMENT BANKING ANALYST, MERRILL LYNCH",
-        quote: "I love that it’s personalized and not generic. It will bring me into stores and make me feel closer to the brand.",
-        image: "/assets/images/heads/phoebe.jpg"
+        name: "Dino Ha",
+        title: "CEO, memebox",
+        href: "http://us.memebox.com",
+        quote: "We wouldn’t be able to live without 42. When you have a lot of numbers it’s hard to know where to focus, with 42 you can find out in just a few clicks.",
+        image: "/assets/images/heads/quotes/dino-memebox.png"
       }
     ];
   });

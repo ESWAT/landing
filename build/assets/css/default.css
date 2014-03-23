@@ -1030,26 +1030,27 @@ footer {
           word-spacing: 1px;
           position: absolute;
           top: 50%;
-          -webkit-transform: translateY(-50%);
+          -moz-transform: translateY(-50%);
           -ms-transform: translateY(-50%);
+          -webkit-transform: translateY(-50%);
           transform: translateY(-50%); }
-      /* line 232, ../../../src/styles/partials/_home.scss */
+      /* line 230, ../../../src/styles/partials/_home.scss */
       .view-home section.testimonials .wrapper ul.bragging-rights {
         margin: 0 auto;
         margin-bottom: 80px;
         width: 50%;
         max-width: 460px; }
-        /* line 238, ../../../src/styles/partials/_home.scss */
+        /* line 236, ../../../src/styles/partials/_home.scss */
         .view-home section.testimonials .wrapper ul.bragging-rights li {
           display: none;
           vertical-align: middle; }
-          /* line 242, ../../../src/styles/partials/_home.scss */
+          /* line 240, ../../../src/styles/partials/_home.scss */
           .view-home section.testimonials .wrapper ul.bragging-rights li.active {
             display: inline-block; }
-      /* line 246, ../../../src/styles/partials/_home.scss */
+      /* line 244, ../../../src/styles/partials/_home.scss */
       .view-home section.testimonials .wrapper ul.people {
         font-size: 0; }
-        /* line 249, ../../../src/styles/partials/_home.scss */
+        /* line 247, ../../../src/styles/partials/_home.scss */
         .view-home section.testimonials .wrapper ul.people li {
           -moz-transition: 0.3s;
           -o-transition: 0.3s;
@@ -1059,30 +1060,33 @@ footer {
           display: inline-block;
           vertical-align: top;
           opacity: 0.3; }
-          /* line 256, ../../../src/styles/partials/_home.scss */
+          /* line 254, ../../../src/styles/partials/_home.scss */
           .view-home section.testimonials .wrapper ul.people li.active {
             opacity: 1; }
-          /* line 258, ../../../src/styles/partials/_home.scss */
+          /* line 256, ../../../src/styles/partials/_home.scss */
           .view-home section.testimonials .wrapper ul.people li:hover {
             cursor: pointer;
             opacity: 1; }
-          /* line 263, ../../../src/styles/partials/_home.scss */
+          /* line 261, ../../../src/styles/partials/_home.scss */
           .view-home section.testimonials .wrapper ul.people li img {
             width: 80px;
+            max-height: 100%;
+            -moz-border-radius: 100%;
+            -webkit-border-radius: 100%;
             border-radius: 100%;
             margin: 0 0 10px 0; }
-  /* line 273, ../../../src/styles/partials/_home.scss */
+  /* line 272, ../../../src/styles/partials/_home.scss */
   .view-home section.gym-badges {
     background: #fdfdfd; }
-    /* line 276, ../../../src/styles/partials/_home.scss */
+    /* line 275, ../../../src/styles/partials/_home.scss */
     .view-home section.gym-badges .wrapper ul {
       font-size: 0;
       text-align: center; }
-      /* line 280, ../../../src/styles/partials/_home.scss */
+      /* line 279, ../../../src/styles/partials/_home.scss */
       .view-home section.gym-badges .wrapper ul li {
         margin: 0 20px;
         display: inline-block; }
-        /* line 284, ../../../src/styles/partials/_home.scss */
+        /* line 283, ../../../src/styles/partials/_home.scss */
         .view-home section.gym-badges .wrapper ul li img {
           margin: 70px 0; }
 
