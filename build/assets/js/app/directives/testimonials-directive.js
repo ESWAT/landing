@@ -6,13 +6,19 @@
         title: "CEO, Rebecca Minkoff",
         quote: "One of the most disruptive things on the front-end that we’ve seen in a while.",
         href: "http://rebeccaminkoff.com",
-        image: "/assets/images/heads/quotes/uri.jpg"
+        image: "/assets/images/heads/quotes/uri-rebeccaminkoff.jpg"
       }, {
         name: "Dino Ha",
         title: "CEO, memebox",
         href: "http://us.memebox.com",
-        quote: "We wouldn’t be able to live without 42. When you have a lot of numbers it’s hard to know where to focus, with 42 you can find out in just a few clicks.",
+        quote: "We wouldn’t be able to live without 42. When you have a lot of data it’s hard to know where to focus, with 42 you can find out in just a few clicks.",
         image: "/assets/images/heads/quotes/dino-memebox.png"
+      }, {
+        name: "Heidi Wolf Saltzman",
+        title: "Owner, Camp & Campus",
+        href: "https://www.shopcampandcampus.com/",
+        quote: "42 has made the world of difference in the analysis of my business. Using 42, I have modified my buying strategy to improve our gross margin and increased our overall profitability. ",
+        image: "/assets/images/heads/quotes/heidi-campcampus.png"
       }
     ];
   });
@@ -34,7 +40,7 @@
             return this.timer = setInterval((function() {
               _this.state.index += 1;
               return scope.$apply();
-            }), 3000);
+            }), 5000);
           },
           stop: function() {
             clearInterval(this.timer);
