@@ -24,6 +24,7 @@ module.exports = (grunt) ->
         'coffee'
         'jade'
         'copy'
+        'imagemin'
         'compass'
     ]
 
@@ -61,6 +62,16 @@ module.exports = (grunt) ->
                 expand: true
                 rename: (src, dest) ->
                     '<%= dirs.build %>/assets/js/libs/' + dest.replace('.coffee', '.js')
+
+
+        imagemin:
+          release:
+            files: [
+                expand: true
+                cwd:  '<%= dirs.src %>/images'
+                src:  '**/*.{png,jpg,gif}'
+                dest: '<%= dirs.build %>/assets/images'
+            ]
 
 
         jade:
@@ -186,6 +197,7 @@ module.exports = (grunt) ->
         'grunt-contrib-copy'
         'grunt-contrib-compass'
         'grunt-contrib-connect'
+        'grunt-contrib-imagemin'
         'grunt-contrib-jade'
         'grunt-contrib-watch'
         'grunt-newer'
