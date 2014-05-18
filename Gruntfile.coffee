@@ -15,7 +15,7 @@ module.exports = (grunt) ->
         'newer:coffee'
         'newer:jade'
         'newer:copy'
-        'compass'
+        'compass:dev'
         'banner'
     ]
 
@@ -24,7 +24,8 @@ module.exports = (grunt) ->
         'coffee'
         'jade'
         'copy'
-        'compass'
+        'imagemin'
+        'compass:prod'
     ]
 
 
@@ -61,6 +62,16 @@ module.exports = (grunt) ->
                 expand: true
                 rename: (src, dest) ->
                     '<%= dirs.build %>/assets/js/libs/' + dest.replace('.coffee', '.js')
+
+
+        imagemin:
+          release:
+            files: [
+                expand: true
+                cwd:  '<%= dirs.src %>/images'
+                src:  '**/*.{png,jpg,gif}'
+                dest: '<%= dirs.build %>/assets/images'
+            ]
 
 
         jade:
@@ -115,15 +126,25 @@ module.exports = (grunt) ->
                     '<%= dirs.build %>/assets/js/app/' + dest
 
 
-        compass: dev:
-            options:
-                sassDir:   '<%= dirs.src %>/styles'
-                cssDir:    '<%= dirs.build %>/assets/css'
-                imagesDir: '<%= dirs.src %>/images'
-                fontsDir:  '<%= dirs.src %>/fonts'
-                relativeAssets: true
-                debugInfo: false
-                outputStyle: 'nested'
+        compass:
+            dev:
+                options:
+                    sassDir:   '<%= dirs.src %>/styles'
+                    cssDir:    '<%= dirs.build %>/assets/css'
+                    imagesDir: '<%= dirs.src %>/images'
+                    fontsDir:  '<%= dirs.src %>/fonts'
+                    relativeAssets: true
+                    debugInfo: false
+                    outputStyle: 'nested'
+            prod:
+                options:
+                    sassDir:   '<%= dirs.src %>/styles'
+                    cssDir:    '<%= dirs.build %>/assets/css'
+                    imagesDir: '<%= dirs.src %>/images'
+                    fontsDir:  '<%= dirs.src %>/fonts'
+                    relativeAssets: true
+                    debugInfo: false
+                    outputStyle: 'compressed'
 
 
         connect: build: options:
@@ -186,6 +207,7 @@ module.exports = (grunt) ->
         'grunt-contrib-copy'
         'grunt-contrib-compass'
         'grunt-contrib-connect'
+        'grunt-contrib-imagemin'
         'grunt-contrib-jade'
         'grunt-contrib-watch'
         'grunt-newer'
