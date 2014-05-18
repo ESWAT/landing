@@ -15,7 +15,7 @@ module.exports = (grunt) ->
         'newer:coffee'
         'newer:jade'
         'newer:copy'
-        'compass'
+        'compass:dev'
         'banner'
     ]
 
@@ -25,7 +25,7 @@ module.exports = (grunt) ->
         'jade'
         'copy'
         'imagemin'
-        'compass'
+        'compass:prod'
     ]
 
 
@@ -126,15 +126,25 @@ module.exports = (grunt) ->
                     '<%= dirs.build %>/assets/js/app/' + dest
 
 
-        compass: dev:
-            options:
-                sassDir:   '<%= dirs.src %>/styles'
-                cssDir:    '<%= dirs.build %>/assets/css'
-                imagesDir: '<%= dirs.src %>/images'
-                fontsDir:  '<%= dirs.src %>/fonts'
-                relativeAssets: true
-                debugInfo: false
-                outputStyle: 'nested'
+        compass:
+            dev:
+                options:
+                    sassDir:   '<%= dirs.src %>/styles'
+                    cssDir:    '<%= dirs.build %>/assets/css'
+                    imagesDir: '<%= dirs.src %>/images'
+                    fontsDir:  '<%= dirs.src %>/fonts'
+                    relativeAssets: true
+                    debugInfo: false
+                    outputStyle: 'nested'
+            prod:
+                options:
+                    sassDir:   '<%= dirs.src %>/styles'
+                    cssDir:    '<%= dirs.build %>/assets/css'
+                    imagesDir: '<%= dirs.src %>/images'
+                    fontsDir:  '<%= dirs.src %>/fonts'
+                    relativeAssets: true
+                    debugInfo: false
+                    outputStyle: 'compressed'
 
 
         connect: build: options:
