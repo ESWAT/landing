@@ -1,16 +1,19 @@
 
 article.view.view-footer
 
-    footer
+    .wrapper
 
-        .wrapper
+        .logo
+            a.customicon-logo-42(ui-sref="root.home")
 
-            article
-                h1 Know Your Data
+        p.copyright
+            &copy; 2014 42 Technologies, Inc
 
-                a.outline-btn(ui-sref="root.demo.signup") Sign Up
-
-            nav
-                ul
-                    li: &copy; 2014 42 Technologies, Inc
-
+        nav
+            ul
+                li
+                    a.nav-link(href="#terms") Terms
+                li
+                    a.nav-link(href="#terms") Privacy
+                li
+                    a.outline-btn(ui-sref="root.demo.signup") Request A Demo
