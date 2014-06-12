@@ -1,0 +1,41 @@
+.view-generic {
+    background: $white;
+    position: relative;
+    top: 120px;
+    padding: 50px 0 220px;
+
+    .wrapper {
+        max-width: 680px;
+    }
+
+    h1,
+    h2 {
+        padding: 20px 0 0;
+        color: $navy;
+    }
+
+    p {
+        padding: 0 0 20px;
+        color: $dark-grey;
+
+        a {
+            color: $medium-blue;
+
+            &:hover {
+                color: $dark-blue;
+            }
+        }
+    }
+
+    ul {
+        margin: 20px 0 0 40px;
+    }
+
+    li {
+        color: $dark-grey;
+        font-weight: $regular-weight-font;
+        line-height: 24px;
+        padding: 0 0 20px;
+        list-style: disc;
+    }
+}
