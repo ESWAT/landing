@@ -17,6 +17,14 @@
     p {
         padding: 0 0 20px;
         color: $dark-grey;
+
+        a {
+            color: $medium-blue;
+
+            &:hover {
+                color: $dark-blue;
+            }
+        }
     }
 
     ul {
