@@ -61,3 +61,8 @@ app.config ($stateProvider, $urlRouterProvider) ->
         url: '^/privacy'
         views:
             '@':templateUrl:'partials/privacy.html'
+
+    .state 'root.terms',
+        url: '^/terms'
+        views:
+            '@':templateUrl:'partials/terms.html'
