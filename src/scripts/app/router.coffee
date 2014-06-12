@@ -56,3 +56,8 @@ app.config ($stateProvider, $urlRouterProvider) ->
     .state 'root.demo.upload-sucess',
         url: '^/demo/upload/sucess'
         templateUrl:'partials/demo/upload-success.html'
+
+    .state 'root.privacy',
+        url: '^/privacy'
+        views:
+            '@':templateUrl:'partials/privacy.html'
