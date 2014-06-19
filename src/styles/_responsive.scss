@@ -571,14 +571,27 @@ $mobile-port: 351px;
     }
 
     footer {
-        height: 270px;
+        padding: 50px 0 30px;
 
         .wrapper {
             padding: 0 60px;
+            text-align: center;
 
-            article {
-                margin: 70px 0 80px 0;
-                h1 { font-size: 28px; }
+            .logo {
+                display: none;
+            }
+
+            .copyright {
+                margin-top: 40px;
+            }
+
+            .copyright,
+            ul {
+                float: none;
+            }
+
+            .outline-btn {
+                position: static;
             }
         }
     }
@@ -765,22 +778,6 @@ $mobile-port: 351px;
                             }
                         }
                     }
-                }
-            }
-        }
-    }
-
-    footer {
-        height: 280px;
-
-        .wrapper {
-            nav {
-                width: 300px;
-                margin: 0 auto;
-
-                ul {
-                    li { margin: 0 10px 10px; }
-                    li:nth-child(even) { display: none; }
                 }
             }
         }
