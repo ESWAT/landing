@@ -62,6 +62,20 @@
     }).state('root.demo.upload-sucess', {
       url: '^/demo/upload/sucess',
       templateUrl: 'partials/demo/upload-success.html'
+    }).state('root.privacy', {
+      url: '^/privacy',
+      views: {
+        '@': {
+          templateUrl: 'partials/privacy.html'
+        }
+      }
+    }).state('root.terms', {
+      url: '^/terms',
+      views: {
+        '@': {
+          templateUrl: 'partials/terms.html'
+        }
+      }
     });
   });
 
