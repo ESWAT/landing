@@ -28,4 +28,4 @@ app.config ($sceProvider) ->
 app.value 'config',
     services:
         landing:
-            url: 'http://staging.landing.42debut.com'
+            url: 'http://landing.42debut.com'
