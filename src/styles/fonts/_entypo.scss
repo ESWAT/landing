@@ -9,10 +9,7 @@
 
 @include font-face(
     "entypo-social",
-    inline-font-files('entypo/entypo-social.eot',  eot,
-                      'entypo/entypo-social.woff', woff,
-                      'entypo/entypo-social.ttf',  truetype,
-                      'entypo/entypo-social.svg',  svg)
+    '/assets/fonts/entypo/entypo-social'
 );
 
 
