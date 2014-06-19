@@ -28,6 +28,10 @@ module.exports = (grunt) ->
         'compass:prod'
     ]
 
+    grunt.registerTask 'heroku:production', [
+        'build:prod'
+    ]
+
 
     # Project configuration.
     grunt.initConfig
