@@ -194,6 +194,13 @@ $mobile-port: 351px;
         }
     }
 
+    .view-generic {
+        .wrapper {
+            text-align: left;
+            padding: 0 30px;
+        }
+    }
+
     .view-features {
         section {
             &.features {
@@ -567,7 +574,7 @@ $mobile-port: 351px;
         height: 270px;
 
         .wrapper {
-            padding: 0;
+            padding: 0 60px;
 
             article {
                 margin: 70px 0 80px 0;
