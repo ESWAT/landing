@@ -19,6 +19,6 @@
     "grunt-sass": "^0.14.0",
     "markdown-js": "0.0.3",
     "node-bourbon": "^1.2.3",
-    "express": "~4.4.3"
+    "express": "~4.4.4"
   }
 }
