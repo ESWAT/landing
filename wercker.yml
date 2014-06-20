@@ -10,7 +10,7 @@ build:
           echo "npm version $(npm -v) running"
 deploy:
    steps:
-        - landing-content-changes
+        - heroku-deploy
    after-steps:
         - hipchat-notify:
             token: $HIPCHAT_TOKEN
