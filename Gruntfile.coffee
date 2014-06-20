@@ -29,7 +29,7 @@ module.exports = (grunt) ->
     ]
 
     grunt.registerTask 'heroku:production', [
-        'build:prod'
+        'build'
     ]
 
     grunt.registerTask 'web', [
