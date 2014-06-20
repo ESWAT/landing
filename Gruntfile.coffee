@@ -32,6 +32,11 @@ module.exports = (grunt) ->
         'build:prod'
     ]
 
+    grunt.registerTask 'web', [
+        'connect'
+        'watch'
+    ]
+
 
     # Project configuration.
     grunt.initConfig
@@ -165,7 +170,7 @@ module.exports = (grunt) ->
 
 
         connect: build: options:
-            port: 9000
+            port: process.env.PORT or 3000
             base: '<%= dirs.build %>'
             middleware: (connect, options) -> [
                 # Allows CORS to all domains (don't use this in production!)
