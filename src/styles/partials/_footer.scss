@@ -2,69 +2,91 @@
 footer {
     position: relative;
     background: $navy;
-    padding: 85px 0 70px;
     text-align: center;
-    overflow: hidden;
 
-    .wrapper {
-        position: relative
-    }
-
-    .logo {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-left: -15px;
-        color: #fff;
-    }
-
-    a { color: $white;}
-
-    .copyright {
-        float: left;
-        color: $white;
-        font-size: 10px;
+    .request-demo {
+        border-radius: 3px;
+        border: 1px solid $yellow;
+        @include box-sizing(border-box);
         font-weight: $bold-weight-font;
         letter-spacing: $letter-spacing;
         text-indent: $letter-spacing;
         text-transform: uppercase;
-    }
+        color: $white;
+        padding: 12px 24px;
+        clear: both;
+        background: $yellow;
+        border: none;
+        color: $white;
+        font-size: 20px;
+        position: relative;
+        top: -10px;
+        z-index: 2;
+        @include transition(0.3s);
 
-    ul {
-        font-size: 0;
-        float: left;
-        clear: left;
-
-        li {
-            display: inline-block;
-            margin-right: 10px;
-            font-size: 10px;
-            font-weight: $bold-weight-font;
-            letter-spacing: $letter-spacing;
-            text-indent: $letter-spacing;
-            text-transform: uppercase;
-            line-height: 24px;
-
-            .nav-link {
-                @include transition(0.3s);
-                border-bottom: 2px solid transparent;
-                padding: 0 0 6px;
-                color: $white;
-
-                &:hover, .selected {
-                    padding: 0 0 3px;
-                    border-bottom: 2px solid $white;
-                }
-            }
+        &:hover {
+            background: $white;
+            color: $navy;
+            border-color: $navy;
         }
     }
 
-    .outline-btn {
+    .wrapper {
+        overflow: hidden;
+        padding-top: 40px;
+    }
+
+    ul {
         color: $white;
-        padding: 0 0 6px;
-        position: absolute;
-        top: 0;
-        right: 0;
+        margin-bottom: 40px;
+
+        li {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: $bold-weight-font;
+            letter-spacing: $letter-spacing;
+            text-transform: uppercase;
+            margin: 0 20px;
+            line-height: 24px;
+        }
+
+        a {
+            vertical-align: top;
+        }
+
+    }
+
+    .footer-company-links {
+        float: left;
+        margin-left: -20px;
+    }
+
+    .footer-social-links {
+        float: right;
+        margin-right: -20px;
+
+        .social-icon:before {
+                line-height: 0;
+                margin-right: .15em;
+        }
+    }
+
+    .footer-copyright {
+        clear: both;
+
+        li {
+            margin: 0;
+
+            &:after {
+                content: ' • ';
+                color: $dark-grey;
+            }
+
+            &:last-child:after {
+                content: '';
+                margin-left: 0;
+            }
+        }
     }
 
     .social-icon {
