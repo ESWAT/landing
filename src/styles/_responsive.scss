@@ -515,7 +515,7 @@ $mobile-port: 351px;
                 margin: 0 0 50px 0;
             }
 
-            &.hero, &.social {
+            &.hero {
                 .wrapper { padding: 0 50px; }
             }
 
@@ -750,22 +750,6 @@ $mobile-port: 351px;
                     margin: 0 15px 0 0;
                 }
             }
-
-            &.social .wrapper {
-                padding: 0;
-
-                ul {
-                    margin: 30px 0;
-
-                    li {
-                        margin: 10px 5px;
-                        width: 45px;
-                        height: 45px;
-
-                        a p:before { line-height: 43px; }
-                    }
-                }
-            }
         }
     }
 
@@ -856,16 +840,6 @@ $mobile-port: 351px;
                 .quote-wrapper { width: 100%; }
 
                 q { width: 100%; }
-            }
-        }
-    }
-
-    .view-about {
-        section {
-            &.social {
-                .wrapper {
-                    padding: 0 30px;
-                }
             }
         }
     }
