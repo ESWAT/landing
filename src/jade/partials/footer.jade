@@ -5,7 +5,12 @@ article.view.view-footer
 
     .wrapper
 
+        .logo
+            a.customicon-logo-42(ui-sref="root.home")
+
         ul.footer-company-links
+            li: a(ui-sref="root.home")
+                | Home
             li: a(ui-sref="root.features")
                 | Features
             li: a(href="http://42technologies.tumblr.com", target="_blank")
@@ -17,11 +22,13 @@ article.view.view-footer
 
         ul.footer-social-links
             li: a.nav-link(href="https://twitter.com/42debut")
-                    i.social-icon.icon-social-twitter
-                    | Twitter
+                i.social-icon.icon-social-twitter
             li: a.nav-link(href="https://www.linkedin.com/company/42-technologies-inc-")
-                    i.social-icon.icon-social-linkedin
-                    | LinkedIn
+                i.social-icon.icon-social-linkedin
+            li: a.nav-link(href="https://www.facebook.com/42technologies")
+                i.social-icon.icon-social-facebook
+            li: a.nav-link(href="https://github.com/42technologies/")
+                i.social-icon.icon-social-github
 
         ul.footer-copyright
             li: span.copyright-text &copy; 2014 42 Technologies, Inc
