@@ -91,15 +91,14 @@
 
     .footer-social-links {
         position: absolute;
-        right: -4px;
+        right: -5px;
 
         li {
-            margin: 0 4px;
+            margin: 0 5px;
         }
 
         .social-icon:before {
-                line-height: 0;
-                margin-right: .15em;
+                line-height: 24px;
         }
 
         a:hover {
