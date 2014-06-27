@@ -58,41 +58,5 @@
                 }
             }
         }
-
-        &.social {
-            background: $off-white;
-
-            .wrapper {
-                text-align: center;
-
-                ul {
-                    display: inline-block;
-                    margin: 70px 0;
-
-                    li {
-                        @include transition(0.3s);
-                        width: 50px;
-                        height: 50px;
-                        display: inline-block;
-                        border: 2px solid $light-grey;
-                        border-radius: 100%;
-                        margin: 0 15px 10px 15px;
-
-                        &:hover {
-                            background: rgba(0, 0, 0, 0.05);
-                            cursor: pointer;
-                        }
-
-                        a {
-                            p:before {
-                                color: $light-grey;
-                                font-size: 48px;
-                                line-height: 48px;
-                            }
-                        }
-                    }
-                }
-            }
-        }
     }
 }

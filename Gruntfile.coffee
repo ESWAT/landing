@@ -217,6 +217,9 @@ module.exports = (grunt) ->
                 tasks: [
                     'copy:images'
                 ]
+            options:
+                spawn: false
+                livereload: true
 
 
     grunt.task.registerTask 'banner', 'prints the banner', ->

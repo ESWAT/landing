@@ -171,6 +171,8 @@ $mobile-port: 351px;
             }
 
             &.gym-badges .wrapper {
+                padding-bottom: 60px;
+
                 ul {
                     font-size: 0;
 
@@ -235,10 +237,21 @@ $mobile-port: 351px;
         }
     }
 
-    footer {
-        .wrapper {
-            .outline-btn {
-                right: 60px;
+    .view-footer {
+        .logo {
+            left: 60px;
+        }
+        .footer-company-links {
+            li {
+                margin: 0 10px;
+            }
+        }
+
+        .footer-social-links {
+            right: 58px;
+
+            li {
+                margin: 0 2px;
             }
         }
     }
@@ -502,7 +515,7 @@ $mobile-port: 351px;
                 margin: 0 0 50px 0;
             }
 
-            &.hero, &.social {
+            &.hero {
                 .wrapper { padding: 0 50px; }
             }
 
@@ -578,32 +591,21 @@ $mobile-port: 351px;
         }
     }
 
-    footer {
-        padding: 50px 0 30px;
+    .view-footer {
+        .logo {
+            display: none;
+        }
 
-        .wrapper {
-            padding: 0 60px;
-            text-align: center;
+        .footer-company-links {
+            left: 60px;
+            width: auto;
+            margin-left: 0;
 
-            .logo {
-                display: none;
-            }
-
-            .copyright {
-                margin-top: 40px;
-            }
-
-            .copyright,
-            ul {
-                float: none;
-            }
-
-            .outline-btn {
-                position: static;
+            li {
+                margin: 0 5px;
             }
         }
     }
-
 }
 
 // Mobile 579
@@ -748,22 +750,6 @@ $mobile-port: 351px;
                     margin: 0 15px 0 0;
                 }
             }
-
-            &.social .wrapper {
-                padding: 0;
-
-                ul {
-                    margin: 30px 0;
-
-                    li {
-                        margin: 10px 5px;
-                        width: 45px;
-                        height: 45px;
-
-                        a p:before { line-height: 43px; }
-                    }
-                }
-            }
         }
     }
 
@@ -788,6 +774,34 @@ $mobile-port: 351px;
                     }
                 }
             }
+        }
+    }
+
+    .view-footer {
+        .logo {
+            display: none;
+        }
+
+        .footer-company-links {
+            position: static;
+            display: block;
+
+            li {
+                margin: 0 5px;
+            }
+        }
+
+        .footer-social-links {
+            position: static;
+            display: block;
+
+            li {
+                margin: 0 5px;
+            }
+        }
+
+        .footer-copyright {
+            margin-top: 20px;
         }
     }
 }
@@ -830,12 +844,32 @@ $mobile-port: 351px;
         }
     }
 
-    .view-about {
-        section {
-            &.social {
-                .wrapper {
-                    padding: 0 30px;
+    .view-footer {
+        .wrapper {
+            padding: 40px 0 20px;
+        }
+
+        .footer-company-links {
+            display: none;
+        }
+
+        .footer-social-links {
+            margin-bottom: 20px;
+        }
+
+        .footer-copyright {
+            text-align: center;
+
+            li:first-child {
+                display: block;
+
+                &:after {
+                    content: '';
                 }
+            }
+
+            .copyright-text {
+                clear: both;
             }
         }
     }
