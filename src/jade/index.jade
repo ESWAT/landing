@@ -6,7 +6,7 @@ include mixins/mixins-google-analytics
 
 
 !!!
-html(lang='en', ng-app="42.landing")
+html(lang='en', ng-app="42.landing", ng-class="{'contactVisible':contactUs.isVisible}")
 
   head
     title 42 &ndash; Data Made Actionable

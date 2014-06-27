@@ -90,23 +90,23 @@ app.directive('viewHeader', function($window, $rootScope) {
         link: function (scope, element) {
             var $element = $(element);
 
-            scope.contactUs = {}
-            scope.contactUs.isVisible = false;
+            $rootScope.contactUs = {}
+            $rootScope.contactUs.isVisible = false;
 
-            scope.contactUs.show = function () {
-                scope.contactUs.isVisible = true;
+            $rootScope.contactUs.show = function () {
+                $rootScope.contactUs.isVisible = true;
             }
 
-            scope.contactUs.hide = function() {
-                scope.contactUs.isVisible = false;
+            $rootScope.contactUs.hide = function() {
+                $rootScope.contactUs.isVisible = false;
             }
 
-            scope.contactUs.toggle = function() {
-                scope.contactUs.isVisible = !scope.contactUs.isVisible;
+            $rootScope.contactUs.toggle = function() {
+                $rootScope.contactUs.isVisible = !$rootScope.contactUs.isVisible;
             }
 
             $rootScope.$on('$stateChangeSuccess', function() {
-                scope.contactUs.hide();
+                $rootScope.contactUs.hide();
             });
         }
     }
