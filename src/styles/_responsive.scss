@@ -535,6 +535,13 @@ $mobile-port: 351px;
                 }
             }
         }
+
+        .the-product {
+            h2, p {
+                max-width: 355px;
+                margin: 0 auto;
+            }
+        }
     }
 
     .view-features {
