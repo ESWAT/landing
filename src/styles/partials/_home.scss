@@ -201,8 +201,9 @@
             overflow: hidden;
 
             .main-testimonial {
-                width: 600px;
+                width: 580px;
                 float: right;
+                overflow: hidden;
 
                 p,
                 blockquote {
@@ -225,9 +226,8 @@
                 }
 
                 .testimonial-person {
-                    margin-bottom: 10px;
                     float: left;
-                    min-width: 300px;
+                    width: 300px;
                 }
 
                 .testimonial-excerpt {
