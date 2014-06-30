@@ -78,17 +78,10 @@ article.view.view-home
 
             .main-testimonial
 
-                .testimonial-excerpt
+                .testimonial-excerpt(ng-init="showMainTestimonial = false", ng-if="!showMainTestimonial")
 
                     blockquote
                         | “42 has made the world of difference in the analysis of my business—it enables me to view my supplier, style and customer data from so many different perspectives, none of which are currently available through my POS system. Using the data revealed by 42, I have modified my buying strategy to improve our gross margin where possible and increase our overall profitability.”
-
-                a.read-more.outline-btn(href="#") Read more from Heidi
-
-                .testimonial-person
-                    img(src="/assets/images/heads/quotes/heidi-campcampus.png")
-                    h4.testimonial-name Heidi Wolf Saltzman
-                    h3.testimonial-role Owner, Camp & Campus
 
                 .testimonial-full(ng-if="showMainTestimonial")
 
@@ -105,6 +98,13 @@ article.view.view-home
                     p Working closely with Heidi gave us the chance to learn about Camp & Campus’ needs and customize a system that would make the business more efficient and effective. As with many of our customers who already had an analytics platform in place, once Heidi tried out 42’s dashboard, it was clear that we could deliver better results more quickly and easily—all with the data she already had.
 
                     blockquote Working closely with Heidi gave us the chance to learn about Camp & Campus’ needs and customize a system that would make the business more efficient and effective. As with many of our customers who already had an analytics platform in place, once Heidi tried out 42’s dashboard, it was clear that we could deliver better results more quickly and easily—all with the data she already had.
+
+                a.read-more.outline-btn(href="#", ng-click="showMainTestimonial = !showMainTestimonial") Read more from Heidi
+
+                .testimonial-person
+                    img(src="/assets/images/heads/quotes/heidi-campcampus.png")
+                    h4.testimonial-name Heidi Wolf Saltzman
+                    h3.testimonial-role Owner, Camp & Campus
 
             .other-testimonial
                 p.testimonial-quote
