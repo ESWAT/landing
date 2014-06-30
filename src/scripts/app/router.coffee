@@ -66,8 +66,3 @@ app.config ($stateProvider, $urlRouterProvider) ->
         url: '^/terms'
         views:
             '@':templateUrl:'partials/terms.html'
-
-    .state 'root.customers',
-        url: '^/customers'
-        views:
-            '@':templateUrl:'partials/customers.html'
