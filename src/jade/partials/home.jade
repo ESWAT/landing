@@ -78,12 +78,12 @@ article.view.view-home
 
             .main-testimonial
 
-                .testimonial-excerpt(ng-init="showMainTestimonial = false", ng-if="!showMainTestimonial")
+                .testimonial-excerpt.animation-fade(ng-init="showMainTestimonial = false", ng-show="!showMainTestimonial")
 
                     blockquote
                         | “42 has made the world of difference in the analysis of my business—it enables me to view my supplier, style and customer data from so many different perspectives, none of which are currently available through my POS system. Using the data revealed by 42, I have modified my buying strategy to improve our gross margin where possible and increase our overall profitability.”
 
-                .testimonial-full(ng-if="showMainTestimonial")
+                .testimonial-full.animation-fade(ng-if="showMainTestimonial")
 
                     p When we met Heidi back in 2013, she shared that she wished there were an easier way to sort through all the data that  comes through. From handling hundreds of SKUs to figuring out which products to stock that customers of all ages  would love and buy, Heidi would be able to save a lot of time if she had better tools that could tell her exactly where and who sales were coming from.
 
