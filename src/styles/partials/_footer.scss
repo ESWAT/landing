@@ -6,7 +6,6 @@
 
     .request-demo {
         border-radius: 3px;
-        border: 1px solid $yellow;
         @include box-sizing(border-box);
         font-weight: $bold-weight-font;
         letter-spacing: $letter-spacing;
@@ -22,12 +21,6 @@
         position: relative;
         top: -10px;
         @include transition(0.3s);
-
-        &:hover {
-            background: $off-white;
-            color: $navy;
-            border-color: $navy;
-        }
     }
 
     .wrapper {

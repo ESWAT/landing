@@ -9,6 +9,12 @@ html, body {
     overflow-y: auto;
 }
 
+html.contactVisible,
+html.contactVisible body {
+    overflow: hidden;
+    height: 100%;
+}
+
 body {
     background: $off-white;
 }

@@ -8,6 +8,17 @@
             }
         }
 
+        &.the-product {
+
+            .wrapper {
+                padding-bottom: 0;
+            }
+
+            h2 {
+                margin-top: 0;
+            }
+        }
+
 
         &.the-team {
             background: $white;

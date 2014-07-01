@@ -145,31 +145,6 @@ $mobile-port: 351px;
                 }
             }
 
-            &.testimonials .wrapper {
-                ul.bragging-rights { width: 80%; }
-
-                ul.people {
-                    li {
-                        margin: 20px;
-                        text-align: left;
-
-                        img {
-                            width: 50px;
-                            height: 50px;
-                            display: inline-block;
-                            margin: 0 15px 0 0;
-                            vertical-align: top;
-                        }
-
-                        div {
-                            display: inline-block;
-                            vertical-align: top;
-                            width: 170px;
-                        }
-                    }
-                }
-            }
-
             &.gym-badges .wrapper {
                 padding-bottom: 60px;
 
@@ -180,6 +155,28 @@ $mobile-port: 351px;
                         img {
                             margin: 20px 70px;
                         }
+                    }
+                }
+            }
+
+            &.testimonials {
+                .main-testimonial {
+                    width: auto;
+                    float: none;
+                    clear: both;
+                    margin-bottom: 40px;
+                }
+
+                .other-testimonial {
+                    padding: 0;
+                    width: 50%;
+
+                    &:nth-child(2) {
+                        padding-right: 10px;
+                    }
+
+                    &:last-child {
+                        padding-left: 10px;
                     }
                 }
             }
@@ -434,18 +431,16 @@ $mobile-port: 351px;
                 }
             }
 
-            &.testimonials {
-                padding: 0;
+            &.gym-badges { display: none; }
 
+
+            &.testimonials {
                 .wrapper {
-                    ul.bragging-rights {
-                        width: 100%;
-                        margin: 30px auto;
-                    }
+                    padding: 20px 0;
+                    width: 80%;
+                    overflow: hidden;
                 }
             }
-
-            &.gym-badges { display: none; }
         }
     }
 
@@ -533,6 +528,13 @@ $mobile-port: 351px;
                         margin: 0 1% 30px 19%;
                     }
                 }
+            }
+        }
+
+        .the-product {
+            h2, p {
+                max-width: 355px;
+                margin: 0 auto;
             }
         }
     }
@@ -688,18 +690,35 @@ $mobile-port: 351px;
                 }
             }
 
-            &.testimonials .wrapper {
-                .quote-wrapper {
-                    position: relative;
-                    height: 240px;
-                    margin: 0 auto;
+            &.testimonials {
+                .main-testimonial {
+                    .testimonial-excerpt {
+                        blockquote {
+                            font-size: 16px;
+                            line-height: 1.5em;
+                        }
+                    }
+
+                    .read-more {
+                        display: none;
+                    }
                 }
-                q {
-                    position: absolute;
-                    top: 50%;
-                    -webkit-transform: translateY(-50%);
-                    -ms-transform: translateY(-50%);
-                    transform: translateY(-50%);
+
+                .other-testimonial {
+                    padding: 0 !important;
+                    width: auto;
+                    float: none;
+                    margin-bottom: 40px;
+                }
+
+                .testimonial-person {
+                    width: 100% !important;
+
+                    img {
+                        margin: 0 auto;
+                        display: block;
+                        float: none;
+                    }
                 }
             }
         }
@@ -834,12 +853,6 @@ $mobile-port: 351px;
                         }
                     }
                 }
-            }
-
-            &.testimonials .wrapper {
-                .quote-wrapper { width: 100%; }
-
-                q { width: 100%; }
             }
         }
     }

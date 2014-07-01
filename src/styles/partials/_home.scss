@@ -197,76 +197,162 @@
         &.testimonials {
             background: $white;
             border-bottom: 1px solid #eee;
-            padding: 60px 0px;
+            padding: 60px 0 30px;
+            overflow: hidden;
 
-            .wrapper {
-                text-align: center;
+            .main-testimonial {
+                width: 580px;
+                float: right;
+                overflow: hidden;
 
-                .quote-wrapper {
-                    position: relative;
-                    max-width: 700px;
-                    margin: 0 auto;
-                    height: 200px;
-                    width: 80%;
+                p,
+                blockquote {
+                    font-size: 16px;
+                    margin: 0 0 20px;
+                    line-height: 1.5em;
+                }
 
-                    q {
-                        @include transition(0.3s);
-                        display: block;
-                        padding: 20px 30px 50px 30px;
+                blockquote {
+                    font-weight: 300;
+                    font-style: italic;
+                }
 
-                        color: $navy;
-                        font-size: 24px;
-                        font-weight: $regular-weight-font;
-                        line-height: 32px;
-                        text-transform: none;
-                        word-spacing: 1px;
+                a {
+                    color: $medium-blue;
 
-                        position: absolute;
-                        top: 50%;
-                        @include transform(translateY(-50%));
+                    &:hover {
+                        color: $dark-blue;
                     }
                 }
 
-                ul.bragging-rights {
-                    margin: 0 auto;
-                    margin-bottom: 80px;
-                    width: 50%;
-                    max-width: 460px;
+                .testimonial-person {
+                    float: left;
+                    width: 300px;
+                }
 
-                    li {
-                        display: none;
-                        vertical-align: middle;
-
-                        &.active { display: inline-block; }
+                .testimonial-excerpt {
+                    blockquote {
+                        font-size: 20px;
+                        line-height: 1.6em;
                     }
                 }
 
-                ul.people {
-                    font-size: 0;
+                .testimonial-full {
+                    clear: both;
+                }
 
-                    li {
-                        @include transition(0.3s);
-                        width: 240px;
-                        display: inline-block;
-                        vertical-align: top;
-                        opacity: 0.3;
+                .read-more {
+                    float: right;
+                    margin-top: 20px;
+                    border: 1px solid $medium-grey;
+                    color: $medium-grey;
 
-                        &.active { opacity: 1; }
-
-                        &:hover {
-                            cursor: pointer;
-                            opacity: 1;
-                        }
-
-                        img {
-                            width: 80px;
-                            max-height: 100%;
-                            border-radius: 100%;
-                            margin: 0 0 10px 0;
-                        }
+                    &:hover {
+                        color: $medium-grey;
                     }
                 }
             }
+
+            .other-testimonial {
+                width: 360px;
+                float: left;
+                vertical-align: top;
+                overflow: hidden;
+                padding: 0 40px 40px 0;
+
+                .testimonial-quote {
+                    font-style: italic;
+                }
+            }
+
+            .testimonial-person {
+                vertical-align: top;
+                margin-top: 10px;
+
+                img {
+                    float: left;
+                    width: 50px;
+                    height: 50px;
+                    max-height: 100%;
+                    border-radius: 100%;
+                    margin-right: 10px;
+                }
+
+                .testimonial-name {
+                    padding-top: 5px;
+                }
+            }
+
+
+
+            //   .wrapper {
+            //       text-align: center;
+
+            //       .quote-wrapper {
+            //           position: relative;
+            //           max-width: 700px;
+            //           margin: 0 auto;
+            //           height: 200px;
+            //           width: 80%;
+
+            //           q {
+            //               @include transition(0.3s);
+            //               display: block;
+            //               padding: 20px 30px 50px 30px;
+
+            //               color: $navy;
+            //               font-size: 24px;
+            //               font-weight: $regular-weight-font;
+            //               line-height: 32px;
+            //               text-transform: none;
+            //               word-spacing: 1px;
+
+            //               position: absolute;
+            //               top: 50%;
+            //               @include transform(translateY(-50%));
+            //           }
+            //       }
+
+            //       ul.bragging-rights {
+            //           margin: 0 auto;
+            //           margin-bottom: 80px;
+            //           width: 50%;
+            //           max-width: 460px;
+
+            //           li {
+            //               display: none;
+            //               vertical-align: middle;
+
+            //               &.active { display: inline-block; }
+            //           }
+            //       }
+
+            //       ul.people {
+            //           font-size: 0;
+
+            //           li {
+            //               @include transition(0.3s);
+            //               width: 240px;
+            //               display: inline-block;
+            //               vertical-align: top;
+            //               opacity: 0.3;
+
+            //               &.active { opacity: 1; }
+
+            //               &:hover {
+            //                   cursor: pointer;
+            //                   opacity: 1;
+            //               }
+
+            //               img {
+            //                   width: 80px;
+            //                   max-height: 100%;
+            //                   border-radius: 100%;
+            //                   margin: 0 0 10px 0;
+            //               }
+            //           }
+            //       }
+            //   }
         }
 
         &.gym-badges {
