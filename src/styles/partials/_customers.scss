@@ -10,9 +10,32 @@
         &.customers {
             padding: 100px 0 50px;
             background: $white;
+            text-align: left;
 
             .wrapper {
-                width: 100%;
+                max-width: 680px;
+            }
+
+            p {
+                padding: 0 0 20px;
+                color: $medium-grey;
+
+                a {
+                    color: $medium-blue;
+
+                    &:hover {
+                        color: $dark-blue;
+                    }
+                }
+            }
+
+            blockquote {
+                color: $medium-grey;
+                font-size: 20px;
+                font-style: italic;
+                line-height: 30px;
+                padding: 20px 0 40px;
+                margin: 0 -80px;
             }
         }
     }
