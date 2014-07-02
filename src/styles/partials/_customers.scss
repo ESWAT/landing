@@ -1,0 +1,19 @@
+.view-customers {
+    section {
+        &.hero {
+            .wrapper {
+                width: 100%;
+                height: 550px;
+            }
+        }
+
+        &.customers {
+            padding: 100px 0 50px;
+            background: $white;
+
+            .wrapper {
+                width: 100%;
+            }
+        }
+    }
+}
