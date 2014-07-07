@@ -15,7 +15,7 @@ app.factory 'LandingAPI', ($http, config) -> ({url} = {}) ->
         return $http.post("#{url}#{endpoint}", request)
 
 
-app.controller 'SignupController', ($scope, config, LandingAPI) ->
+app.controller 'SignupController', ($scope, segmentio, LandingAPI) ->
     landingAPI = new LandingAPI()
 
     $scope.view = 'signup'
@@ -23,8 +23,14 @@ app.controller 'SignupController', ($scope, config, LandingAPI) ->
 
     $scope.submit = ->
         request = $scope.request
-        console.log "Sending demo request:", request
+
+        console.log "Sending demo request:"
+        console.log request
+
+        segmentio.track "Demo Request", request
+
         landingAPI.sendDemoRequest(request)
         .then (-> console.log "Demo request sent successfully.")
         ,     (-> console.error 'could not send demo request..')
+
         $scope.view = 'thanks'

@@ -27,16 +27,9 @@ html(lang='en', ng-app="42.landing", ng-class="{'contactVisible':contactUs.isVis
     block top-scripts
       mixin js-lib("jquery")
       mixin js-lib("angular")
-      mixin js-lib("angular.animate")
-      mixin js-lib("angular.ui")
-      mixin js-lib("angular.ui.router")
-      mixin js-lib("angular.sanitize")
-
-      mixin app-core("app")
-      mixin app-core("router")
 
       mixin typekit-sync("qzk2xqv")
-      mixin google-analytics('42debut.com', 'UA-43248089-1')
+      //- mixin google-analytics('42debut.com', 'UA-43248089-1')
 
     script
       var img = new Image();
@@ -55,6 +48,15 @@ html(lang='en', ng-app="42.landing", ng-class="{'contactVisible':contactUs.isVis
 
   block bottom-scripts
     mixin js-lib("lodash")
+
+    mixin js-lib("angular.animate")
+    mixin js-lib("angular.ui")
+    mixin js-lib("angular.ui.router")
+    mixin js-lib("angular.sanitize")
+    mixin js-lib("angular.segmentio")
+
+    mixin app-core("app")
+    mixin app-core("router")
 
     mixin app-directive("signup")
     mixin app-directive("flippable")
