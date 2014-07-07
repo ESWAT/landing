@@ -24,7 +24,7 @@
     };
   });
 
-  app.controller('SignupController', function($scope, config, LandingAPI) {
+  app.controller('SignupController', function($scope, segmentio, LandingAPI) {
     var landingAPI;
     landingAPI = new LandingAPI();
     $scope.view = 'signup';
@@ -32,7 +32,9 @@
     return $scope.submit = function() {
       var request;
       request = $scope.request;
-      console.log("Sending demo request:", request);
+      console.log("Sending demo request:");
+      console.log(request);
+      segmentio.track("Demo Request", request);
       landingAPI.sendDemoRequest(request).then((function() {
         return console.log("Demo request sent successfully.");
       }), (function() {

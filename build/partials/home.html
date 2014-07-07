@@ -48,19 +48,66 @@
     </div>
   </section>
   <section class="testimonials">
-    <div ng-mouseenter="carousel.stop()" ng-mouseleave="carousel.start()" class="wrapper">
-      <div class="quote-wrapper">
-        <q ng-bind-html="testimonials[carousel.state.index].quote"></q>
+    <div class="wrapper">
+      <div class="section-heading">
+        <ul>
+          <li class="line"></li>
+          <li>
+            <h3>What Our Customers Say</h3>
+          </li>
+          <li class="line"></li>
+        </ul>
       </div>
-      <ul class="people">
-        <li ng-repeat="testimonial in testimonials" ng-class="{active:carousel.state.index == $index}" ng-mouseover="select($index)"><a href="{{ testimonial.href }}" target="_blank"><img ng-src="{{ testimonial.image }}"/>
-            <div>
-              <h4 ng-bind-html="testimonial.name"></h4>
-              <h3 ng-bind-html="testimonial.title"></h3>
-            </div></a></li>
-      </ul>
+      <div class="main-testimonial">
+        <div ng-init="showMainTestimonial = false" ng-show="!showMainTestimonial" class="testimonial-excerpt animation-fade">
+          <blockquote>“42 has made the world of difference in the analysis of my business—it enables me to view my supplier, style and customer data from so many different perspectives, none of which are currently available through my POS system. Using the data revealed by 42, I have modified my buying strategy to improve our gross margin where possible and increase our overall profitability.”</blockquote>
+        </div>
+        <div ng-if="showMainTestimonial" class="testimonial-full animation-fade">
+          <p>When we met Heidi back in 2013, she shared that she wished there were an easier way to sort through all the data that  comes through. From handling hundreds of SKUs to figuring out which products to stock that customers of all ages  would love and buy, Heidi would be able to save a lot of time if she had better tools that could tell her exactly where and who sales were coming from.</p>
+          <p>After speaking with Heidi to understand how better data analytics tools could grow her business, we set out to customize a 42 dashboard to give her all the things her previous platform couldn’t do.</p>
+          <p>Improving visibility on a few metrics—such as which SKUs the top 50% of revenue was from, inventory sell-through reporting, and creating tracking for customers who spent certain amounts in a time period—was in her own words, “very revolutionary.”</p>
+          <blockquote>“42 has made the world of difference in the analysis of my business—it enables me to view my supplier, style and customer data from so many different perspectives, none of which are currently available through my POS system. Using the data revealed by 42, I have modified my buying strategy to improve our gross margin where possible and increase our overall profitability.”</blockquote>
+          <p>As Camp & Campus adopts to a changing town with newer shoppers, it’s more important than ever to list products that cater to the lifestyle of their customers. 42’s analytics began to provide insights for Heidi to focus on key brands and age categories, helping her improve the customer experience as Camp & Campus becomes a thriving destination shop.</p>
+          <p>Working closely with Heidi gave us the chance to learn about Camp & Campus’ needs and customize a system that would make the business more efficient and effective. As with many of our customers who already had an analytics platform in place, once Heidi tried out 42’s dashboard, it was clear that we could deliver better results more quickly and easily—all with the data she already had.</p>
+          <blockquote>Working closely with Heidi gave us the chance to learn about Camp & Campus’ needs and customize a system that would make the business more efficient and effective. As with many of our customers who already had an analytics platform in place, once Heidi tried out 42’s dashboard, it was clear that we could deliver better results more quickly and easily—all with the data she already had.</blockquote>
+        </div><a href="#" ng-show="!showMainTestimonial" ng-click="showMainTestimonial = !showMainTestimonial" class="read-more outline-btn">Read more from Heidi</a>
+        <div class="testimonial-person"><img src="/assets/images/heads/quotes/heidi-campcampus.png"/>
+          <h4 class="testimonial-name">Heidi Wolf Saltzman</h4>
+          <h3 class="testimonial-role">Owner, Camp & Campus</h3>
+        </div>
+      </div>
+      <div class="other-testimonial">
+        <p class="testimonial-quote">“We wouldn’t be able to live without 42. When you have a lot of data it’s hard to know where to focus, with 42 you can find out in just a few clicks.”</p>
+        <div class="testimonial-person"><img src="/assets/images/heads/quotes/dino-memebox.png"/>
+          <h4 class="testimonial-name">Dino Ha</h4>
+          <h3 class="testimonial-role">CEO, memebox</h3>
+        </div>
+      </div>
+      <div class="other-testimonial">
+        <p class="testimonial-quote">“One of the most disruptive things on the front-end that we’ve seen in a while.”</p>
+        <div class="testimonial-person"><img src="/assets/images/heads/quotes/uri-rebeccaminkoff.jpg"/>
+          <h4 class="testimonial-name">Uri Minkoff</h4>
+          <h3 class="testimonial-role">CEO, Rebecca Minkoff</h3>
+        </div>
+      </div>
     </div>
   </section>
+  <!--
+  <div ng-mouseenter="carousel.stop()" ng-mouseleave="carousel.start()" class="wrapper">
+    <div class="quote-wrapper">
+      <q ng-bind-html="testimonials[carousel.state.index].quote"></q>
+    </div>
+  </div>
+  -->
+  <!--
+  <ul class="people">
+    <li ng-repeat="testimonial in testimonials" ng-class="{active:carousel.state.index == $index}" ng-mouseover="select($index)"><a href="{{ testimonial.href }}" target="_blank"><img ng-src="{{ testimonial.image }}"/>
+        <div>
+          <h4 ng-bind-html="testimonial.name"></h4>
+          <h3 ng-bind-html="testimonial.title"></h3>
+        </div></a></li>
+  </ul>
+  -->
   <section class="gym-badges">
     <div class="wrapper">
       <ul>
