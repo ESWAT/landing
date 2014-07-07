@@ -12,9 +12,9 @@ module.exports = (grunt) ->
 
     grunt.registerTask 'build', [
         'clean:build'
-        'newer:coffee'
-        'newer:jade'
-        'newer:copy'
+        'coffee'
+        'jade'
+        'copy'
         'sass:dev'
         'banner'
     ]
@@ -197,15 +197,15 @@ module.exports = (grunt) ->
                     '<%= dirs.src %>/jade/widgets/**/*'
                 ]
                 tasks: [
-                    'newer:jade:partials'
-                    'newer:jade:widgets'
+                    'jade:partials'
+                    'jade:widgets'
                 ]
                 options: nospawn: true
             scripts:
                 files: ['<%= dirs.src %>/scripts/**/*']
                 tasks: [
-                    'newer:coffee'
-                    'newer:copy'
+                    'coffee'
+                    'copy'
                 ]
                 options: nospawn: true
             sass:
@@ -234,7 +234,6 @@ module.exports = (grunt) ->
         'grunt-contrib-imagemin'
         'grunt-contrib-jade'
         'grunt-contrib-watch'
-        'grunt-newer'
         'grunt-sass'
     ]
     .forEach grunt.loadNpmTasks
