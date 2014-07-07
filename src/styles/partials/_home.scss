@@ -242,6 +242,7 @@
                 }
 
                 .read-more {
+                    display: none; // disabling for now
                     float: right;
                     margin-top: 20px;
                     border: 1px solid $medium-grey;
