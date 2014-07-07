@@ -1,7 +1,10 @@
+
+
 app.service 'Testimonials', ($rootScope) ->
     $rootScope.showMainTestimonial = false
-    scope.open = ->
+    open: ->
         $rootScope.showMainTestimonial = true
+
 
 app.directive 'readMore', (Testimonials) ->
     restrict: 'C'
