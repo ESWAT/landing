@@ -1,0 +1,18 @@
+box: wercker/nodejs
+
+build:
+  steps:
+    - npm-install
+    - script:
+        name: echo nodejs information
+        code: |
+          echo "node version $(node -v) running"
+          echo "npm version $(npm -v) running"
+deploy:
+   steps:
+        - landing-content-changes
+   after-steps:
+        - hipchat-notify:
+            token: $HIPCHAT_TOKEN
+            room_id: $HIPCHAT_ROOM_ID
+            from-name: $HIPCHAT_NAME

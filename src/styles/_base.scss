@@ -2,11 +2,20 @@
 $header-height: 120px;
 $slide-transition-speed: 0.7s;
 
+* {
+    outline: none !important;
+}
 
 html, body {
     height: auto;
     overflow-x: hidden;
     overflow-y: auto;
+}
+
+html.contactVisible,
+html.contactVisible body {
+    overflow: hidden;
+    height: 100%;
 }
 
 body {

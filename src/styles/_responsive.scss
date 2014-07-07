@@ -145,32 +145,9 @@ $mobile-port: 351px;
                 }
             }
 
-            &.testimonials .wrapper {
-                ul.bragging-rights { width: 80%; }
-
-                ul.people {
-                    li {
-                        margin: 20px;
-                        text-align: left;
-
-                        img {
-                            width: 50px;
-                            height: 50px;
-                            display: inline-block;
-                            margin: 0 15px 0 0;
-                            vertical-align: top;
-                        }
-
-                        div {
-                            display: inline-block;
-                            vertical-align: top;
-                            width: 170px;
-                        }
-                    }
-                }
-            }
-
             &.gym-badges .wrapper {
+                padding-bottom: 60px;
+
                 ul {
                     font-size: 0;
 
@@ -178,6 +155,28 @@ $mobile-port: 351px;
                         img {
                             margin: 20px 70px;
                         }
+                    }
+                }
+            }
+
+            &.testimonials {
+                .main-testimonial {
+                    width: auto;
+                    float: none;
+                    clear: both;
+                    margin-bottom: 40px;
+                }
+
+                .other-testimonial {
+                    padding: 0;
+                    width: 50%;
+
+                    &:nth-child(2) {
+                        padding-right: 10px;
+                    }
+
+                    &:last-child {
+                        padding-left: 10px;
                     }
                 }
             }
@@ -191,6 +190,13 @@ $mobile-port: 351px;
                     padding: 70px 30px;
                 }
             }
+        }
+    }
+
+    .view-generic {
+        .wrapper {
+            text-align: left;
+            padding: 0 30px;
         }
     }
 
@@ -225,6 +231,25 @@ $mobile-port: 351px;
                 }
             }
 
+        }
+    }
+
+    .view-footer {
+        .logo {
+            left: 60px;
+        }
+        .footer-company-links {
+            li {
+                margin: 0 10px;
+            }
+        }
+
+        .footer-social-links {
+            right: 58px;
+
+            li {
+                margin: 0 2px;
+            }
         }
     }
 }
@@ -406,18 +431,16 @@ $mobile-port: 351px;
                 }
             }
 
-            &.testimonials {
-                padding: 0;
+            &.gym-badges { display: none; }
 
+
+            &.testimonials {
                 .wrapper {
-                    ul.bragging-rights {
-                        width: 100%;
-                        margin: 30px auto;
-                    }
+                    padding: 20px 0;
+                    width: 80%;
+                    overflow: hidden;
                 }
             }
-
-            &.gym-badges { display: none; }
         }
     }
 
@@ -487,7 +510,7 @@ $mobile-port: 351px;
                 margin: 0 0 50px 0;
             }
 
-            &.hero, &.social {
+            &.hero {
                 .wrapper { padding: 0 50px; }
             }
 
@@ -505,6 +528,13 @@ $mobile-port: 351px;
                         margin: 0 1% 30px 19%;
                     }
                 }
+            }
+        }
+
+        .the-product {
+            h2, p {
+                max-width: 355px;
+                margin: 0 auto;
             }
         }
     }
@@ -563,19 +593,21 @@ $mobile-port: 351px;
         }
     }
 
-    footer {
-        height: 270px;
+    .view-footer {
+        .logo {
+            display: none;
+        }
 
-        .wrapper {
-            padding: 0;
+        .footer-company-links {
+            left: 60px;
+            width: auto;
+            margin-left: 0;
 
-            article {
-                margin: 70px 0 80px 0;
-                h1 { font-size: 28px; }
+            li {
+                margin: 0 5px;
             }
         }
     }
-
 }
 
 // Mobile 579
@@ -658,18 +690,35 @@ $mobile-port: 351px;
                 }
             }
 
-            &.testimonials .wrapper {
-                .quote-wrapper {
-                    position: relative;
-                    height: 240px;
-                    margin: 0 auto;
+            &.testimonials {
+                .main-testimonial {
+                    .testimonial-excerpt {
+                        blockquote {
+                            font-size: 16px;
+                            line-height: 1.5em;
+                        }
+                    }
+
+                    .read-more {
+                        display: none;
+                    }
                 }
-                q {
-                    position: absolute;
-                    top: 50%;
-                    -webkit-transform: translateY(-50%);
-                    -ms-transform: translateY(-50%);
-                    transform: translateY(-50%);
+
+                .other-testimonial {
+                    padding: 0 !important;
+                    width: auto;
+                    float: none;
+                    margin-bottom: 40px;
+                }
+
+                .testimonial-person {
+                    width: 100% !important;
+
+                    img {
+                        margin: 0 auto;
+                        display: block;
+                        float: none;
+                    }
                 }
             }
         }
@@ -720,22 +769,6 @@ $mobile-port: 351px;
                     margin: 0 15px 0 0;
                 }
             }
-
-            &.social .wrapper {
-                padding: 0;
-
-                ul {
-                    margin: 30px 0;
-
-                    li {
-                        margin: 10px 5px;
-                        width: 45px;
-                        height: 45px;
-
-                        a p:before { line-height: 43px; }
-                    }
-                }
-            }
         }
     }
 
@@ -763,19 +796,31 @@ $mobile-port: 351px;
         }
     }
 
-    footer {
-        height: 280px;
+    .view-footer {
+        .logo {
+            display: none;
+        }
 
-        .wrapper {
-            nav {
-                width: 300px;
-                margin: 0 auto;
+        .footer-company-links {
+            position: static;
+            display: block;
 
-                ul {
-                    li { margin: 0 10px 10px; }
-                    li:nth-child(even) { display: none; }
-                }
+            li {
+                margin: 0 5px;
             }
+        }
+
+        .footer-social-links {
+            position: static;
+            display: block;
+
+            li {
+                margin: 0 5px;
+            }
+        }
+
+        .footer-copyright {
+            margin-top: 20px;
         }
     }
 }
@@ -809,21 +854,35 @@ $mobile-port: 351px;
                     }
                 }
             }
-
-            &.testimonials .wrapper {
-                .quote-wrapper { width: 100%; }
-
-                q { width: 100%; }
-            }
         }
     }
 
-    .view-about {
-        section {
-            &.social {
-                .wrapper {
-                    padding: 0 30px;
+    .view-footer {
+        .wrapper {
+            padding: 40px 0 20px;
+        }
+
+        .footer-company-links {
+            display: none;
+        }
+
+        .footer-social-links {
+            margin-bottom: 20px;
+        }
+
+        .footer-copyright {
+            text-align: center;
+
+            li:first-child {
+                display: block;
+
+                &:after {
+                    content: '';
                 }
+            }
+
+            .copyright-text {
+                clear: both;
             }
         }
     }

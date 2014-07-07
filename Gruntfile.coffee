@@ -12,10 +12,10 @@ module.exports = (grunt) ->
 
     grunt.registerTask 'build', [
         'clean:build'
-        'newer:coffee'
-        'newer:jade'
-        'newer:copy'
-        'compass:dev'
+        'coffee'
+        'jade'
+        'copy'
+        'sass:dev'
         'banner'
     ]
 
@@ -25,11 +25,16 @@ module.exports = (grunt) ->
         'jade'
         'copy'
         'imagemin'
-        'compass:prod'
+        'sass:prod'
     ]
 
     grunt.registerTask 'heroku:production', [
-        'build:prod'
+        'build'
+    ]
+
+    grunt.registerTask 'web', [
+        'connect'
+        'watch'
     ]
 
 
@@ -109,6 +114,11 @@ module.exports = (grunt) ->
 
 
         copy:
+            font:
+                expand: true
+                cwd:  '<%= dirs.src %>/fonts'
+                src:  '**/*'
+                dest: '<%= dirs.build %>/assets/fonts'
             images:
                 expand: true
                 cwd:  '<%= dirs.src %>/images'
@@ -130,29 +140,37 @@ module.exports = (grunt) ->
                     '<%= dirs.build %>/assets/js/app/' + dest
 
 
-        compass:
+        sass:
             dev:
                 options:
-                    sassDir:   '<%= dirs.src %>/styles'
-                    cssDir:    '<%= dirs.build %>/assets/css'
-                    imagesDir: '<%= dirs.src %>/images'
-                    fontsDir:  '<%= dirs.src %>/fonts'
-                    relativeAssets: true
-                    debugInfo: false
-                    outputStyle: 'nested'
+                    includePaths:   require('node-bourbon').includePaths
+                    sassDir:        '<%= dirs.src %>/styles'
+                    cssDir:         '<%= dirs.build %>/assets/css'
+                    outputStyle:    'nested'
+                files: [{
+                    cwd:    '<%= dirs.src %>/styles'
+                    src:    '**/*.scss'
+                    dest:   '<%= dirs.build %>/assets/css'
+                    ext:    '.css'
+                    expand: true
+                }]
             prod:
                 options:
-                    sassDir:   '<%= dirs.src %>/styles'
-                    cssDir:    '<%= dirs.build %>/assets/css'
-                    imagesDir: '<%= dirs.src %>/images'
-                    fontsDir:  '<%= dirs.src %>/fonts'
-                    relativeAssets: true
-                    debugInfo: false
-                    outputStyle: 'compressed'
+                    includePaths:   require('node-bourbon').includePaths
+                    sassDir:        '<%= dirs.src %>/styles'
+                    cssDir:         '<%= dirs.build %>/assets/css'
+                    outputStyle:    'compressed'
+                files: [{
+                    cwd:    '<%= dirs.src %>/styles'
+                    src:    '**/*.scss'
+                    dest:   '<%= dirs.build %>/assets/css'
+                    ext:    '.css'
+                    expand: true
+                }]
 
 
         connect: build: options:
-            port: 9000
+            port: process.env.PORT or 3000
             base: '<%= dirs.build %>'
             middleware: (connect, options) -> [
                 # Allows CORS to all domains (don't use this in production!)
@@ -179,26 +197,29 @@ module.exports = (grunt) ->
                     '<%= dirs.src %>/jade/widgets/**/*'
                 ]
                 tasks: [
-                    'newer:jade:partials'
-                    'newer:jade:widgets'
+                    'jade:partials'
+                    'jade:widgets'
                 ]
                 options: nospawn: true
             scripts:
                 files: ['<%= dirs.src %>/scripts/**/*']
                 tasks: [
-                    'newer:coffee'
-                    'newer:copy'
+                    'coffee'
+                    'copy'
                 ]
                 options: nospawn: true
-            compass:
+            sass:
                 files: ['<%= dirs.src %>/styles/**/*']
-                tasks: ['compass']
+                tasks: ['sass']
 
             images:
                 files: ['<%= dirs.src %>/images/**/*']
                 tasks: [
                     'copy:images'
                 ]
+            options:
+                spawn: false
+                livereload: true
 
 
     grunt.task.registerTask 'banner', 'prints the banner', ->
@@ -209,11 +230,10 @@ module.exports = (grunt) ->
         'grunt-contrib-clean'
         'grunt-contrib-coffee'
         'grunt-contrib-copy'
-        'grunt-contrib-compass'
         'grunt-contrib-connect'
         'grunt-contrib-imagemin'
         'grunt-contrib-jade'
         'grunt-contrib-watch'
-        'grunt-newer'
+        'grunt-sass'
     ]
     .forEach grunt.loadNpmTasks

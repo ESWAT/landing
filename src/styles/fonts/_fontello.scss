@@ -1,6 +1,11 @@
 
 @import "compass/css3/font-face";
 
+@include font-face(
+    "swag",
+    '/assets/fonts/fontello/fontello'
+);
+
 
 @include font-face(
     "fontello",

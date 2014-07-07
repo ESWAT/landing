@@ -1,11 +1,11 @@
-.view-generic {
+.view-generic,
+.generic-content {
     background: $white;
-    position: relative;
-    top: 120px;
-    padding: 50px 0 220px;
 
     .wrapper {
         max-width: 680px;
+        padding: 70px 30px;
+        text-align: left;
     }
 
     h1,
@@ -16,7 +16,7 @@
 
     p {
         padding: 0 0 20px;
-        color: $dark-grey;
+        color: $medium-grey;
 
         a {
             color: $medium-blue;
@@ -26,6 +26,12 @@
             }
         }
     }
+}
+
+.view-generic {
+    position: relative;
+    top: 120px;
+    padding: 50px 0 220px;
 
     ul {
         margin: 20px 0 0 40px;

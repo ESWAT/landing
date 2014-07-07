@@ -1,13 +1,7 @@
 
-@import "compass/css3/font-face";
-
-
 @include font-face(
     "swag",
-    inline-font-files('swag/swag.eot',  eot,
-                      'swag/swag.woff', woff,
-                      'swag/swag.ttf',  truetype,
-                      'swag/swag.svg',  svg)
+    '/assets/fonts/swag/swag'
 );
 
 

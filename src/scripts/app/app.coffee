@@ -4,6 +4,7 @@
     'ui.router'
     'ngAnimate'
     'ngSanitize'
+    'segmentio'
 ]
 
 
@@ -26,6 +27,15 @@ app.config ($sceProvider) ->
 
 
 app.value 'config',
+    segmentio:
+        key: 'wqrh71hl3d'
     services:
         landing:
             url: 'http://landing.42debut.com'
+
+
+app.run (config, segmentio) ->
+    console.log "Host:", window.location.host
+    if window.location.host in ['www.42debut.com', '42debut.com']
+        console.log "production host; installing segmentio"
+        segmentio.load(config.segmentio.key)

@@ -1,19 +1,38 @@
 
 article.view.view-footer
 
+    a.request-demo(ui-sref="root.demo.signup") Request A Demo
+
     .wrapper
 
         .logo
             a.customicon-logo-42(ui-sref="root.home")
 
-        p.copyright
-            &copy; 2014 42 Technologies, Inc
+        ul.footer-company-links
+            li: a(ui-sref="root.home")
+                | Home
+            li: a(ui-sref="root.features")
+                | Features
+            li: a(href="http://42technologies.tumblr.com", target="_blank")
+                | Blog
+            li: a(ui-sref="root.about")
+                | About
+            li: a.contact-link(href="mailto:team@42debut.com")
+                | Contact
 
-        nav
-            ul
-                li
-                    a.nav-link(href="#terms") Terms
-                li
-                    a.nav-link(href="#privacy") Privacy
-                li
-                    a.outline-btn(ui-sref="root.demo.signup") Request A Demo
+        ul.footer-social-links
+            li: a.nav-link(href="https://twitter.com/42debut")
+                i.social-icon.icon-social-twitter
+            li: a.nav-link(href="https://www.linkedin.com/company/42-technologies-inc-")
+                i.social-icon.icon-social-linkedin
+            li: a.nav-link(href="http://instagram.com/42technologies")
+                i.social-icon.icon-social-instagram
+            li: a.nav-link(href="https://www.facebook.com/42technologies")
+                i.social-icon.icon-social-facebook
+            li: a.nav-link(href="https://github.com/42technologies/")
+                i.social-icon.icon-social-github
+
+        ul.footer-copyright
+            li: span.copyright-text &copy; 2014 42 Technologies, Inc
+            li: a.copyright-link(href="#terms") Terms
+            li: a.copyright-link(href="#privacy") Privacy
