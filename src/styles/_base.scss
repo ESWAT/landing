@@ -2,6 +2,9 @@
 $header-height: 120px;
 $slide-transition-speed: 0.7s;
 
+* {
+    outline: none !important;
+}
 
 html, body {
     height: auto;
